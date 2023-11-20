@@ -30,6 +30,7 @@
         {
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -54,12 +55,21 @@
             dataGridView2.Size = new Size(300, 188);
             dataGridView2.TabIndex = 1;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DarkGray;
+            panel1.Location = new Point(-1, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(488, 578);
+            panel1.TabIndex = 2;
+            // 
             // FormProductos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(37, 42, 64);
             ClientSize = new Size(1230, 580);
+            Controls.Add(panel1);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Name = "FormProductos";
@@ -73,5 +83,6 @@
 
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
+        private Panel panel1;
     }
 }
