@@ -39,16 +39,18 @@
             lblIntentos = new Label();
             checkBox1 = new CheckBox();
             timer1 = new System.Windows.Forms.Timer(components);
+            progressBar1 = new ProgressBar();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(390, -1);
             label1.Name = "label1";
-            label1.Size = new Size(76, 28);
+            label1.Size = new Size(73, 25);
             label1.TabIndex = 0;
             label1.Text = "LOGIN";
             // 
@@ -106,6 +108,7 @@
             // 
             txtContrasena.Location = new Point(162, 187);
             txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
             txtContrasena.Size = new Size(403, 27);
             txtContrasena.TabIndex = 6;
             // 
@@ -134,12 +137,31 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(69, 346);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(496, 29);
+            progressBar1.TabIndex = 9;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(571, 355);
+            label4.Name = "label4";
+            label4.Size = new Size(21, 20);
+            label4.TabIndex = 10;
+            label4.Text = "%";
+            // 
             // InicioSesion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(37, 42, 64);
-            ClientSize = new Size(663, 394);
+            ClientSize = new Size(663, 411);
+            Controls.Add(label4);
+            Controls.Add(progressBar1);
             Controls.Add(checkBox1);
             Controls.Add(lblIntentos);
             Controls.Add(txtContrasena);
@@ -168,5 +190,7 @@
         private Label lblIntentos;
         private CheckBox checkBox1;
         private System.Windows.Forms.Timer timer1;
+        private ProgressBar progressBar1;
+        private Label label4;
     }
 }
