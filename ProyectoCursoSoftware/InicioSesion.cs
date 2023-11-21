@@ -80,5 +80,10 @@ namespace ProyectoCursoSoftware
                 txtContrasena.PasswordChar = '*';
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

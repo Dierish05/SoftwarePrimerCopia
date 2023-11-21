@@ -64,6 +64,7 @@
             button1.Size = new Size(68, 29);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnAceptar
             // 
