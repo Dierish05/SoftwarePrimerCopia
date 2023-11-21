@@ -15,6 +15,7 @@ namespace ProyectoCursoSoftware.Formularios
         public FormProducto_01()
         {
             InitializeComponent();
+            //Hola uwu
         }
     }
 }
