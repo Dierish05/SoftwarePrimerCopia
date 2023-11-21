@@ -7,6 +7,7 @@ namespace ProyectoCursoSoftware
 {
     public partial class InicioSesion : Form
     {
+        Conexion con;
         int cont = 3;
         Stopwatch oSW = new Stopwatch();
         public InicioSesion()
@@ -23,13 +24,10 @@ namespace ProyectoCursoSoftware
                 Cursor.Current = Cursors.Default;
                 return;
             }
-            string Usuario = "Dieri";
-            string Contrasena = "123";
-            if (txtUsuario.Text == Usuario && txtContrasena.Text == Contrasena)
+            con = new Conexion(txtUsuario.Text, txtContrasena.Text);
+            if (this.con.connect.State == ConnectionState.Open)
             {
-                //Progress prog = new Progress();
-                //prog.Show();
-                Menu menu = new Menu();
+                MenuAdministrador menu = new MenuAdministrador();
                 menu.Show();
                 this.Visible = false;
             }
@@ -51,6 +49,7 @@ namespace ProyectoCursoSoftware
                     //Thread.Sleep(60000);//60,000=60seg
                 }
             }
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

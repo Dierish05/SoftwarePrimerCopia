@@ -17,7 +17,7 @@ namespace ProyectoCursoSoftware
             try
             {
 
-                connect = new SqlConnection("Server=localhost;Database=HVentasLOCAS;UID=" + user + ";PWD=" + pass);
+                connect = new SqlConnection("Server=localhost;Database=Proyecto;UID=" + user + ";PWD=" + pass);
                 //connect = new SqlConnection("Server=DESKTOP-B2TA6M2;Database=odonto;UID=" + user + ";PWD=" + pass);
                 connect.Open();
             }
