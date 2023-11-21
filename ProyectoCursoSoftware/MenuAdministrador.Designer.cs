@@ -46,7 +46,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, reportesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1160, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(1015, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -55,34 +56,34 @@
             inicioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendedorToolStripMenuItem, productoToolStripMenuItem, compraToolStripMenuItem, proveedorToolStripMenuItem });
             inicioToolStripMenuItem.ForeColor = Color.White;
             inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            inicioToolStripMenuItem.Size = new Size(59, 24);
+            inicioToolStripMenuItem.Size = new Size(48, 20);
             inicioToolStripMenuItem.Text = "Inicio";
             // 
             // vendedorToolStripMenuItem
             // 
             vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
-            vendedorToolStripMenuItem.Size = new Size(160, 26);
+            vendedorToolStripMenuItem.Size = new Size(128, 22);
             vendedorToolStripMenuItem.Text = "Vendedor";
             vendedorToolStripMenuItem.Click += vendedorToolStripMenuItem_Click;
             // 
             // productoToolStripMenuItem
             // 
             productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            productoToolStripMenuItem.Size = new Size(160, 26);
+            productoToolStripMenuItem.Size = new Size(128, 22);
             productoToolStripMenuItem.Text = "Producto";
             productoToolStripMenuItem.Click += productoToolStripMenuItem_Click;
             // 
             // compraToolStripMenuItem
             // 
             compraToolStripMenuItem.Name = "compraToolStripMenuItem";
-            compraToolStripMenuItem.Size = new Size(160, 26);
+            compraToolStripMenuItem.Size = new Size(128, 22);
             compraToolStripMenuItem.Text = "Compra";
             compraToolStripMenuItem.Click += compraToolStripMenuItem_Click;
             // 
             // proveedorToolStripMenuItem
             // 
             proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            proveedorToolStripMenuItem.Size = new Size(160, 26);
+            proveedorToolStripMenuItem.Size = new Size(128, 22);
             proveedorToolStripMenuItem.Text = "Proveedor";
             proveedorToolStripMenuItem.Click += proveedorToolStripMenuItem_Click;
             // 
@@ -90,25 +91,27 @@
             // 
             reportesToolStripMenuItem.ForeColor = Color.White;
             reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            reportesToolStripMenuItem.Size = new Size(82, 24);
+            reportesToolStripMenuItem.Size = new Size(65, 20);
             reportesToolStripMenuItem.Text = "Reportes";
             // 
             // PanelContenedor
             // 
             PanelContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            PanelContenedor.Location = new Point(0, 31);
+            PanelContenedor.Location = new Point(0, 23);
+            PanelContenedor.Margin = new Padding(3, 2, 3, 2);
             PanelContenedor.Name = "PanelContenedor";
-            PanelContenedor.Size = new Size(1155, 642);
+            PanelContenedor.Size = new Size(1015, 482);
             PanelContenedor.TabIndex = 1;
             // 
             // MenuAdministrador
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1160, 677);
+            ClientSize = new Size(1015, 508);
             Controls.Add(PanelContenedor);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MenuAdministrador";
             Text = "MenuAdministrador";
             WindowState = FormWindowState.Maximized;
