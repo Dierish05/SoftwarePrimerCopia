@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCursoSoftware.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,25 @@ namespace ProyectoCursoSoftware.Formularios
 {
     public partial class FormProducto : Form
     {
-        public FormProducto()
+        private Conexion con;
+        private ProductoModel pm;
+        public FormProducto(Conexion Con)
         {
+            this.con = Con;
+            pm = new ProductoModel(con);
             InitializeComponent();
+            Listar();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormProducto_01 formProducto_01 = new FormProducto_01();
             formProducto_01.ShowDialog();
+        }
+
+        private void Listar()
+        {
+            pm.listarProductos(dgvDatos);
         }
     }
 }

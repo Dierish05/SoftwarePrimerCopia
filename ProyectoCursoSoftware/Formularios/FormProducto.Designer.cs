@@ -33,7 +33,7 @@
             btnEliminar = new Button();
             btnEditar = new Button();
             btnAgregar = new Button();
-            dataGridView1 = new DataGridView();
+            dgvDatos = new DataGridView();
             groupBox1 = new GroupBox();
             btnBuscar = new Button();
             textBox1 = new TextBox();
@@ -45,7 +45,7 @@
             btnLimpiar = new Button();
             txtPrecio = new TextBox();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -53,9 +53,10 @@
             // btnActualizar
             // 
             btnActualizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnActualizar.Location = new Point(913, 169);
+            btnActualizar.Location = new Point(799, 127);
+            btnActualizar.Margin = new Padding(3, 2, 3, 2);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(94, 29);
+            btnActualizar.Size = new Size(82, 22);
             btnActualizar.TabIndex = 23;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSalir.Location = new Point(1025, 523);
+            btnSalir.Location = new Point(897, 392);
+            btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(94, 29);
+            btnSalir.Size = new Size(82, 22);
             btnSalir.TabIndex = 22;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -73,9 +75,10 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEliminar.Location = new Point(1025, 467);
+            btnEliminar.Location = new Point(897, 350);
+            btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.Size = new Size(82, 22);
             btnEliminar.TabIndex = 21;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -83,9 +86,10 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEditar.Location = new Point(1025, 408);
+            btnEditar.Location = new Point(897, 306);
+            btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(94, 29);
+            btnEditar.Size = new Size(82, 22);
             btnEditar.TabIndex = 20;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -93,59 +97,65 @@
             // btnAgregar
             // 
             btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnAgregar.Location = new Point(1025, 355);
+            btnAgregar.Location = new Point(897, 266);
+            btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.Size = new Size(82, 22);
             btnAgregar.TabIndex = 19;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // dataGridView1
+            // dgvDatos
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(16, 215);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(991, 337);
-            dataGridView1.TabIndex = 18;
+            dgvDatos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatos.Location = new Point(14, 161);
+            dgvDatos.Margin = new Padding(3, 2, 3, 2);
+            dgvDatos.Name = "dgvDatos";
+            dgvDatos.RowHeadersWidth = 51;
+            dgvDatos.RowTemplate.Height = 29;
+            dgvDatos.Size = new Size(867, 253);
+            dgvDatos.TabIndex = 18;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(btnBuscar);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(16, 72);
+            groupBox1.Location = new Point(14, 54);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(350, 112);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(306, 84);
             groupBox1.TabIndex = 17;
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar";
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(6, 60);
+            btnBuscar.Location = new Point(5, 45);
+            btnBuscar.Margin = new Padding(3, 2, 3, 2);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(94, 29);
+            btnBuscar.Size = new Size(82, 22);
             btnBuscar.TabIndex = 2;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(89, 27);
+            textBox1.Location = new Point(78, 20);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 27);
+            textBox1.Size = new Size(169, 23);
             textBox1.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(19, 27);
+            label2.Location = new Point(17, 20);
             label2.Name = "label2";
-            label2.Size = new Size(67, 20);
+            label2.Size = new Size(54, 15);
             label2.TabIndex = 0;
             label2.Text = "Nombre:";
             // 
@@ -157,7 +167,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1144, 51);
+            label1.Size = new Size(1001, 38);
             label1.TabIndex = 16;
             label1.Text = "BUSQUEDA Y MANTENIMIENTO DE PRODUCTO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -169,9 +179,11 @@
             groupBox2.Controls.Add(btnLimpiar);
             groupBox2.Controls.Add(txtPrecio);
             groupBox2.Controls.Add(label3);
-            groupBox2.Location = new Point(416, 72);
+            groupBox2.Location = new Point(364, 54);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(423, 112);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(370, 84);
             groupBox2.TabIndex = 24;
             groupBox2.TabStop = false;
             groupBox2.Text = "Filtrar";
@@ -179,63 +191,67 @@
             // cmbCategoria
             // 
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(107, 64);
+            cmbCategoria.Location = new Point(94, 48);
+            cmbCategoria.Margin = new Padding(3, 2, 3, 2);
             cmbCategoria.Name = "cmbCategoria";
-            cmbCategoria.Size = new Size(193, 28);
+            cmbCategoria.Size = new Size(169, 23);
             cmbCategoria.TabIndex = 4;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(19, 72);
+            label4.Location = new Point(17, 54);
             label4.Name = "label4";
-            label4.Size = new Size(77, 20);
+            label4.Size = new Size(61, 15);
             label4.TabIndex = 3;
             label4.Text = "Categoria:";
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(307, 27);
+            btnLimpiar.Location = new Point(269, 20);
+            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(94, 29);
+            btnLimpiar.Size = new Size(82, 22);
             btnLimpiar.TabIndex = 2;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(107, 27);
+            txtPrecio.Location = new Point(94, 20);
+            txtPrecio.Margin = new Padding(3, 2, 3, 2);
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(193, 27);
+            txtPrecio.Size = new Size(169, 23);
             txtPrecio.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(19, 27);
+            label3.Location = new Point(17, 20);
             label3.Name = "label3";
-            label3.Size = new Size(53, 20);
+            label3.Size = new Size(43, 15);
             label3.TabIndex = 0;
             label3.Text = "Precio:";
             // 
             // FormProducto
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1137, 595);
+            ClientSize = new Size(995, 446);
             Controls.Add(groupBox2);
             Controls.Add(btnActualizar);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvDatos);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormProducto";
             Text = "FormProducto";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -250,7 +266,7 @@
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnAgregar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvDatos;
         private GroupBox groupBox1;
         private Button btnBuscar;
         private TextBox textBox1;

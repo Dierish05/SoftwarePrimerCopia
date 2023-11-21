@@ -27,7 +27,7 @@ namespace ProyectoCursoSoftware
             con = new Conexion(txtUsuario.Text, txtContrasena.Text);
             if (this.con.connect.State == ConnectionState.Open)
             {
-                MenuAdministrador menu = new MenuAdministrador();
+                MenuAdministrador menu = new MenuAdministrador(con);
                 menu.Show();
                 this.Visible = false;
             }

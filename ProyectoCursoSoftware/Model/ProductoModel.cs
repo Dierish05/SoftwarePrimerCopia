@@ -23,7 +23,7 @@ namespace ProyectoCursoSoftware.Model
             SqlDataReader leer;
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "LeerProductos";
+            cmd.CommandText = "MostrarProductos";
             cmd.Connection = con.connect;
 
 
