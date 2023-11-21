@@ -18,104 +18,40 @@ namespace ProyectoCursoSoftware
             InitializeComponent();
         }
 
+        private void AbrirFormhijo(object formhijo)
+        {
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+
+
+            }
+            Form fh = formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(fh);
+            this.PanelContenedor.Tag = fh;
+            fh.Show();
+        }
+
         private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FormVendedor frmVendedor = new FormVendedor();
-                frmVendedor.MdiParent = this;
-                foreach (Form frm in Application.OpenForms)
-                {
-                    if (frm is FormVendedor)
-                    {
-                        frm.Show();
-                        frm.Size = MinimumSize;
-                        frm.WindowState = FormWindowState.Normal;
-                        return;
-                    }
-                }
-                frmVendedor.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Aviso",
-                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AbrirFormhijo(new FormVendedor());
         }
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FormProducto frmProducto = new FormProducto();
-                frmProducto.MdiParent = this;
-                foreach (Form frm in Application.OpenForms)
-                {
-                    if (frm is FormProducto)
-                    {
-                        frm.Show();
-                        frm.Size = MinimumSize;
-                        frm.WindowState = FormWindowState.Normal;
-                        return;
-                    }
-                }
-                frmProducto.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Aviso",
-                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AbrirFormhijo(new FormProducto());
         }
 
         private void compraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FormCompras frmCompras = new FormCompras();
-                frmCompras.MdiParent = this;
-                foreach (Form frm in Application.OpenForms)
-                {
-                    if (frm is FormCompras)
-                    {
-                        frm.Show();
-                        frm.Size = MinimumSize;
-                        frm.WindowState = FormWindowState.Normal;
-                        return;
-                    }
-                }
-                frmCompras.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Aviso",
-                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AbrirFormhijo(new FormCompras());
         }
 
         private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FormProveedor frmProveedor = new FormProveedor();
-                frmProveedor.MdiParent = this;
-                foreach (Form frm in Application.OpenForms)
-                {
-                    if (frm is FormProveedor)
-                    {
-                        frm.Show();
-                        frm.Size = MinimumSize;
-                        frm.WindowState = FormWindowState.Normal;
-                        return;
-                    }
-                }
-                frmProveedor.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Aviso",
-                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            AbrirFormhijo(new FormProveedor());
         }
     }
 }

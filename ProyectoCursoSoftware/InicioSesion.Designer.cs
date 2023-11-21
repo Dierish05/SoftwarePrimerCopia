@@ -173,6 +173,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InicioSesion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "InicioSesion";
             ResumeLayout(false);
             PerformLayout();
