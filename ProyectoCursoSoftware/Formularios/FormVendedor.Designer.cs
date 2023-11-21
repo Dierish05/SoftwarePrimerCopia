@@ -51,7 +51,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(-4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1155, 50);
+            label1.Size = new Size(1144, 50);
             label1.TabIndex = 0;
             label1.Text = "BUSQUEDA Y MANTENIMIENTO DE VENDEDOR";
             label1.TextAlign = ContentAlignment.MiddleCenter;
