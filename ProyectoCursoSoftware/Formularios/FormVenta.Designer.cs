@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormVenta";
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.BackColor = Color.Teal;
+            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(-3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(1144, 50);
+            label1.TabIndex = 1;
+            label1.Text = "VENTA";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // FormVenta
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1137, 595);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FormVenta";
+            Text = "FormVenta";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Label label1;
     }
 }

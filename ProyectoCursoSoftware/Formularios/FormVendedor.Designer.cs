@@ -30,9 +30,9 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
             btnBuscar = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
             dataGridView1 = new DataGridView();
             btnAgregar = new Button();
             btnEditar = new Button();
@@ -68,22 +68,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(19, 27);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Nombre:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(89, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 27);
-            textBox1.TabIndex = 1;
-            // 
             // btnBuscar
             // 
             btnBuscar.Location = new Point(6, 60);
@@ -92,6 +76,22 @@
             btnBuscar.TabIndex = 2;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(89, 27);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(193, 27);
+            textBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(19, 27);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Nombre:";
             // 
             // dataGridView1
             // 
@@ -163,6 +163,7 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             ForeColor = SystemColors.ControlText;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormVendedor";
             Text = "FormVendedor";
             groupBox1.ResumeLayout(false);

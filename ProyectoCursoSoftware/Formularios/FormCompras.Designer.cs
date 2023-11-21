@@ -162,6 +162,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormCompras";
             Text = "FormCompras";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

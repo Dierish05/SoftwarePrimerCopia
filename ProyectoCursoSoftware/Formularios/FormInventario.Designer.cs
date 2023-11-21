@@ -63,6 +63,7 @@
             ClientSize = new Size(1137, 595);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormInventario";
             Text = "FormInventario";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

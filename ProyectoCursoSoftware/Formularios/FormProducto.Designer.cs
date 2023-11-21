@@ -40,11 +40,11 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            cmbCategoria = new ComboBox();
+            label4 = new Label();
             btnLimpiar = new Button();
             txtPrecio = new TextBox();
             label3 = new Label();
-            label4 = new Label();
-            cmbCategoria = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -169,6 +169,23 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Filtrar";
             // 
+            // cmbCategoria
+            // 
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(108, 64);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(193, 28);
+            cmbCategoria.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(19, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(77, 20);
+            label4.TabIndex = 3;
+            label4.Text = "Categoria:";
+            // 
             // btnLimpiar
             // 
             btnLimpiar.Location = new Point(307, 27);
@@ -194,23 +211,6 @@
             label3.TabIndex = 0;
             label3.Text = "Precio:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(19, 72);
-            label4.Name = "label4";
-            label4.Size = new Size(77, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Categoria:";
-            // 
-            // cmbCategoria
-            // 
-            cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(108, 64);
-            cmbCategoria.Name = "cmbCategoria";
-            cmbCategoria.Size = new Size(193, 28);
-            cmbCategoria.TabIndex = 4;
-            // 
             // FormProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -225,6 +225,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormProducto";
             Text = "FormProducto";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
