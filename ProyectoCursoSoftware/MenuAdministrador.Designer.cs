@@ -53,6 +53,7 @@
             // inicioToolStripMenuItem
             // 
             inicioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendedorToolStripMenuItem, productoToolStripMenuItem, compraToolStripMenuItem, proveedorToolStripMenuItem });
+            inicioToolStripMenuItem.ForeColor = Color.White;
             inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             inicioToolStripMenuItem.Size = new Size(59, 24);
             inicioToolStripMenuItem.Text = "Inicio";
@@ -87,6 +88,7 @@
             // 
             // reportesToolStripMenuItem
             // 
+            reportesToolStripMenuItem.ForeColor = Color.White;
             reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             reportesToolStripMenuItem.Size = new Size(82, 24);
             reportesToolStripMenuItem.Text = "Reportes";
@@ -109,6 +111,7 @@
             MainMenuStrip = menuStrip1;
             Name = "MenuAdministrador";
             Text = "MenuAdministrador";
+            WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

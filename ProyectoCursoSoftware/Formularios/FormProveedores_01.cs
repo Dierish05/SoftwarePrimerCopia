@@ -44,7 +44,7 @@ namespace ProyectoCursoSoftware.Formularios
         {
             if (txtNombre.Text == "")
             {
-                MessageBox.Show("Cammpos vacios! porfavor complete todos los campos e intentelo nuevamente")
+                MessageBox.Show("Cammpos vacios! porfavor complete todos los campos e intentelo nuevamente");
             }
         }
 

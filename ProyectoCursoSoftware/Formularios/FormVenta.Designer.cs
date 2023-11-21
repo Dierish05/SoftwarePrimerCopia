@@ -32,17 +32,6 @@
             label2 = new Label();
             txtVendedor = new TextBox();
             groupBox1 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            groupBox2 = new GroupBox();
-            txtSubTotal = new TextBox();
-            this.txtMonto = new TextBox();
-            this.txtTotal = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            btnGuardar = new Button();
-            btnAnular = new Button();
-            btnImprimir = new Button();
             groupBox3 = new GroupBox();
             button2 = new Button();
             button1 = new Button();
@@ -53,15 +42,26 @@
             btnCancelar = new Button();
             btnBuscar = new Button();
             dgvProducto = new DataGridView();
-            dateTimePicker1 = new DateTimePicker();
-            textBox1 = new TextBox();
             label4 = new Label();
             label3 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            textBox1 = new TextBox();
+            dataGridView1 = new DataGridView();
+            groupBox2 = new GroupBox();
+            btnImprimir = new Button();
+            btnAnular = new Button();
+            btnGuardar = new Button();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            txtSubTotal = new TextBox();
+            textBox6 = new TextBox();
+            textBox7 = new TextBox();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -107,110 +107,6 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Principal";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(15, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(877, 309);
-            dataGridView1.TabIndex = 5;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(btnImprimir);
-            groupBox2.Controls.Add(btnAnular);
-            groupBox2.Controls.Add(btnGuardar);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(this.txtTotal);
-            groupBox2.Controls.Add(this.txtMonto);
-            groupBox2.Controls.Add(txtSubTotal);
-            groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(22, 445);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1103, 351);
-            groupBox2.TabIndex = 6;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Detalle";
-            // 
-            // txtSubTotal
-            // 
-            txtSubTotal.Location = new Point(932, 70);
-            txtSubTotal.Name = "txtSubTotal";
-            txtSubTotal.Size = new Size(104, 27);
-            txtSubTotal.TabIndex = 6;
-            // 
-            // txtMonto
-            // 
-            this.txtMonto.Location = new Point(932, 120);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new Size(104, 27);
-            this.txtMonto.TabIndex = 7;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new Point(932, 172);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new Size(104, 27);
-            this.txtTotal.TabIndex = 8;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(965, 47);
-            label5.Name = "label5";
-            label5.Size = new Size(71, 20);
-            label5.TabIndex = 8;
-            label5.Text = "Sub Total";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(992, 149);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 20);
-            label6.TabIndex = 10;
-            label6.Text = "Total";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(981, 100);
-            label7.Name = "label7";
-            label7.Size = new Size(53, 20);
-            label7.TabIndex = 7;
-            label7.Text = "Monto";
-            // 
-            // btnGuardar
-            // 
-            btnGuardar.Location = new Point(898, 271);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
-            btnGuardar.TabIndex = 12;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnAnular
-            // 
-            btnAnular.Location = new Point(1003, 271);
-            btnAnular.Name = "btnAnular";
-            btnAnular.Size = new Size(94, 29);
-            btnAnular.TabIndex = 13;
-            btnAnular.Text = "Anular";
-            btnAnular.UseVisualStyleBackColor = true;
-            // 
-            // btnImprimir
-            // 
-            btnImprimir.Location = new Point(898, 306);
-            btnImprimir.Name = "btnImprimir";
-            btnImprimir.Size = new Size(199, 29);
-            btnImprimir.TabIndex = 14;
-            btnImprimir.Text = "Imprimir";
-            btnImprimir.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -308,21 +204,6 @@
             dgvProducto.Size = new Size(365, 133);
             dgvProducto.TabIndex = 17;
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(993, 40);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(104, 27);
-            dateTimePicker1.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(993, 73);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(104, 27);
-            textBox1.TabIndex = 0;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -341,6 +222,125 @@
             label3.TabIndex = 2;
             label3.Text = "Fecha:";
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(993, 40);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(104, 27);
+            dateTimePicker1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(993, 73);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(104, 27);
+            textBox1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(15, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(877, 309);
+            dataGridView1.TabIndex = 5;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(textBox7);
+            groupBox2.Controls.Add(textBox6);
+            groupBox2.Controls.Add(btnImprimir);
+            groupBox2.Controls.Add(btnAnular);
+            groupBox2.Controls.Add(btnGuardar);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(txtSubTotal);
+            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Location = new Point(22, 445);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(1103, 351);
+            groupBox2.TabIndex = 6;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Detalle";
+            // 
+            // btnImprimir
+            // 
+            btnImprimir.Location = new Point(898, 306);
+            btnImprimir.Name = "btnImprimir";
+            btnImprimir.Size = new Size(199, 29);
+            btnImprimir.TabIndex = 14;
+            btnImprimir.Text = "Imprimir";
+            btnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // btnAnular
+            // 
+            btnAnular.Location = new Point(1003, 271);
+            btnAnular.Name = "btnAnular";
+            btnAnular.Size = new Size(94, 29);
+            btnAnular.TabIndex = 13;
+            btnAnular.Text = "Anular";
+            btnAnular.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(898, 271);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.TabIndex = 12;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(981, 100);
+            label7.Name = "label7";
+            label7.Size = new Size(53, 20);
+            label7.TabIndex = 7;
+            label7.Text = "Monto";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(992, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 20);
+            label6.TabIndex = 10;
+            label6.Text = "Total";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(965, 47);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 20);
+            label5.TabIndex = 8;
+            label5.Text = "Sub Total";
+            // 
+            // txtSubTotal
+            // 
+            txtSubTotal.Location = new Point(932, 70);
+            txtSubTotal.Name = "txtSubTotal";
+            txtSubTotal.Size = new Size(104, 27);
+            txtSubTotal.TabIndex = 6;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(930, 123);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(106, 27);
+            textBox6.TabIndex = 15;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(930, 172);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(106, 27);
+            textBox7.TabIndex = 16;
+            // 
             // FormVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -356,12 +356,12 @@
             Text = "FormVenta";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -397,5 +397,7 @@
         private Label label3;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox1;
+        private TextBox textBox7;
+        private TextBox textBox6;
     }
 }

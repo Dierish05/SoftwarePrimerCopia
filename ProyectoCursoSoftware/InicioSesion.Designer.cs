@@ -51,7 +51,7 @@
             label1.Location = new Point(390, -1);
             label1.Name = "label1";
             label1.Size = new Size(73, 25);
-            label1.TabIndex = 0;
+            label1.TabIndex = 8;
             label1.Text = "LOGIN";
             // 
             // button1
@@ -62,7 +62,7 @@
             button1.Location = new Point(595, -2);
             button1.Name = "button1";
             button1.Size = new Size(68, 29);
-            button1.TabIndex = 1;
+            button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -73,7 +73,7 @@
             btnAceptar.Location = new Point(69, 300);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(496, 29);
-            btnAceptar.TabIndex = 2;
+            btnAceptar.TabIndex = 3;
             btnAceptar.Text = "Log in";
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
@@ -85,7 +85,7 @@
             label2.Location = new Point(69, 130);
             label2.Name = "label2";
             label2.Size = new Size(59, 20);
-            label2.TabIndex = 3;
+            label2.TabIndex = 6;
             label2.Text = "Usuario";
             // 
             // label3
@@ -95,7 +95,7 @@
             label3.Location = new Point(69, 190);
             label3.Name = "label3";
             label3.Size = new Size(83, 20);
-            label3.TabIndex = 4;
+            label3.TabIndex = 9;
             label3.Text = "Contraseña";
             // 
             // txtUsuario
@@ -103,7 +103,7 @@
             txtUsuario.Location = new Point(162, 123);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(403, 27);
-            txtUsuario.TabIndex = 5;
+            txtUsuario.TabIndex = 1;
             // 
             // txtContrasena
             // 
@@ -111,7 +111,7 @@
             txtContrasena.Name = "txtContrasena";
             txtContrasena.PasswordChar = '*';
             txtContrasena.Size = new Size(403, 27);
-            txtContrasena.TabIndex = 6;
+            txtContrasena.TabIndex = 2;
             // 
             // lblIntentos
             // 
@@ -129,7 +129,7 @@
             checkBox1.Location = new Point(83, 223);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(82, 24);
-            checkBox1.TabIndex = 8;
+            checkBox1.TabIndex = 5;
             checkBox1.Text = "Mostrar";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;

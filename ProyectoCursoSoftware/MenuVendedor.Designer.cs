@@ -49,6 +49,7 @@
             MainMenuStrip = menuStrip1;
             Name = "MenuVendedor";
             Text = "MenuVendedor";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();
         }
