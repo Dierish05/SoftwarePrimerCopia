@@ -144,7 +144,7 @@
             label1.Name = "label1";
             label1.Size = new Size(394, 31);
             label1.TabIndex = 31;
-            label1.Text = "REGISTRO / ACTUALIZACION";
+            label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // dtpFechaCompra
