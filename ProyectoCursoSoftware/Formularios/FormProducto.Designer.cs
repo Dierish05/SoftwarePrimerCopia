@@ -1,6 +1,6 @@
 ﻿namespace ProyectoCursoSoftware.Formularios
 {
-    partial class FormCompras
+    partial class FormProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -39,77 +39,81 @@
             textBox1 = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            dataGridView2 = new DataGridView();
+            groupBox2 = new GroupBox();
+            btnLimpiar = new Button();
+            txtPrecio = new TextBox();
             label3 = new Label();
+            label4 = new Label();
+            cmbCategoria = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(914, 168);
+            btnActualizar.Location = new Point(913, 169);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(94, 29);
-            btnActualizar.TabIndex = 15;
+            btnActualizar.TabIndex = 23;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1031, 398);
+            btnSalir.Location = new Point(1025, 523);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 29);
-            btnSalir.TabIndex = 14;
+            btnSalir.TabIndex = 22;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(1031, 341);
+            btnEliminar.Location = new Point(1025, 466);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(94, 29);
-            btnEliminar.TabIndex = 13;
+            btnEliminar.TabIndex = 21;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(1031, 283);
+            btnEditar.Location = new Point(1025, 408);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(94, 29);
-            btnEditar.TabIndex = 12;
+            btnEditar.TabIndex = 20;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(1031, 230);
+            btnAgregar.Location = new Point(1025, 355);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 11;
+            btnAgregar.TabIndex = 19;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(17, 214);
+            dataGridView1.Location = new Point(16, 215);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(991, 213);
-            dataGridView1.TabIndex = 10;
+            dataGridView1.Size = new Size(991, 337);
+            dataGridView1.TabIndex = 18;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(btnBuscar);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(17, 71);
+            groupBox1.Location = new Point(16, 72);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(350, 112);
-            groupBox1.TabIndex = 9;
+            groupBox1.TabIndex = 17;
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar";
             // 
@@ -144,44 +148,75 @@
             label1.BackColor = Color.Teal;
             label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1, -1);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(1144, 50);
-            label1.TabIndex = 8;
-            label1.Text = "BUSQUEDA Y MANTENIMIENTO DE COMPRA";
+            label1.TabIndex = 16;
+            label1.Text = "BUSQUEDA Y MANTENIMIENTO DE PRODUCTO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dataGridView2
+            // groupBox2
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(17, 509);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(991, 233);
-            dataGridView2.TabIndex = 16;
+            groupBox2.Controls.Add(cmbCategoria);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(btnLimpiar);
+            groupBox2.Controls.Add(txtPrecio);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Location = new Point(416, 72);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(423, 112);
+            groupBox2.TabIndex = 24;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Filtrar";
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(307, 27);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(94, 29);
+            btnLimpiar.TabIndex = 2;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(108, 26);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(193, 27);
+            txtPrecio.TabIndex = 1;
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label3.BackColor = Color.Teal;
-            label3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1, 445);
+            label3.AutoSize = true;
+            label3.Location = new Point(19, 27);
             label3.Name = "label3";
-            label3.Size = new Size(1144, 50);
-            label3.TabIndex = 17;
-            label3.Text = "INVENTARIO";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            label3.Size = new Size(53, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Precio:";
             // 
-            // FormCompras
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(19, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(77, 20);
+            label4.TabIndex = 3;
+            label4.Text = "Categoria:";
+            // 
+            // cmbCategoria
+            // 
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(108, 64);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(193, 28);
+            cmbCategoria.TabIndex = 4;
+            // 
+            // FormProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1137, 754);
-            Controls.Add(label3);
-            Controls.Add(dataGridView2);
+            ClientSize = new Size(1137, 595);
+            Controls.Add(groupBox2);
             Controls.Add(btnActualizar);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
@@ -190,12 +225,13 @@
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
-            Name = "FormCompras";
-            Text = "FormCompras";
+            Name = "FormProducto";
+            Text = "FormProducto";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -212,7 +248,11 @@
         private TextBox textBox1;
         private Label label2;
         private Label label1;
-        private DataGridView dataGridView2;
+        private GroupBox groupBox2;
+        private ComboBox cmbCategoria;
+        private Label label4;
+        private Button btnLimpiar;
+        private TextBox txtPrecio;
         private Label label3;
     }
 }
