@@ -39,11 +39,8 @@
             textBox1 = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            dataGridView2 = new DataGridView();
-            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // btnActualizar
@@ -57,7 +54,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1031, 398);
+            btnSalir.Location = new Point(1031, 522);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 29);
             btnSalir.TabIndex = 14;
@@ -66,7 +63,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(1031, 341);
+            btnEliminar.Location = new Point(1031, 465);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(94, 29);
             btnEliminar.TabIndex = 13;
@@ -75,7 +72,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(1031, 283);
+            btnEditar.Location = new Point(1031, 407);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(94, 29);
             btnEditar.TabIndex = 12;
@@ -84,7 +81,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(1031, 230);
+            btnAgregar.Location = new Point(1031, 354);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 29);
             btnAgregar.TabIndex = 11;
@@ -98,7 +95,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(991, 213);
+            dataGridView1.Size = new Size(991, 337);
             dataGridView1.TabIndex = 10;
             // 
             // groupBox1
@@ -151,37 +148,12 @@
             label1.Text = "BUSQUEDA Y MANTENIMIENTO DE COMPRA";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(17, 509);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(991, 233);
-            dataGridView2.TabIndex = 16;
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label3.BackColor = Color.Teal;
-            label3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1, 445);
-            label3.Name = "label3";
-            label3.Size = new Size(1144, 50);
-            label3.TabIndex = 17;
-            label3.Text = "INVENTARIO";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // FormCompras
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1137, 754);
-            Controls.Add(label3);
-            Controls.Add(dataGridView2);
+            ClientSize = new Size(1137, 595);
             Controls.Add(btnActualizar);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
@@ -195,7 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -212,7 +183,5 @@
         private TextBox textBox1;
         private Label label2;
         private Label label1;
-        private DataGridView dataGridView2;
-        private Label label3;
     }
 }
