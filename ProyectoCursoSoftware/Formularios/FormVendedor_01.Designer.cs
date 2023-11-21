@@ -179,7 +179,7 @@
             rbtnMasculino.Size = new Size(97, 24);
             rbtnMasculino.TabIndex = 22;
             rbtnMasculino.TabStop = true;
-            rbtnMasculino.Text = "Musculino";
+            rbtnMasculino.Text = "Masculino";
             rbtnMasculino.UseVisualStyleBackColor = true;
             // 
             // rbtnFemenino
@@ -271,7 +271,7 @@
             Controls.Add(txtNombres);
             Controls.Add(label1);
             Name = "FormVendedor_01";
-            Text = "FormVendedor_01";
+            Text = "x";
             ResumeLayout(false);
             PerformLayout();
         }
