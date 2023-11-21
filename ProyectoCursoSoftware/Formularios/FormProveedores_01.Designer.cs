@@ -37,37 +37,43 @@
             // 
             // btnRegresar
             // 
-            btnRegresar.Location = new Point(179, 370);
+            btnRegresar.Location = new Point(157, 278);
+            btnRegresar.Margin = new Padding(3, 2, 3, 2);
             btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(94, 29);
+            btnRegresar.Size = new Size(82, 22);
             btnRegresar.TabIndex = 43;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(42, 370);
+            btnGuardar.Location = new Point(37, 278);
+            btnGuardar.Margin = new Padding(3, 2, 3, 2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.Size = new Size(82, 22);
             btnGuardar.TabIndex = 42;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 46);
+            label2.Location = new Point(10, 34);
             label2.Name = "label2";
-            label2.Size = new Size(67, 20);
+            label2.Size = new Size(54, 15);
             label2.TabIndex = 33;
             label2.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(96, 39);
+            txtNombre.Location = new Point(82, 34);
+            txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(214, 27);
+            txtNombre.Size = new Size(188, 23);
             txtNombre.TabIndex = 32;
+            txtNombre.TextChanged += txtNombre_TextChanged;
+            txtNombre.KeyDown += txtNombre_KeyDown;
             // 
             // label1
             // 
@@ -77,23 +83,25 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, -2);
             label1.Name = "label1";
-            label1.Size = new Size(320, 31);
+            label1.Size = new Size(280, 23);
             label1.TabIndex = 31;
             label1.Text = "REGISTRO / ACTUALIZACION";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormProveedores_01
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(322, 426);
+            ClientSize = new Size(282, 320);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);
             Controls.Add(label2);
             Controls.Add(txtNombre);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormProveedores_01";
             Text = "FormProveedores_01";
+            Load += FormProveedores_01_Load;
             ResumeLayout(false);
             PerformLayout();
         }

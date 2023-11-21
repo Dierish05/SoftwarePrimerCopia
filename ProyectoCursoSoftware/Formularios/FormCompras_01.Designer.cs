@@ -28,111 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtCantidad = new TextBox();
-            txtPrecio = new TextBox();
             txtCodProducto = new TextBox();
             btnRegresar = new Button();
             btnGuardar = new Button();
             label7 = new Label();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            txtId = new TextBox();
             label1 = new Label();
-            dtpFechaCompra = new DateTimePicker();
+            numericUpDown1 = new NumericUpDown();
+            nUpdownCantidad = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).BeginInit();
             SuspendLayout();
-            // 
-            // txtCantidad
-            // 
-            txtCantidad.Location = new Point(159, 189);
-            txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(214, 27);
-            txtCantidad.TabIndex = 49;
-            // 
-            // txtPrecio
-            // 
-            txtPrecio.Location = new Point(159, 153);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(214, 27);
-            txtPrecio.TabIndex = 48;
             // 
             // txtCodProducto
             // 
-            txtCodProducto.Location = new Point(159, 117);
+            txtCodProducto.Location = new Point(140, 48);
+            txtCodProducto.Margin = new Padding(3, 2, 3, 2);
             txtCodProducto.Name = "txtCodProducto";
-            txtCodProducto.Size = new Size(214, 27);
+            txtCodProducto.Size = new Size(188, 23);
             txtCodProducto.TabIndex = 47;
+            txtCodProducto.KeyDown += txtCodProducto_KeyDown;
             // 
             // btnRegresar
             // 
-            btnRegresar.Location = new Point(250, 370);
+            btnRegresar.Location = new Point(219, 278);
+            btnRegresar.Margin = new Padding(3, 2, 3, 2);
             btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(94, 29);
+            btnRegresar.Size = new Size(82, 22);
             btnRegresar.TabIndex = 43;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(46, 370);
+            btnGuardar.Location = new Point(40, 278);
+            btnGuardar.Margin = new Padding(3, 2, 3, 2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.Size = new Size(82, 22);
             btnGuardar.TabIndex = 42;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(13, 196);
+            label7.Location = new Point(12, 110);
             label7.Name = "label7";
-            label7.Size = new Size(146, 20);
+            label7.Size = new Size(117, 15);
             label7.TabIndex = 38;
             label7.Text = "Cantidad Comprada:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(13, 160);
+            label5.Location = new Point(12, 83);
             label5.Name = "label5";
-            label5.Size = new Size(110, 20);
+            label5.Size = new Size(89, 15);
             label5.TabIndex = 36;
             label5.Text = "Precio Compra:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(13, 124);
+            label4.Location = new Point(12, 56);
             label4.Name = "label4";
-            label4.Size = new Size(103, 20);
+            label4.Size = new Size(84, 15);
             label4.TabIndex = 35;
             label4.Text = "Cod Producto:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(13, 85);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 20);
-            label3.TabIndex = 34;
-            label3.Text = "Fecha Compra:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(13, 46);
-            label2.Name = "label2";
-            label2.Size = new Size(27, 20);
-            label2.TabIndex = 33;
-            label2.Text = "ID:";
-            // 
-            // txtId
-            // 
-            txtId.Location = new Point(162, 39);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(214, 27);
-            txtId.TabIndex = 32;
             // 
             // label1
             // 
@@ -142,56 +106,66 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(1, -2);
             label1.Name = "label1";
-            label1.Size = new Size(394, 31);
+            label1.Size = new Size(345, 23);
             label1.TabIndex = 31;
             label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dtpFechaCompra
+            // numericUpDown1
             // 
-            dtpFechaCompra.Location = new Point(159, 78);
-            dtpFechaCompra.Name = "dtpFechaCompra";
-            dtpFechaCompra.Size = new Size(217, 27);
-            dtpFechaCompra.TabIndex = 50;
+            numericUpDown1.DecimalPlaces = 2;
+            numericUpDown1.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            numericUpDown1.Location = new Point(140, 77);
+            numericUpDown1.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
+            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 50;
+            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown1.KeyDown += numericUpDown1_KeyDown;
+            // 
+            // nUpdownCantidad
+            // 
+            nUpdownCantidad.Location = new Point(140, 106);
+            nUpdownCantidad.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nUpdownCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nUpdownCantidad.Name = "nUpdownCantidad";
+            nUpdownCantidad.Size = new Size(120, 23);
+            nUpdownCantidad.TabIndex = 51;
+            nUpdownCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // FormCompras_01
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(396, 426);
-            Controls.Add(dtpFechaCompra);
-            Controls.Add(txtCantidad);
-            Controls.Add(txtPrecio);
+            ClientSize = new Size(346, 320);
+            Controls.Add(nUpdownCantidad);
+            Controls.Add(numericUpDown1);
             Controls.Add(txtCodProducto);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);
             Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(txtId);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormCompras_01";
             Text = "FormCompras_01";
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtCantidad;
-        private TextBox txtPrecio;
         private TextBox txtCodProducto;
         private Button btnRegresar;
         private Button btnGuardar;
         private Label label7;
         private Label label5;
         private Label label4;
-        private Label label3;
-        private Label label2;
-        private TextBox txtId;
         private Label label1;
-        private DateTimePicker dtpFechaCompra;
+        private NumericUpDown numericUpDown1;
+        private NumericUpDown nUpdownCantidad;
     }
 }

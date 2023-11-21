@@ -16,5 +16,11 @@ namespace ProyectoCursoSoftware.Formularios
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormProducto_01 formProducto_01 = new FormProducto_01();
+            formProducto_01.ShowDialog();
+        }
     }
 }

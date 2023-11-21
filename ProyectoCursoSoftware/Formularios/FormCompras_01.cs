@@ -16,5 +16,37 @@ namespace ProyectoCursoSoftware.Formularios
         {
             InitializeComponent();
         }
+
+        private void txtCodProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Limitar a 5 caracteres
+            if (!(e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && txtCodProducto.Text.Length >= 5)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+
+
+        private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+        {
+            //// Permitir solo números y un punto para decimales
+            //if (!((char.IsDigit((char)e.KeyValue) || e.KeyValue == (char)Keys.OemPeriod || e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && !(e.KeyValue == (char)Keys.OemPeriod && numericUpDown1.Text.Contains("."))))
+            //{
+            //    e.SuppressKeyPress = true;
+            //}
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (txtCodProducto.Text == "" || numericUpDown1.Value == 0 || nUpdownCantidad.Value == 0)
+            {
+                MessageBox.Show("Campos vacios, porfavor introduzca un dato valido!");
+            }
+            else 
+            {
+                //Metodo de guardar compra
+            }
+        }
     }
 }
