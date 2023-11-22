@@ -43,9 +43,9 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 MessageBox.Show("Campos incompletos! Porfavor complete todos los campos e intentelo nuevamente");
             }
-            else 
+            else
             {
-             //Metodo guardar producto
+                //Metodo guardar producto
             }
         }
     }
