@@ -72,7 +72,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(-3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1001, 38);
+            label1.Size = new Size(1144, 51);
             label1.TabIndex = 1;
             label1.Text = "VENTA";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -80,9 +80,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(293, 50);
+            label2.Location = new Point(335, 67);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(73, 20);
             label2.TabIndex = 2;
             label2.Text = "Vendedor";
             // 
@@ -90,11 +90,10 @@
             // 
             txtVendedor.BackColor = Color.FromArgb(221, 233, 218);
             txtVendedor.BorderStyle = BorderStyle.FixedSingle;
-            txtVendedor.Location = new Point(19, 66);
-            txtVendedor.Margin = new Padding(3, 2, 3, 2);
+            txtVendedor.Location = new Point(22, 88);
             txtVendedor.Name = "txtVendedor";
             txtVendedor.ReadOnly = true;
-            txtVendedor.Size = new Size(338, 23);
+            txtVendedor.Size = new Size(386, 27);
             txtVendedor.TabIndex = 3;
             // 
             // groupBox1
@@ -104,11 +103,9 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Location = new Point(19, 91);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(22, 121);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(965, 238);
+            groupBox1.Size = new Size(1103, 317);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Principal";
@@ -124,11 +121,9 @@
             groupBox3.Controls.Add(btnCancelar);
             groupBox3.Controls.Add(btnBuscar);
             groupBox3.Controls.Add(dgvProducto);
-            groupBox3.Location = new Point(5, 22);
-            groupBox3.Margin = new Padding(3, 2, 3, 2);
+            groupBox3.Location = new Point(6, 29);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(3, 2, 3, 2);
-            groupBox3.Size = new Size(564, 214);
+            groupBox3.Size = new Size(645, 285);
             groupBox3.TabIndex = 17;
             groupBox3.TabStop = false;
             groupBox3.Text = "Buscar Producto";
@@ -137,10 +132,9 @@
             // 
             btnEliminarProd.FlatStyle = FlatStyle.Flat;
             btnEliminarProd.ForeColor = Color.FromArgb(26, 138, 94);
-            btnEliminarProd.Location = new Point(350, 189);
-            btnEliminarProd.Margin = new Padding(3, 2, 3, 2);
+            btnEliminarProd.Location = new Point(400, 252);
             btnEliminarProd.Name = "btnEliminarProd";
-            btnEliminarProd.Size = new Size(120, 22);
+            btnEliminarProd.Size = new Size(137, 29);
             btnEliminarProd.TabIndex = 25;
             btnEliminarProd.Text = "Eliminar Producto";
             btnEliminarProd.UseVisualStyleBackColor = true;
@@ -149,10 +143,9 @@
             // 
             btnAgregarProd.FlatStyle = FlatStyle.Flat;
             btnAgregarProd.ForeColor = Color.FromArgb(26, 138, 94);
-            btnAgregarProd.Location = new Point(350, 155);
-            btnAgregarProd.Margin = new Padding(3, 2, 3, 2);
+            btnAgregarProd.Location = new Point(400, 207);
             btnAgregarProd.Name = "btnAgregarProd";
-            btnAgregarProd.Size = new Size(120, 22);
+            btnAgregarProd.Size = new Size(137, 29);
             btnAgregarProd.TabIndex = 24;
             btnAgregarProd.Text = "Agregar Producto";
             btnAgregarProd.UseVisualStyleBackColor = true;
@@ -160,18 +153,18 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(196, 16);
+            label9.Location = new Point(224, 21);
             label9.Name = "label9";
-            label9.Size = new Size(51, 15);
+            label9.Size = new Size(64, 20);
             label9.TabIndex = 23;
             label9.Text = "Nombre";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(78, 16);
+            label8.Location = new Point(89, 21);
             label8.Name = "label8";
-            label8.Size = new Size(46, 15);
+            label8.Size = new Size(58, 20);
             label8.TabIndex = 22;
             label8.Text = "Codigo";
             // 
@@ -180,10 +173,9 @@
             txtNombre.BackColor = Color.FromArgb(221, 233, 218);
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.ForeColor = Color.FromArgb(149, 156, 146);
-            txtNombre.Location = new Point(143, 33);
-            txtNombre.Margin = new Padding(3, 2, 3, 2);
+            txtNombre.Location = new Point(163, 44);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(110, 23);
+            txtNombre.Size = new Size(125, 27);
             txtNombre.TabIndex = 21;
             txtNombre.Enter += txtNombre_Enter;
             txtNombre.Leave += txtNombre_Leave;
@@ -193,10 +185,9 @@
             txtCodigo.BackColor = Color.FromArgb(221, 233, 218);
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
             txtCodigo.ForeColor = Color.FromArgb(149, 156, 146);
-            txtCodigo.Location = new Point(19, 33);
-            txtCodigo.Margin = new Padding(3, 2, 3, 2);
+            txtCodigo.Location = new Point(22, 44);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(110, 23);
+            txtCodigo.Size = new Size(125, 27);
             txtCodigo.TabIndex = 20;
             txtCodigo.Enter += txtCodigo_Enter;
             txtCodigo.Leave += txtCodigo_Leave;
@@ -205,10 +196,9 @@
             // 
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnCancelar.Location = new Point(170, 74);
-            btnCancelar.Margin = new Padding(3, 2, 3, 2);
+            btnCancelar.Location = new Point(194, 99);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(82, 22);
+            btnCancelar.Size = new Size(94, 29);
             btnCancelar.TabIndex = 19;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -217,41 +207,41 @@
             // 
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnBuscar.Location = new Point(46, 74);
-            btnBuscar.Margin = new Padding(3, 2, 3, 2);
+            btnBuscar.Location = new Point(53, 99);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(82, 22);
+            btnBuscar.Size = new Size(94, 29);
             btnBuscar.TabIndex = 18;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             // 
             // dgvProducto
             // 
+            dgvProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvProducto.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvProducto.BackgroundColor = Color.FromArgb(235, 238, 245);
             dgvProducto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducto.Location = new Point(11, 111);
-            dgvProducto.Margin = new Padding(3, 2, 3, 2);
+            dgvProducto.Location = new Point(13, 148);
             dgvProducto.Name = "dgvProducto";
             dgvProducto.RowHeadersWidth = 51;
             dgvProducto.RowTemplate.Height = 29;
-            dgvProducto.Size = new Size(319, 100);
+            dgvProducto.Size = new Size(365, 133);
             dgvProducto.TabIndex = 17;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(818, 60);
+            label4.Location = new Point(935, 80);
             label4.Name = "label4";
-            label4.Size = new Size(36, 15);
+            label4.Size = new Size(45, 20);
             label4.TabIndex = 7;
             label4.Text = "Hora:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(814, 35);
+            label3.Location = new Point(930, 47);
             label3.Name = "label3";
-            label3.Size = new Size(41, 15);
+            label3.Size = new Size(50, 20);
             label3.TabIndex = 2;
             label3.Text = "Fecha:";
             // 
@@ -259,33 +249,32 @@
             // 
             dateTimePicker1.CalendarMonthBackground = Color.YellowGreen;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(869, 30);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Location = new Point(993, 40);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(92, 23);
+            dateTimePicker1.Size = new Size(105, 27);
             dateTimePicker1.TabIndex = 1;
             // 
             // textBox1
             // 
             textBox1.BackColor = Color.FromArgb(221, 233, 218);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(869, 55);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Location = new Point(993, 73);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(91, 23);
+            textBox1.Size = new Size(104, 27);
             textBox1.TabIndex = 0;
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = Color.FromArgb(235, 238, 245);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(13, 20);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(15, 27);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(767, 232);
+            dataGridView1.Size = new Size(877, 309);
             dataGridView1.TabIndex = 5;
             // 
             // groupBox2
@@ -300,11 +289,9 @@
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(txtSubTotal);
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(19, 334);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.Location = new Point(22, 445);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(965, 263);
+            groupBox2.Size = new Size(1103, 351);
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Detalle";
@@ -313,30 +300,27 @@
             // 
             textBox7.BackColor = Color.FromArgb(221, 233, 218);
             textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(814, 129);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
+            textBox7.Location = new Point(930, 172);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(93, 23);
+            textBox7.Size = new Size(106, 27);
             textBox7.TabIndex = 16;
             // 
             // textBox6
             // 
             textBox6.BackColor = Color.FromArgb(221, 233, 218);
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(814, 92);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
+            textBox6.Location = new Point(930, 123);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(93, 23);
+            textBox6.Size = new Size(106, 27);
             textBox6.TabIndex = 15;
             // 
             // btnImprimir
             // 
             btnImprimir.FlatStyle = FlatStyle.Flat;
             btnImprimir.ForeColor = Color.FromArgb(26, 138, 94);
-            btnImprimir.Location = new Point(786, 230);
-            btnImprimir.Margin = new Padding(3, 2, 3, 2);
+            btnImprimir.Location = new Point(898, 307);
             btnImprimir.Name = "btnImprimir";
-            btnImprimir.Size = new Size(174, 22);
+            btnImprimir.Size = new Size(199, 29);
             btnImprimir.TabIndex = 14;
             btnImprimir.Text = "Imprimir";
             btnImprimir.UseVisualStyleBackColor = true;
@@ -347,10 +331,9 @@
             // 
             btnAnular.FlatStyle = FlatStyle.Flat;
             btnAnular.ForeColor = Color.Red;
-            btnAnular.Location = new Point(878, 203);
-            btnAnular.Margin = new Padding(3, 2, 3, 2);
+            btnAnular.Location = new Point(1003, 271);
             btnAnular.Name = "btnAnular";
-            btnAnular.Size = new Size(82, 22);
+            btnAnular.Size = new Size(94, 29);
             btnAnular.TabIndex = 13;
             btnAnular.Text = "Anular";
             btnAnular.UseVisualStyleBackColor = true;
@@ -361,10 +344,9 @@
             // 
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnGuardar.Location = new Point(786, 203);
-            btnGuardar.Margin = new Padding(3, 2, 3, 2);
+            btnGuardar.Location = new Point(898, 271);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(82, 22);
+            btnGuardar.Size = new Size(94, 29);
             btnGuardar.TabIndex = 12;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -374,27 +356,27 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(858, 75);
+            label7.Location = new Point(981, 100);
             label7.Name = "label7";
-            label7.Size = new Size(43, 15);
+            label7.Size = new Size(53, 20);
             label7.TabIndex = 7;
             label7.Text = "Monto";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(868, 112);
+            label6.Location = new Point(992, 149);
             label6.Name = "label6";
-            label6.Size = new Size(32, 15);
+            label6.Size = new Size(42, 20);
             label6.TabIndex = 10;
             label6.Text = "Total";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(844, 35);
+            label5.Location = new Point(965, 47);
             label5.Name = "label5";
-            label5.Size = new Size(55, 15);
+            label5.Size = new Size(71, 20);
             label5.TabIndex = 8;
             label5.Text = "Sub Total";
             // 
@@ -402,25 +384,23 @@
             // 
             txtSubTotal.BackColor = Color.FromArgb(221, 233, 218);
             txtSubTotal.BorderStyle = BorderStyle.FixedSingle;
-            txtSubTotal.Location = new Point(816, 52);
-            txtSubTotal.Margin = new Padding(3, 2, 3, 2);
+            txtSubTotal.Location = new Point(933, 69);
             txtSubTotal.Name = "txtSubTotal";
-            txtSubTotal.Size = new Size(91, 23);
+            txtSubTotal.Size = new Size(104, 27);
             txtSubTotal.TabIndex = 6;
             // 
             // FormVenta
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(995, 591);
+            ClientSize = new Size(1137, 788);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(txtVendedor);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormVenta";
             Text = "FormVenta";
             groupBox1.ResumeLayout(false);

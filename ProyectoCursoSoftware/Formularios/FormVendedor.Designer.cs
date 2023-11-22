@@ -110,6 +110,8 @@
             // dgvDatos
             // 
             dgvDatos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvDatos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDatos.Location = new Point(11, 215);
             dgvDatos.Name = "dgvDatos";
