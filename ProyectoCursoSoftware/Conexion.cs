@@ -30,31 +30,35 @@ namespace ProyectoCursoSoftware
                                     END AS UserRole";
                 using (SqlCommand command = new SqlCommand(query, connect))
                 {
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        string userRole = reader["UserRole"].ToString();
+                        if (reader.Read())
+                        {
+                            string userRole = reader["UserRole"].ToString();
 
-                        if (userRole == "dbcreator")
-                        {
-                            // Abrir el formulario para dbcreator
-                            rol = "dbcreator";
-                        }
-                        else if (userRole == "sysadmin")
-                        {
-                            // Abrir el formulario para sysadmin
-                            rol = "sysadmin";
+                            if (userRole == "dbcreator")
+                            {
+                                // Abrir el formulario para dbcreator
+                                rol = "dbcreator";
+                            }
+                            else if (userRole == "sysadmin")
+                            {
+                                // Abrir el formulario para sysadmin
+                                rol = "sysadmin";
+                            }
+                            else
+                            {
+                                MessageBox.Show("No tienes roles específicos asignados.");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No tienes roles específicos asignados.");
+                            MessageBox.Show("Error al verificar roles.");
                         }
+
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al verificar roles.");
-                    }
+
+                        
                 }
             }
             catch (Exception)
