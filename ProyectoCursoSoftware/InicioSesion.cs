@@ -27,9 +27,19 @@ namespace ProyectoCursoSoftware
             con = new Conexion(txtUsuario.Text, txtContrasena.Text);
             if (this.con.connect.State == ConnectionState.Open)
             {
-                MenuAdministrador menu = new MenuAdministrador(con);
-                menu.Show();
-                this.Visible = false;
+                if (con.rol == "sysadmin")
+                {
+                    MenuAdministrador menu = new MenuAdministrador(con);
+                    menu.Show();
+                    this.Visible = false;
+                }
+
+                if (con.rol == "dbcreator")
+                {
+                    MenuVendedor menuVendedor = new MenuVendedor();
+                    menuVendedor.Show();
+                    this.Visible = false;
+                }
             }
             else
             {

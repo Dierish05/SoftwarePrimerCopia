@@ -39,7 +39,7 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text == "" || txtCodigo.Text == "" || txtDescripcion.Text == ""
-                || cmbCategoria.Text == "" || txtProveedor.Text == "")
+                || cmbCategoria.Text == "" )
             {
                 MessageBox.Show("Campos incompletos! Porfavor complete todos los campos e intentelo nuevamente");
             }
