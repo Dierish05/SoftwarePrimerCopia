@@ -70,18 +70,18 @@
             // 
             // btnRegresar
             // 
-            btnRegresar.Location = new Point(179, 371);
+            btnRegresar.Location = new Point(173, 371);
             btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(94, 29);
+            btnRegresar.Size = new Size(119, 41);
             btnRegresar.TabIndex = 75;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(42, 371);
+            btnGuardar.Location = new Point(35, 371);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.Size = new Size(119, 41);
             btnGuardar.TabIndex = 74;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.BackColor = Color.Teal;
-            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, -3);
             label1.Name = "label1";
@@ -189,6 +189,7 @@
             Controls.Add(label2);
             Controls.Add(txtCodigo);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormProducto_01";
             Text = "FormProducto_01";
             ResumeLayout(false);

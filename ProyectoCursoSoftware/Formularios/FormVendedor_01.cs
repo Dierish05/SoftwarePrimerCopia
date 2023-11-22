@@ -136,10 +136,11 @@ namespace ProyectoCursoSoftware.Formularios
 
         private char DeterminarSexo()
         {
-            if(rbtnFemenino.Checked == true)
+            if (rbtnFemenino.Checked == true)
             {
                 return 'F';
-            } else if(rbtnMasculino.Checked == true)
+            }
+            else if (rbtnMasculino.Checked == true)
             {
                 return 'M';
             }
@@ -156,7 +157,8 @@ namespace ProyectoCursoSoftware.Formularios
 
                 MessageBox.Show("Datos incompletos! porfavor complete los datos e intentelo nuevamente");
 
-            } else if(rbtnFemenino.Checked == false && rbtnMasculino.Checked == false)
+            }
+            else if (rbtnFemenino.Checked == false && rbtnMasculino.Checked == false)
             {
                 MessageBox.Show("Debe seleccionar un genero");
             }
@@ -167,7 +169,7 @@ namespace ProyectoCursoSoftware.Formularios
                 vm.CrearVendedor(txtNombres.Text, txtApellidos.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text);
                 this.Close();
             }
-            
+
 
         }
     }

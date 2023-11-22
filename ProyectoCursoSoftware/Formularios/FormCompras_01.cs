@@ -43,7 +43,7 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 MessageBox.Show("Campos vacios, porfavor introduzca un dato valido!");
             }
-            else 
+            else
             {
                 //Metodo de guardar compra
             }

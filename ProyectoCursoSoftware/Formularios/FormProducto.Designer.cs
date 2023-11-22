@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducto));
             btnSalir = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
@@ -38,10 +39,10 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            comboBox1 = new ComboBox();
             cmbCategoria = new ComboBox();
             label4 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -50,9 +51,9 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSalir.Location = new Point(1025, 523);
+            btnSalir.Location = new Point(1006, 511);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(94, 29);
+            btnSalir.Size = new Size(119, 41);
             btnSalir.TabIndex = 22;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -60,9 +61,9 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEliminar.Location = new Point(1025, 467);
+            btnEliminar.Location = new Point(1006, 455);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.Size = new Size(119, 41);
             btnEliminar.TabIndex = 21;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -70,9 +71,9 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEditar.Location = new Point(1025, 408);
+            btnEditar.Location = new Point(1006, 396);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(94, 29);
+            btnEditar.Size = new Size(119, 41);
             btnEditar.TabIndex = 20;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -80,9 +81,9 @@
             // btnAgregar
             // 
             btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnAgregar.Location = new Point(1025, 355);
+            btnAgregar.Location = new Point(1006, 343);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.Size = new Size(119, 41);
             btnAgregar.TabIndex = 19;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -96,7 +97,7 @@
             dgvDatos.Name = "dgvDatos";
             dgvDatos.RowHeadersWidth = 51;
             dgvDatos.RowTemplate.Height = 29;
-            dgvDatos.Size = new Size(991, 337);
+            dgvDatos.Size = new Size(965, 337);
             dgvDatos.TabIndex = 18;
             // 
             // groupBox1
@@ -130,7 +131,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.BackColor = Color.Teal;
-            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
@@ -151,6 +152,14 @@
             groupBox2.TabIndex = 24;
             groupBox2.TabStop = false;
             groupBox2.Text = "Filtrar";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(107, 19);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(193, 28);
+            comboBox1.TabIndex = 5;
             // 
             // cmbCategoria
             // 
@@ -178,14 +187,6 @@
             label3.TabIndex = 0;
             label3.Text = "Precio:";
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(107, 19);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(193, 28);
-            comboBox1.TabIndex = 5;
-            // 
             // FormProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -201,7 +202,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormProducto";
-            Text = "FormProducto";
+            Text = resources.GetString("$this.Text");
             ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

@@ -42,66 +42,66 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.Teal;
+            menuStrip1.BackColor = Color.DarkSlateGray;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, reportesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
-            menuStrip1.Size = new Size(1160, 38);
+            menuStrip1.Size = new Size(1160, 34);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             inicioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vendedorToolStripMenuItem, productoToolStripMenuItem, compraToolStripMenuItem, proveedorToolStripMenuItem, ventaToolStripMenuItem });
-            inicioToolStripMenuItem.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            inicioToolStripMenuItem.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
             inicioToolStripMenuItem.ForeColor = Color.White;
             inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            inicioToolStripMenuItem.Size = new Size(81, 32);
+            inicioToolStripMenuItem.Size = new Size(65, 28);
             inicioToolStripMenuItem.Text = "Inicio";
             // 
             // vendedorToolStripMenuItem
             // 
             vendedorToolStripMenuItem.Name = "vendedorToolStripMenuItem";
-            vendedorToolStripMenuItem.Size = new Size(224, 32);
+            vendedorToolStripMenuItem.Size = new Size(202, 32);
             vendedorToolStripMenuItem.Text = "Vendedor";
             vendedorToolStripMenuItem.Click += vendedorToolStripMenuItem_Click;
             // 
             // productoToolStripMenuItem
             // 
             productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            productoToolStripMenuItem.Size = new Size(224, 32);
+            productoToolStripMenuItem.Size = new Size(202, 32);
             productoToolStripMenuItem.Text = "Producto";
             productoToolStripMenuItem.Click += productoToolStripMenuItem_Click;
             // 
             // compraToolStripMenuItem
             // 
             compraToolStripMenuItem.Name = "compraToolStripMenuItem";
-            compraToolStripMenuItem.Size = new Size(224, 32);
+            compraToolStripMenuItem.Size = new Size(202, 32);
             compraToolStripMenuItem.Text = "Compra";
             compraToolStripMenuItem.Click += compraToolStripMenuItem_Click;
             // 
             // proveedorToolStripMenuItem
             // 
             proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            proveedorToolStripMenuItem.Size = new Size(224, 32);
+            proveedorToolStripMenuItem.Size = new Size(202, 32);
             proveedorToolStripMenuItem.Text = "Proveedor";
             proveedorToolStripMenuItem.Click += proveedorToolStripMenuItem_Click;
             // 
             // ventaToolStripMenuItem
             // 
             ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            ventaToolStripMenuItem.Size = new Size(224, 32);
+            ventaToolStripMenuItem.Size = new Size(202, 32);
             ventaToolStripMenuItem.Text = "Venta";
             ventaToolStripMenuItem.Click += ventaToolStripMenuItem_Click;
             // 
             // reportesToolStripMenuItem
             // 
-            reportesToolStripMenuItem.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            reportesToolStripMenuItem.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
             reportesToolStripMenuItem.ForeColor = Color.White;
             reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            reportesToolStripMenuItem.Size = new Size(115, 32);
+            reportesToolStripMenuItem.Size = new Size(94, 28);
             reportesToolStripMenuItem.Text = "Reportes";
             // 
             // PanelContenedor
@@ -119,6 +119,7 @@
             ClientSize = new Size(1160, 677);
             Controls.Add(PanelContenedor);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "MenuAdministrador";
             Text = "MenuAdministrador";

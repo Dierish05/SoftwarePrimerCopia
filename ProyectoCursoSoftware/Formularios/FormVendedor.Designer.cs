@@ -47,7 +47,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.BackColor = Color.Teal;
-            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(-5, 0);
             label1.Name = "label1";
@@ -111,15 +111,15 @@
             dgvDatos.Name = "dgvDatos";
             dgvDatos.RowHeadersWidth = 51;
             dgvDatos.RowTemplate.Height = 29;
-            dgvDatos.Size = new Size(991, 337);
+            dgvDatos.Size = new Size(965, 337);
             dgvDatos.TabIndex = 2;
             // 
             // btnAgregar
             // 
             btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnAgregar.Location = new Point(1021, 355);
+            btnAgregar.Location = new Point(996, 343);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.Size = new Size(119, 41);
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEditar.Location = new Point(1021, 408);
+            btnEditar.Location = new Point(996, 396);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(94, 29);
+            btnEditar.Size = new Size(119, 41);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -138,9 +138,9 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEliminar.Location = new Point(1021, 467);
+            btnEliminar.Location = new Point(996, 455);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
+            btnEliminar.Size = new Size(119, 41);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -148,9 +148,9 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSalir.Location = new Point(1021, 523);
+            btnSalir.Location = new Point(996, 511);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(94, 29);
+            btnSalir.Size = new Size(119, 41);
             btnSalir.TabIndex = 6;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
