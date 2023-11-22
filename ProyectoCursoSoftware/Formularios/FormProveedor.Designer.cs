@@ -44,16 +44,21 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSalir.BackColor = Color.WhiteSmoke;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.ForeColor = Color.FromArgb(26, 138, 94);
             btnSalir.Location = new Point(1006, 509);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(119, 41);
             btnSalir.TabIndex = 14;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.ForeColor = Color.FromArgb(26, 138, 94);
             btnEliminar.Location = new Point(1006, 451);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(119, 41);
@@ -64,6 +69,8 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = Color.FromArgb(26, 138, 94);
             btnEditar.Location = new Point(1006, 393);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(119, 41);
@@ -74,6 +81,8 @@
             // btnAgregar
             // 
             btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.ForeColor = Color.FromArgb(26, 138, 94);
             btnAgregar.Location = new Point(1006, 341);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(119, 41);
@@ -106,6 +115,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.FromArgb(221, 233, 218);
             textBox1.Location = new Point(89, 27);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(193, 27);

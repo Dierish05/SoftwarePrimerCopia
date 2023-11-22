@@ -37,6 +37,8 @@
             // 
             // btnRegresar
             // 
+            btnRegresar.FlatStyle = FlatStyle.Flat;
+            btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
             btnRegresar.Location = new Point(169, 371);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
@@ -46,6 +48,8 @@
             // 
             // btnGuardar
             // 
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
             btnGuardar.Location = new Point(26, 371);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
@@ -65,6 +69,7 @@
             // 
             // txtNombre
             // 
+            txtNombre.BackColor = Color.FromArgb(221, 233, 218);
             txtNombre.Location = new Point(94, 45);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(214, 27);
@@ -89,6 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(322, 427);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);

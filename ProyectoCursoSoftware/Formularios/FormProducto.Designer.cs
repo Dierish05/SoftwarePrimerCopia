@@ -51,6 +51,8 @@
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.ForeColor = Color.FromArgb(26, 138, 94);
             btnSalir.Location = new Point(1006, 511);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(119, 41);
@@ -61,6 +63,8 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.ForeColor = Color.FromArgb(26, 138, 94);
             btnEliminar.Location = new Point(1006, 455);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(119, 41);
@@ -71,6 +75,8 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = Color.FromArgb(26, 138, 94);
             btnEditar.Location = new Point(1006, 396);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(119, 41);
@@ -81,6 +87,8 @@
             // btnAgregar
             // 
             btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.ForeColor = Color.FromArgb(26, 138, 94);
             btnAgregar.Location = new Point(1006, 343);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(119, 41);
@@ -113,6 +121,8 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.FromArgb(221, 233, 218);
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Location = new Point(89, 27);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(193, 27);
@@ -155,6 +165,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = Color.FromArgb(221, 233, 218);
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(107, 19);
             comboBox1.Name = "comboBox1";
@@ -163,6 +174,7 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.BackColor = Color.FromArgb(221, 233, 218);
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Location = new Point(107, 64);
             cmbCategoria.Name = "cmbCategoria";
@@ -191,6 +203,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1137, 595);
             Controls.Add(groupBox2);
             Controls.Add(btnSalir);

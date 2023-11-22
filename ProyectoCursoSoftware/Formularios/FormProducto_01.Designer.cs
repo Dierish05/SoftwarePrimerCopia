@@ -46,6 +46,7 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.BackColor = Color.FromArgb(221, 233, 218);
             cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Location = new Point(93, 195);
@@ -55,6 +56,8 @@
             // 
             // txtDescripcion
             // 
+            txtDescripcion.BackColor = Color.FromArgb(221, 233, 218);
+            txtDescripcion.BorderStyle = BorderStyle.FixedSingle;
             txtDescripcion.Location = new Point(93, 117);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(214, 27);
@@ -62,6 +65,8 @@
             // 
             // txtNombre
             // 
+            txtNombre.BackColor = Color.FromArgb(221, 233, 218);
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Location = new Point(96, 77);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(214, 27);
@@ -70,6 +75,8 @@
             // 
             // btnRegresar
             // 
+            btnRegresar.FlatStyle = FlatStyle.Flat;
+            btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
             btnRegresar.Location = new Point(173, 371);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
@@ -79,6 +86,8 @@
             // 
             // btnGuardar
             // 
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
             btnGuardar.Location = new Point(35, 371);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
@@ -134,6 +143,8 @@
             // 
             // txtCodigo
             // 
+            txtCodigo.BackColor = Color.FromArgb(221, 233, 218);
+            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
             txtCodigo.Location = new Point(96, 39);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(214, 27);
@@ -163,6 +174,8 @@
             // 
             // btnSeleccionar
             // 
+            btnSeleccionar.FlatStyle = FlatStyle.Flat;
+            btnSeleccionar.ForeColor = Color.FromArgb(26, 138, 94);
             btnSeleccionar.Location = new Point(213, 160);
             btnSeleccionar.Name = "btnSeleccionar";
             btnSeleccionar.Size = new Size(94, 29);
@@ -174,6 +187,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(322, 427);
             Controls.Add(btnSeleccionar);
             Controls.Add(txtProveedor);

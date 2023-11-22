@@ -33,7 +33,8 @@
             btnSeleccionar = new Button();
             btnCancelar = new Button();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
+            label2 = new Label();
+            txtNombre = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -63,6 +64,8 @@
             // 
             // btnSeleccionar
             // 
+            btnSeleccionar.FlatStyle = FlatStyle.Flat;
+            btnSeleccionar.ForeColor = Color.FromArgb(26, 138, 94);
             btnSeleccionar.Location = new Point(12, 374);
             btnSeleccionar.Name = "btnSeleccionar";
             btnSeleccionar.Size = new Size(119, 41);
@@ -72,6 +75,8 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.ForeColor = Color.FromArgb(26, 138, 94);
             btnCancelar.Location = new Point(143, 373);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(119, 41);
@@ -81,25 +86,37 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtNombre);
             groupBox1.Location = new Point(12, 34);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(250, 70);
+            groupBox1.Size = new Size(284, 70);
             groupBox1.TabIndex = 71;
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar";
             // 
-            // textBox1
+            // label2
             // 
-            textBox1.Location = new Point(6, 26);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(222, 27);
-            textBox1.TabIndex = 0;
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Nombre:";
+            // 
+            // txtNombre
+            // 
+            txtNombre.BackColor = Color.FromArgb(221, 233, 218);
+            txtNombre.Location = new Point(79, 26);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(193, 27);
+            txtNombre.TabIndex = 0;
             // 
             // FormProducto_02
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(662, 427);
             Controls.Add(groupBox1);
             Controls.Add(btnCancelar);
@@ -122,6 +139,7 @@
         private Button btnSeleccionar;
         private Button btnCancelar;
         private GroupBox groupBox1;
-        private TextBox textBox1;
+        private TextBox txtNombre;
+        private Label label2;
     }
 }

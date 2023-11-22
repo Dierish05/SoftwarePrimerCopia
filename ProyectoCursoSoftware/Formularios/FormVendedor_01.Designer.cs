@@ -65,6 +65,8 @@
             // 
             // txtNombres
             // 
+            txtNombres.BackColor = Color.FromArgb(221, 233, 218);
+            txtNombres.BorderStyle = BorderStyle.FixedSingle;
             txtNombres.Location = new Point(96, 39);
             txtNombres.Name = "txtNombres";
             txtNombres.Size = new Size(214, 27);
@@ -145,6 +147,8 @@
             // 
             // btnGuardar
             // 
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
             btnGuardar.Location = new Point(30, 371);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
@@ -155,6 +159,8 @@
             // 
             // btnRegresar
             // 
+            btnRegresar.FlatStyle = FlatStyle.Flat;
+            btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
             btnRegresar.Location = new Point(169, 371);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
@@ -186,6 +192,8 @@
             // 
             // txtApellidos
             // 
+            txtApellidos.BackColor = Color.FromArgb(221, 233, 218);
+            txtApellidos.BorderStyle = BorderStyle.FixedSingle;
             txtApellidos.Location = new Point(96, 77);
             txtApellidos.Name = "txtApellidos";
             txtApellidos.Size = new Size(214, 27);
@@ -194,6 +202,8 @@
             // 
             // txtDireccion
             // 
+            txtDireccion.BackColor = Color.FromArgb(221, 233, 218);
+            txtDireccion.BorderStyle = BorderStyle.FixedSingle;
             txtDireccion.Location = new Point(93, 117);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(214, 27);
@@ -201,6 +211,8 @@
             // 
             // txtTelefono
             // 
+            txtTelefono.BackColor = Color.FromArgb(221, 233, 218);
+            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
             txtTelefono.Location = new Point(93, 153);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(214, 27);
@@ -209,6 +221,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.BackColor = Color.FromArgb(221, 233, 218);
             txtEmail.Location = new Point(93, 216);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(214, 27);
@@ -216,6 +229,7 @@
             // 
             // txtCedula
             // 
+            txtCedula.BackColor = Color.FromArgb(221, 233, 218);
             txtCedula.Location = new Point(93, 251);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(214, 27);
@@ -224,6 +238,7 @@
             // 
             // cmbMunicipio
             // 
+            cmbMunicipio.BackColor = Color.FromArgb(221, 233, 218);
             cmbMunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbMunicipio.FormattingEnabled = true;
             cmbMunicipio.Items.AddRange(new object[] { "Managua", "Esteli", "Leon", "Granada", "Masaya" });
@@ -236,6 +251,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(322, 427);
             Controls.Add(cmbMunicipio);
             Controls.Add(txtCedula);

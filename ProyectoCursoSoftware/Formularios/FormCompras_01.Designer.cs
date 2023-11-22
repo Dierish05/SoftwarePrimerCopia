@@ -43,6 +43,8 @@
             // 
             // txtCodProducto
             // 
+            txtCodProducto.BackColor = Color.FromArgb(221, 233, 218);
+            txtCodProducto.BorderStyle = BorderStyle.FixedSingle;
             txtCodProducto.Location = new Point(160, 64);
             txtCodProducto.Name = "txtCodProducto";
             txtCodProducto.Size = new Size(137, 27);
@@ -51,6 +53,8 @@
             // 
             // btnRegresar
             // 
+            btnRegresar.FlatStyle = FlatStyle.Flat;
+            btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
             btnRegresar.Location = new Point(173, 359);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
@@ -60,12 +64,15 @@
             // 
             // btnGuardar
             // 
+            btnGuardar.BackColor = SystemColors.Control;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
             btnGuardar.Location = new Point(41, 359);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
             btnGuardar.TabIndex = 42;
             btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // label7
@@ -110,6 +117,7 @@
             // 
             // numericUpDown1
             // 
+            numericUpDown1.BackColor = Color.FromArgb(221, 233, 218);
             numericUpDown1.DecimalPlaces = 2;
             numericUpDown1.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
             numericUpDown1.Location = new Point(160, 103);
@@ -124,6 +132,8 @@
             // 
             // nUpdownCantidad
             // 
+            nUpdownCantidad.BackColor = Color.FromArgb(221, 233, 218);
+            nUpdownCantidad.BorderStyle = BorderStyle.FixedSingle;
             nUpdownCantidad.Location = new Point(160, 141);
             nUpdownCantidad.Margin = new Padding(3, 4, 3, 4);
             nUpdownCantidad.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
@@ -137,6 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(322, 427);
             Controls.Add(nUpdownCantidad);
             Controls.Add(numericUpDown1);
