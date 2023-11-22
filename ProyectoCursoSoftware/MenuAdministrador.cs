@@ -38,7 +38,7 @@ namespace ProyectoCursoSoftware
 
         private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FormVendedor());
+            AbrirFormhijo(new FormVendedor(con));
         }
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,12 +48,12 @@ namespace ProyectoCursoSoftware
 
         private void compraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FormCompras());
+            AbrirFormhijo(new FormCompras(con));
         }
 
         private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FormProveedor());
+            AbrirFormhijo(new FormProveedor(con));
         }
     }
 }
