@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCursoSoftware.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace ProyectoCursoSoftware.Formularios
 {
     public partial class FormVenta : Form
     {
-        public FormVenta()
+        private Conexion con;
+        private InventarioModel im;
+        public FormVenta(Conexion Con)
         {
+            this.con = Con;
+            im = new InventarioModel(con);
             InitializeComponent();
+            listar();
         }
 
         private void btnGuardar_MouseEnter(object sender, EventArgs e)
@@ -72,6 +78,11 @@ namespace ProyectoCursoSoftware.Formularios
         private void txtNombre_Leave(object sender, EventArgs e)
         {
             txtCodigo.ForeColor = Color.FromArgb(149, 156, 146);
+        }
+
+        private void listar()
+        {
+            im.listarInventario(dgvProducto);
         }
     }
 }
