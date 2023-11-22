@@ -37,20 +37,18 @@
             // 
             // btnRegresar
             // 
-            btnRegresar.Location = new Point(157, 278);
-            btnRegresar.Margin = new Padding(3, 2, 3, 2);
+            btnRegresar.Location = new Point(169, 371);
             btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(82, 22);
+            btnRegresar.Size = new Size(119, 41);
             btnRegresar.TabIndex = 43;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(37, 278);
-            btnGuardar.Margin = new Padding(3, 2, 3, 2);
+            btnGuardar.Location = new Point(26, 371);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(82, 22);
+            btnGuardar.Size = new Size(119, 41);
             btnGuardar.TabIndex = 42;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -59,18 +57,17 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(10, 34);
+            label2.Location = new Point(11, 45);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(67, 20);
             label2.TabIndex = 33;
             label2.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(82, 34);
-            txtNombre.Margin = new Padding(3, 2, 3, 2);
+            txtNombre.Location = new Point(94, 45);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(188, 23);
+            txtNombre.Size = new Size(214, 27);
             txtNombre.TabIndex = 32;
             txtNombre.TextChanged += txtNombre_TextChanged;
             txtNombre.KeyDown += txtNombre_KeyDown;
@@ -79,26 +76,26 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.BackColor = Color.Teal;
-            label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(0, -2);
+            label1.Location = new Point(0, -3);
             label1.Name = "label1";
-            label1.Size = new Size(280, 23);
+            label1.Size = new Size(323, 31);
             label1.TabIndex = 31;
             label1.Text = "REGISTRO / ACTUALIZACION";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormProveedores_01
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(282, 320);
+            ClientSize = new Size(322, 427);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);
             Controls.Add(label2);
             Controls.Add(txtNombre);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormProveedores_01";
             Text = "FormProveedores_01";
             Load += FormProveedores_01_Load;
