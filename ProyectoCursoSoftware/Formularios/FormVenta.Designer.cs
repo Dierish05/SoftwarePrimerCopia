@@ -130,6 +130,8 @@
             // 
             // btnEliminarProd
             // 
+            btnEliminarProd.FlatStyle = FlatStyle.Flat;
+            btnEliminarProd.ForeColor = Color.FromArgb(26, 138, 94);
             btnEliminarProd.Location = new Point(400, 252);
             btnEliminarProd.Name = "btnEliminarProd";
             btnEliminarProd.Size = new Size(137, 29);
@@ -139,6 +141,8 @@
             // 
             // btnAgregarProd
             // 
+            btnAgregarProd.FlatStyle = FlatStyle.Flat;
+            btnAgregarProd.ForeColor = Color.FromArgb(26, 138, 94);
             btnAgregarProd.Location = new Point(400, 207);
             btnAgregarProd.Name = "btnAgregarProd";
             btnAgregarProd.Size = new Size(137, 29);
@@ -190,6 +194,8 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.ForeColor = Color.FromArgb(26, 138, 94);
             btnCancelar.Location = new Point(194, 99);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
@@ -199,6 +205,8 @@
             // 
             // btnBuscar
             // 
+            btnBuscar.FlatStyle = FlatStyle.Flat;
+            btnBuscar.ForeColor = Color.FromArgb(26, 138, 94);
             btnBuscar.Location = new Point(53, 99);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(94, 29);
