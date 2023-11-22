@@ -176,12 +176,13 @@
             // 
             btnSeleccionar.FlatStyle = FlatStyle.Flat;
             btnSeleccionar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnSeleccionar.Location = new Point(213, 160);
+            btnSeleccionar.Location = new Point(200, 160);
             btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.Size = new Size(94, 29);
+            btnSeleccionar.Size = new Size(107, 29);
             btnSeleccionar.TabIndex = 80;
             btnSeleccionar.Text = "Seleccionar";
             btnSeleccionar.UseVisualStyleBackColor = true;
+            btnSeleccionar.Click += btnSeleccionar_Click;
             // 
             // FormProducto_01
             // 

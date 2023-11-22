@@ -99,10 +99,6 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(groupBox3);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(textBox1);
             groupBox1.Location = new Point(22, 121);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(1103, 317);
@@ -113,9 +109,9 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(btnEliminarProd);
-            groupBox3.Controls.Add(btnAgregarProd);
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(label8);
+            groupBox3.Controls.Add(btnAgregarProd);
             groupBox3.Controls.Add(txtNombre);
             groupBox3.Controls.Add(txtCodigo);
             groupBox3.Controls.Add(btnCancelar);
@@ -123,7 +119,7 @@
             groupBox3.Controls.Add(dgvProducto);
             groupBox3.Location = new Point(6, 29);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(645, 285);
+            groupBox3.Size = new Size(1091, 285);
             groupBox3.TabIndex = 17;
             groupBox3.TabStop = false;
             groupBox3.Text = "Buscar Producto";
@@ -132,7 +128,7 @@
             // 
             btnEliminarProd.FlatStyle = FlatStyle.Flat;
             btnEliminarProd.ForeColor = Color.FromArgb(26, 138, 94);
-            btnEliminarProd.Location = new Point(400, 252);
+            btnEliminarProd.Location = new Point(954, 250);
             btnEliminarProd.Name = "btnEliminarProd";
             btnEliminarProd.Size = new Size(137, 29);
             btnEliminarProd.TabIndex = 25;
@@ -143,7 +139,7 @@
             // 
             btnAgregarProd.FlatStyle = FlatStyle.Flat;
             btnAgregarProd.ForeColor = Color.FromArgb(26, 138, 94);
-            btnAgregarProd.Location = new Point(400, 207);
+            btnAgregarProd.Location = new Point(954, 205);
             btnAgregarProd.Name = "btnAgregarProd";
             btnAgregarProd.Size = new Size(137, 29);
             btnAgregarProd.TabIndex = 24;
@@ -219,18 +215,18 @@
             dgvProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProducto.BackgroundColor = Color.FromArgb(235, 238, 245);
             dgvProducto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducto.Location = new Point(13, 148);
+            dgvProducto.Location = new Point(9, 155);
             dgvProducto.Name = "dgvProducto";
             dgvProducto.ReadOnly = true;
             dgvProducto.RowHeadersWidth = 51;
             dgvProducto.RowTemplate.Height = 29;
-            dgvProducto.Size = new Size(365, 133);
+            dgvProducto.Size = new Size(877, 133);
             dgvProducto.TabIndex = 17;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(935, 80);
+            label4.Location = new Point(957, 100);
             label4.Name = "label4";
             label4.Size = new Size(45, 20);
             label4.TabIndex = 7;
@@ -239,7 +235,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(930, 47);
+            label3.Location = new Point(952, 67);
             label3.Name = "label3";
             label3.Size = new Size(50, 20);
             label3.TabIndex = 2;
@@ -249,7 +245,7 @@
             // 
             dateTimePicker1.CalendarMonthBackground = Color.YellowGreen;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(993, 40);
+            dateTimePicker1.Location = new Point(1015, 60);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(105, 27);
             dateTimePicker1.TabIndex = 1;
@@ -258,7 +254,7 @@
             // 
             textBox1.BackColor = Color.FromArgb(221, 233, 218);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(993, 73);
+            textBox1.Location = new Point(1015, 93);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(104, 27);
@@ -398,13 +394,16 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(txtVendedor);
+            Controls.Add(label4);
             Controls.Add(label2);
+            Controls.Add(label3);
+            Controls.Add(dateTimePicker1);
             Controls.Add(label1);
+            Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVenta";
             Text = "FormVenta";
             groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();

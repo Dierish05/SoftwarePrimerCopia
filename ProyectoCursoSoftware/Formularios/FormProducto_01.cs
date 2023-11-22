@@ -48,5 +48,11 @@ namespace ProyectoCursoSoftware.Formularios
                 //Metodo guardar producto
             }
         }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            FormProducto_02 formProducto_02 = new FormProducto_02();
+            formProducto_02.ShowDialog();
+        }
     }
 }
