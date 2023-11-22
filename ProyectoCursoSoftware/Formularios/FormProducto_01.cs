@@ -12,9 +12,11 @@ namespace ProyectoCursoSoftware.Formularios
 {
     public partial class FormProducto_01 : Form
     {
-        public FormProducto_01()
+        Conexion con;
+        public FormProducto_01(Conexion con)
         {
             InitializeComponent();
+            this.con = con;
             //Hola uwu
         }
 
@@ -51,7 +53,7 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            FormProducto_02 formProducto_02 = new FormProducto_02();
+            FormProducto_02 formProducto_02 = new FormProducto_02(con);
             formProducto_02.ShowDialog();
         }
     }

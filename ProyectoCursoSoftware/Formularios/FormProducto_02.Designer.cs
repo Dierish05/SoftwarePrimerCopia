@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvDatos = new DataGridView();
             label1 = new Label();
             btnSeleccionar = new Button();
             btnCancelar = new Button();
             groupBox1 = new GroupBox();
             label2 = new Label();
             txtNombre = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDatos
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(10, 110);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(640, 257);
-            dataGridView1.TabIndex = 0;
+            dgvDatos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatos.Location = new Point(10, 110);
+            dgvDatos.Name = "dgvDatos";
+            dgvDatos.ReadOnly = true;
+            dgvDatos.RowHeadersWidth = 51;
+            dgvDatos.RowTemplate.Height = 29;
+            dgvDatos.Size = new Size(640, 257);
+            dgvDatos.TabIndex = 0;
             // 
             // label1
             // 
@@ -114,6 +114,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(193, 27);
             txtNombre.TabIndex = 0;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // FormProducto_02
             // 
@@ -125,11 +126,11 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnSeleccionar);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvDatos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormProducto_02";
             Text = "FormProducto_02";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -137,7 +138,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvDatos;
         private Label label1;
         private Button btnSeleccionar;
         private Button btnCancelar;
