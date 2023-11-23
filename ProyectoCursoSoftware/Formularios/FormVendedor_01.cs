@@ -206,13 +206,13 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 MessageBox.Show("Debe seleccionar un genero");
             }
-            else if (!IsValidEmail(txtEmail.Text))
+            else if (IsValidEmail(txtEmail.Text) == false)
             {
                 MessageBox.Show("El correo electrónico no es válido.");
             }
-            else if (!IsValidNicaraguanCedula(txtCedula.Text))
+            else if (IsValidNicaraguanCedula(txtCedula.Text) == false)
             {
-                MessageBox.Show("El correo electrónico no es válido.");
+                MessageBox.Show("La cedula no es válida.");
             }
             else
             {
