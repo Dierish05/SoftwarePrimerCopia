@@ -51,7 +51,7 @@
             dgvDatos.RowHeadersWidth = 51;
             dgvDatos.RowTemplate.Height = 29;
             dgvDatos.Size = new Size(640, 257);
-            dgvDatos.TabIndex = 0;
+            dgvDatos.TabIndex = 4;
             // 
             // label1
             // 
@@ -73,7 +73,7 @@
             btnSeleccionar.Location = new Point(11, 373);
             btnSeleccionar.Name = "btnSeleccionar";
             btnSeleccionar.Size = new Size(119, 41);
-            btnSeleccionar.TabIndex = 69;
+            btnSeleccionar.TabIndex = 2;
             btnSeleccionar.Text = "Seleccionar";
             btnSeleccionar.UseVisualStyleBackColor = true;
             btnSeleccionar.Click += btnSeleccionar_Click;
@@ -85,7 +85,7 @@
             btnCancelar.Location = new Point(143, 373);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(119, 41);
-            btnCancelar.TabIndex = 70;
+            btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -116,7 +116,7 @@
             txtNombre.Location = new Point(79, 27);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(193, 27);
-            txtNombre.TabIndex = 0;
+            txtNombre.TabIndex = 1;
             txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // FormProducto_02

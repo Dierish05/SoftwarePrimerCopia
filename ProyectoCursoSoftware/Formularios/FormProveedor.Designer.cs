@@ -50,7 +50,7 @@
             btnSalir.Location = new Point(1006, 509);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(119, 41);
-            btnSalir.TabIndex = 14;
+            btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
@@ -63,7 +63,7 @@
             btnEliminar.Location = new Point(1006, 451);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(119, 41);
-            btnEliminar.TabIndex = 13;
+            btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
@@ -75,7 +75,7 @@
             btnEditar.Location = new Point(1006, 393);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(119, 41);
-            btnEditar.TabIndex = 12;
+            btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
@@ -87,7 +87,7 @@
             btnAgregar.Location = new Point(1006, 341);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(119, 41);
-            btnAgregar.TabIndex = 11;
+            btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -104,7 +104,7 @@
             dgvDatos.RowHeadersWidth = 51;
             dgvDatos.RowTemplate.Height = 29;
             dgvDatos.Size = new Size(965, 337);
-            dgvDatos.TabIndex = 10;
+            dgvDatos.TabIndex = 6;
             // 
             // groupBox1
             // 

@@ -94,7 +94,7 @@ namespace ProyectoCursoSoftware.Formularios
             }
             else
             {
-                pm.CrearProveedor(txtNombre.Text,txtDireccion.Text,txtTelefono.Text,txtTelefono.Text);
+                pm.CrearProveedor(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtTelefono.Text);
             }
         }
 

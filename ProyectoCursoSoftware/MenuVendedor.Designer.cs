@@ -80,7 +80,6 @@
             ClientSize = new Size(1142, 630);
             Controls.Add(PanelContenedor);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "MenuVendedor";
             Text = "MenuVendedor";
             WindowState = FormWindowState.Maximized;

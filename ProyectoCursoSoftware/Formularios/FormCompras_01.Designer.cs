@@ -49,7 +49,7 @@
             txtProducto.Location = new Point(158, 48);
             txtProducto.Name = "txtProducto";
             txtProducto.Size = new Size(101, 27);
-            txtProducto.TabIndex = 47;
+            txtProducto.TabIndex = 1;
             txtProducto.KeyDown += txtCodProducto_KeyDown;
             // 
             // btnRegresar
@@ -59,7 +59,7 @@
             btnRegresar.Location = new Point(195, 359);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
-            btnRegresar.TabIndex = 43;
+            btnRegresar.TabIndex = 6;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             btnRegresar.Click += btnRegresar_Click;
@@ -72,7 +72,7 @@
             btnGuardar.Location = new Point(63, 359);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
-            btnGuardar.TabIndex = 42;
+            btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
@@ -128,7 +128,7 @@
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(219, 27);
-            numericUpDown1.TabIndex = 50;
+            numericUpDown1.TabIndex = 3;
             numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.KeyDown += numericUpDown1_KeyDown;
             // 
@@ -142,7 +142,7 @@
             nUpdownCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nUpdownCantidad.Name = "nUpdownCantidad";
             nUpdownCantidad.Size = new Size(219, 27);
-            nUpdownCantidad.TabIndex = 51;
+            nUpdownCantidad.TabIndex = 4;
             nUpdownCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // btnSeleccionar
@@ -152,7 +152,7 @@
             btnSeleccionar.Location = new Point(271, 48);
             btnSeleccionar.Name = "btnSeleccionar";
             btnSeleccionar.Size = new Size(107, 29);
-            btnSeleccionar.TabIndex = 52;
+            btnSeleccionar.TabIndex = 2;
             btnSeleccionar.Text = "Seleccionar";
             btnSeleccionar.UseVisualStyleBackColor = true;
             btnSeleccionar.Click += btnSeleccionar_Click;

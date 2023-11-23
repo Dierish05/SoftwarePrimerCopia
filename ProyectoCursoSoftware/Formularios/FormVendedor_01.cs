@@ -209,7 +209,7 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 int muni = DeterminarMunicipio(cmbMunicipio.SelectedItem.ToString());
                 char sexo = DeterminarSexo();
-                vm.CrearVendedor(txtPrimerNombre.Text, txtSegundoNombre.Text,txtPrimerApellido.Text,txtSegundoApellido.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text,txtUsuario.Text);
+                vm.CrearVendedor(txtPrimerNombre.Text, txtSegundoNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text, txtUsuario.Text);
                 vm.CrearLoginVendedor(txtUsuario.Text, txtContraseña.Text);
                 this.Close();
             }

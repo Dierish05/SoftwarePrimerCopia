@@ -78,7 +78,7 @@
             txtPrimerNombre.Location = new Point(145, 38);
             txtPrimerNombre.Name = "txtPrimerNombre";
             txtPrimerNombre.Size = new Size(214, 27);
-            txtPrimerNombre.TabIndex = 10;
+            txtPrimerNombre.TabIndex = 1;
             txtPrimerNombre.KeyDown += txtNombres_KeyDown;
             // 
             // label2
@@ -106,7 +106,7 @@
             btnGuardar.Location = new Point(55, 456);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
-            btnGuardar.TabIndex = 20;
+            btnGuardar.TabIndex = 14;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -118,7 +118,7 @@
             btnRegresar.Location = new Point(194, 456);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
-            btnRegresar.TabIndex = 21;
+            btnRegresar.TabIndex = 15;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             btnRegresar.Click += btnRegresar_Click;
@@ -130,7 +130,7 @@
             txtSegundoNombre.Location = new Point(145, 71);
             txtSegundoNombre.Name = "txtSegundoNombre";
             txtSegundoNombre.Size = new Size(214, 27);
-            txtSegundoNombre.TabIndex = 24;
+            txtSegundoNombre.TabIndex = 2;
             txtSegundoNombre.KeyDown += txtApellidos_KeyDown;
             // 
             // txtPrimerApellido
@@ -140,7 +140,7 @@
             txtPrimerApellido.Location = new Point(145, 106);
             txtPrimerApellido.Name = "txtPrimerApellido";
             txtPrimerApellido.Size = new Size(214, 27);
-            txtPrimerApellido.TabIndex = 31;
+            txtPrimerApellido.TabIndex = 3;
             // 
             // txtSegundoApellido
             // 
@@ -149,7 +149,7 @@
             txtSegundoApellido.Location = new Point(146, 142);
             txtSegundoApellido.Name = "txtSegundoApellido";
             txtSegundoApellido.Size = new Size(214, 27);
-            txtSegundoApellido.TabIndex = 32;
+            txtSegundoApellido.TabIndex = 4;
             // 
             // label9
             // 
@@ -229,7 +229,7 @@
             rbtnMasculino.Location = new Point(143, 411);
             rbtnMasculino.Name = "rbtnMasculino";
             rbtnMasculino.Size = new Size(97, 24);
-            rbtnMasculino.TabIndex = 22;
+            rbtnMasculino.TabIndex = 12;
             rbtnMasculino.TabStop = true;
             rbtnMasculino.Text = "Masculino";
             rbtnMasculino.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@
             rbtnFemenino.Location = new Point(263, 411);
             rbtnFemenino.Name = "rbtnFemenino";
             rbtnFemenino.Size = new Size(95, 24);
-            rbtnFemenino.TabIndex = 23;
+            rbtnFemenino.TabIndex = 13;
             rbtnFemenino.TabStop = true;
             rbtnFemenino.Text = "Femenino";
             rbtnFemenino.UseVisualStyleBackColor = true;
@@ -252,7 +252,7 @@
             txtDireccion.Location = new Point(146, 243);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(214, 27);
-            txtDireccion.TabIndex = 25;
+            txtDireccion.TabIndex = 7;
             // 
             // txtTelefono
             // 
@@ -261,7 +261,7 @@
             txtTelefono.Location = new Point(146, 279);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(214, 27);
-            txtTelefono.TabIndex = 26;
+            txtTelefono.TabIndex = 8;
             txtTelefono.KeyDown += txtTelefono_KeyDown;
             // 
             // txtEmail
@@ -270,7 +270,7 @@
             txtEmail.Location = new Point(146, 342);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(214, 27);
-            txtEmail.TabIndex = 27;
+            txtEmail.TabIndex = 10;
             // 
             // txtCedula
             // 
@@ -278,7 +278,7 @@
             txtCedula.Location = new Point(146, 377);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(214, 27);
-            txtCedula.TabIndex = 28;
+            txtCedula.TabIndex = 11;
             txtCedula.KeyDown += txtCedula_KeyDown;
             // 
             // cmbMunicipio
@@ -290,7 +290,7 @@
             cmbMunicipio.Location = new Point(146, 311);
             cmbMunicipio.Name = "cmbMunicipio";
             cmbMunicipio.Size = new Size(214, 28);
-            cmbMunicipio.TabIndex = 30;
+            cmbMunicipio.TabIndex = 9;
             // 
             // label12
             // 
@@ -317,7 +317,7 @@
             txtUsuario.Location = new Point(146, 177);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(214, 27);
-            txtUsuario.TabIndex = 37;
+            txtUsuario.TabIndex = 5;
             // 
             // txtContraseña
             // 
@@ -326,7 +326,7 @@
             txtContraseña.Location = new Point(146, 210);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new Size(214, 27);
-            txtContraseña.TabIndex = 38;
+            txtContraseña.TabIndex = 6;
             // 
             // FormVendedor_01
             // 

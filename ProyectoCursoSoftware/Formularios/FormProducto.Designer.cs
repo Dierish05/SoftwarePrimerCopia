@@ -56,7 +56,7 @@
             btnSalir.Location = new Point(1006, 511);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(119, 41);
-            btnSalir.TabIndex = 22;
+            btnSalir.TabIndex = 7;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
@@ -69,7 +69,7 @@
             btnEliminar.Location = new Point(1006, 455);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(119, 41);
-            btnEliminar.TabIndex = 21;
+            btnEliminar.TabIndex = 6;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
@@ -81,7 +81,7 @@
             btnEditar.Location = new Point(1006, 396);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(119, 41);
-            btnEditar.TabIndex = 20;
+            btnEditar.TabIndex = 5;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
@@ -93,7 +93,7 @@
             btnAgregar.Location = new Point(1006, 336);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(119, 41);
-            btnAgregar.TabIndex = 19;
+            btnAgregar.TabIndex = 4;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -110,7 +110,7 @@
             dgvDatos.RowHeadersWidth = 51;
             dgvDatos.RowTemplate.Height = 29;
             dgvDatos.Size = new Size(965, 337);
-            dgvDatos.TabIndex = 18;
+            dgvDatos.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -174,7 +174,7 @@
             comboBox1.Location = new Point(107, 19);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(193, 28);
-            comboBox1.TabIndex = 5;
+            comboBox1.TabIndex = 2;
             // 
             // cmbCategoria
             // 
@@ -183,7 +183,7 @@
             cmbCategoria.Location = new Point(107, 64);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(193, 28);
-            cmbCategoria.TabIndex = 4;
+            cmbCategoria.TabIndex = 3;
             // 
             // label4
             // 

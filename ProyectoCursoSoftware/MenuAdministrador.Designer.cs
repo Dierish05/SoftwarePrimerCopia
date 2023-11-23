@@ -38,8 +38,8 @@
             reportesToolStripMenuItem = new ToolStripMenuItem();
             reporteVentaToolStripMenuItem = new ToolStripMenuItem();
             reporteComrpaToolStripMenuItem = new ToolStripMenuItem();
-            PanelContenedor = new Panel();
             cerrarToolStripMenuItem = new ToolStripMenuItem();
+            PanelContenedor = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -111,24 +111,16 @@
             // reporteVentaToolStripMenuItem
             // 
             reporteVentaToolStripMenuItem.Name = "reporteVentaToolStripMenuItem";
-            reporteVentaToolStripMenuItem.Size = new Size(224, 28);
+            reporteVentaToolStripMenuItem.Size = new Size(221, 28);
             reporteVentaToolStripMenuItem.Text = "Reporte Venta";
             reporteVentaToolStripMenuItem.Click += reporteVentaToolStripMenuItem_Click;
             // 
             // reporteComrpaToolStripMenuItem
             // 
             reporteComrpaToolStripMenuItem.Name = "reporteComrpaToolStripMenuItem";
-            reporteComrpaToolStripMenuItem.Size = new Size(224, 28);
+            reporteComrpaToolStripMenuItem.Size = new Size(221, 28);
             reporteComrpaToolStripMenuItem.Text = "Reporte Compra";
             reporteComrpaToolStripMenuItem.Click += reporteComrpaToolStripMenuItem_Click;
-            // 
-            // PanelContenedor
-            // 
-            PanelContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            PanelContenedor.Location = new Point(0, 31);
-            PanelContenedor.Name = "PanelContenedor";
-            PanelContenedor.Size = new Size(1160, 643);
-            PanelContenedor.TabIndex = 1;
             // 
             // cerrarToolStripMenuItem
             // 
@@ -139,6 +131,14 @@
             cerrarToolStripMenuItem.Text = "Cerrar";
             cerrarToolStripMenuItem.Click += cerrarToolStripMenuItem_Click;
             // 
+            // PanelContenedor
+            // 
+            PanelContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            PanelContenedor.Location = new Point(0, 31);
+            PanelContenedor.Name = "PanelContenedor";
+            PanelContenedor.Size = new Size(1160, 643);
+            PanelContenedor.TabIndex = 1;
+            // 
             // MenuAdministrador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -146,7 +146,6 @@
             ClientSize = new Size(1160, 677);
             Controls.Add(PanelContenedor);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "MenuAdministrador";
             Text = "MenuAdministrador";

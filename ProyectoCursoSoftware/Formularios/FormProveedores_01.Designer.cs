@@ -48,7 +48,7 @@
             btnRegresar.Location = new Point(169, 371);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
-            btnRegresar.TabIndex = 43;
+            btnRegresar.TabIndex = 6;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
             btnRegresar.Click += btnRegresar_Click;
@@ -60,7 +60,7 @@
             btnGuardar.Location = new Point(26, 371);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
-            btnGuardar.TabIndex = 42;
+            btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
@@ -81,7 +81,7 @@
             txtNombre.Location = new Point(94, 45);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(214, 27);
-            txtNombre.TabIndex = 32;
+            txtNombre.TabIndex = 1;
             txtNombre.TextChanged += txtNombre_TextChanged;
             txtNombre.KeyDown += txtNombre_KeyDown;
             // 
@@ -132,7 +132,7 @@
             txtTelefono.Location = new Point(94, 84);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(214, 27);
-            txtTelefono.TabIndex = 50;
+            txtTelefono.TabIndex = 2;
             // 
             // txtEmail
             // 
@@ -141,7 +141,7 @@
             txtEmail.Location = new Point(94, 128);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(214, 27);
-            txtEmail.TabIndex = 51;
+            txtEmail.TabIndex = 3;
             // 
             // txtDireccion
             // 
@@ -150,7 +150,7 @@
             txtDireccion.Location = new Point(94, 170);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(214, 27);
-            txtDireccion.TabIndex = 52;
+            txtDireccion.TabIndex = 4;
             // 
             // FormProveedores_01
             // 
