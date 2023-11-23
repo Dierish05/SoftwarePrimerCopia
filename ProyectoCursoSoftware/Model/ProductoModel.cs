@@ -139,6 +139,7 @@ namespace ProyectoCursoSoftware.Model
 
         }
 
+
         public void BusquedaProductoCategoria(int id, DataGridView gridView)
         {
 

@@ -39,10 +39,8 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            comboBox1 = new ComboBox();
             cmbCategoria = new ComboBox();
             label4 = new Label();
-            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -166,56 +164,37 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(cmbCategoria);
             groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(label3);
             groupBox2.Location = new Point(364, 54);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(370, 84);
+            groupBox2.Size = new Size(290, 58);
             groupBox2.TabIndex = 24;
             groupBox2.TabStop = false;
             groupBox2.Text = "Filtrar";
-            // 
-            // comboBox1
-            // 
-            comboBox1.BackColor = Color.FromArgb(221, 233, 218);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(94, 14);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(169, 23);
-            comboBox1.TabIndex = 2;
             // 
             // cmbCategoria
             // 
             cmbCategoria.BackColor = Color.FromArgb(221, 233, 218);
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(94, 48);
+            cmbCategoria.Items.AddRange(new object[] { "Todas", "Cargadores", "Audifonos", "Covers", "Memorias", "Protectores de Pantalla", "Celulares" });
+            cmbCategoria.Location = new Point(84, 17);
             cmbCategoria.Margin = new Padding(3, 2, 3, 2);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(169, 23);
             cmbCategoria.TabIndex = 3;
+            cmbCategoria.SelectedIndexChanged += cmbCategoria_SelectedIndexChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(17, 54);
+            label4.Location = new Point(17, 22);
             label4.Name = "label4";
             label4.Size = new Size(61, 15);
             label4.TabIndex = 3;
             label4.Text = "Categoria:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(17, 20);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 15);
-            label3.TabIndex = 0;
-            label3.Text = "Precio:";
             // 
             // FormProducto
             // 
@@ -259,7 +238,5 @@
         private GroupBox groupBox2;
         private ComboBox cmbCategoria;
         private Label label4;
-        private Label label3;
-        private ComboBox comboBox1;
     }
 }
