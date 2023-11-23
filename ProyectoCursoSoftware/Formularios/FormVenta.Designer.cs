@@ -258,6 +258,7 @@
             // 
             dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dateTimePicker1.CalendarMonthBackground = Color.YellowGreen;
+            dateTimePicker1.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.Location = new Point(1015, 60);
             dateTimePicker1.Name = "dateTimePicker1";
@@ -269,9 +270,9 @@
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.BackColor = Color.FromArgb(221, 233, 218);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Enabled = false;
             textBox1.Location = new Point(1015, 93);
             textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
             textBox1.Size = new Size(104, 27);
             textBox1.TabIndex = 12;
             // 
