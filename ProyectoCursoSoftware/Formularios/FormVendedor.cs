@@ -95,7 +95,20 @@ namespace ProyectoCursoSoftware.Formularios
                 if (cell.Value != null && cell.Value != DBNull.Value)
                 {
 
-                    //Mostrar formulario de editar producto
+                    FormVendedor_01 formVendedor_01 = new FormVendedor_01(vm);
+                    formVendedor_01.txtId.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Vendedores"].Value.ToString();
+                    formVendedor_01.txtPrimerNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del producto"].Value.ToString();
+                    formVendedor_01.txtSegundoNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Descripcion del producto"].Value.ToString();
+                    formVendedor_01.txtPrimerApellido.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Categoria"].Value.ToString();
+                    formVendedor_01.txtSegundoApellido.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.txtEmail.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.txtUsuario.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.txtContraseña.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.txtTelefono.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.cmbMunicipio.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    formVendedor_01.ShowDialog();
                 }
                 else
                 {
