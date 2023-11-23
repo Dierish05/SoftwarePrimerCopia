@@ -229,7 +229,7 @@ namespace ProyectoCursoSoftware.Formularios
             return lIdServicios;
         }
 
-        
+
 
         public int ObtenerIdVentaS()
         {
@@ -266,16 +266,24 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //int vendedor = ObtenerIdVendedor();
-            vm.CrearVenta(1);        
-            int venta = ObtenerIdVentaS();
-            List<int> datos = obtenerIdS();
-            List<int> cant = obtenerCantidades();
-            for (int i = 0; i < datos.Count; i++)
+            if (int.Parse(txtTotal.Text) <= int.Parse(txtMonto.Text))
             {
-                vm.SumarVenta(datos[i], cant[i]);
-                vm.CrearDetVenta(venta, datos[i], cant[i]);
+                vm.CrearVenta(1);
+                int venta = ObtenerIdVentaS();
+                List<int> datos = obtenerIdS();
+                List<int> cant = obtenerCantidades();
+                for (int i = 0; i < datos.Count; i++)
+                {
+                    vm.SumarVenta(datos[i], cant[i]);
+                    vm.CrearDetVenta(venta, datos[i], cant[i]);
+                }
+                MessageBox.Show("La venta se realizo con exito");
             }
-            MessageBox.Show("La venta se realizo con exito");
+            else
+            {
+                MessageBox.Show("Saldo Insuficiente");
+            }
+            
         }
     }
 }
