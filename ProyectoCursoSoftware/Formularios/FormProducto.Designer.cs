@@ -41,6 +41,7 @@
             groupBox2 = new GroupBox();
             cmbCategoria = new ComboBox();
             label4 = new Label();
+            btnUpdate = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -178,6 +179,7 @@
             // cmbCategoria
             // 
             cmbCategoria.BackColor = Color.FromArgb(221, 233, 218);
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Items.AddRange(new object[] { "Todas", "Cargadores", "Audifonos", "Covers", "Memorias", "Protectores de Pantalla", "Celulares" });
             cmbCategoria.Location = new Point(84, 17);
@@ -196,12 +198,27 @@
             label4.TabIndex = 3;
             label4.Text = "Categoria:";
             // 
+            // btnUpdate
+            // 
+            btnUpdate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.ForeColor = Color.FromArgb(26, 138, 94);
+            btnUpdate.Location = new Point(880, 201);
+            btnUpdate.Margin = new Padding(3, 2, 3, 2);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(104, 31);
+            btnUpdate.TabIndex = 25;
+            btnUpdate.Text = "Actualizar";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // FormProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(995, 446);
+            Controls.Add(btnUpdate);
             Controls.Add(groupBox2);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
@@ -238,5 +255,6 @@
         private GroupBox groupBox2;
         private ComboBox cmbCategoria;
         private Label label4;
+        private Button btnUpdate;
     }
 }

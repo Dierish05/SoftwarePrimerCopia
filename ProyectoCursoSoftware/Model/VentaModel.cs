@@ -23,7 +23,7 @@ namespace ProyectoCursoSoftware.Model
             SqlDataReader leer;
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "MostrarVentas";
+            cmd.CommandText = "obtenerIdVenta";
             cmd.Connection = con.connect;
 
 
@@ -44,7 +44,7 @@ namespace ProyectoCursoSoftware.Model
             SqlDataReader leer;
 
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "listarVentas";
+            cmd.CommandText = "obtenerIdVenta";
             cmd.Connection = con.connect;
 
 

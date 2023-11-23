@@ -139,7 +139,7 @@ namespace ProyectoCursoSoftware.Formularios
                     precioProducto != null && precioProducto != DBNull.Value)
                     {
                         double precio = (double)precioProducto;
-                        if (int.Parse(txtCantidad.Text) <= int.Parse(existenciasProducto.ToString()))
+                        if (int.Parse(txtCantidad.Text) <= int.Parse(existenciasProducto.ToString()) && int.Parse(txtCantidad.Text) != 0)
                         {
                             double subtotalfix = int.Parse(txtCantidad.Text) * precio;
                             subtotalfix = Math.Round(subtotalfix, numeroDeDecimales);
@@ -236,15 +236,16 @@ namespace ProyectoCursoSoftware.Formularios
             dataGridView1.DataSource = null;
             vm.listarVentas(dataGridView1);
             List<int> lVentaSId = new List<int>();
+            int n = 0;
 
             foreach (DataGridViewRow dr in dataGridView1.Rows)
             {
-                int vSId;
-                vSId = Convert.ToInt32(dr.Cells["Id_Venta"].Value);
-                lVentaSId.Add(vSId);
+                int id = Convert.ToInt32(dr.Cells["Id_Venta"].Value);
+                lVentaSId.Add(id);
+                n++;
             }
-            int IdVentaS = (lVentaSId[lVentaSId.Count - 2]);
-            return IdVentaS;
+            int idd = lVentaSId[n - 2];
+            return idd;
         }
 
         //public int ObtenerIdVendedor()
@@ -277,13 +278,35 @@ namespace ProyectoCursoSoftware.Formularios
                     vm.SumarVenta(datos[i], cant[i]);
                     vm.CrearDetVenta(venta, datos[i], cant[i]);
                 }
+                dgvCarrito.Rows.Clear();
                 MessageBox.Show("La venta se realizo con exito");
             }
             else
             {
                 MessageBox.Show("Saldo Insuficiente");
             }
-            
+
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!((char.IsDigit((char)e.KeyValue) || e.KeyValue == (char)Keys.OemPeriod || e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && !(e.KeyValue == (char)Keys.OemPeriod && txtCantidad.Text.Contains("."))))
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtMonto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!((char.IsDigit((char)e.KeyValue) || e.KeyValue == (char)Keys.OemPeriod || e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && !(e.KeyValue == (char)Keys.OemPeriod && txtMonto.Text.Contains("."))))
+            {
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

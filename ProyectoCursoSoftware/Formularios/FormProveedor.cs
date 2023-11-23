@@ -87,5 +87,10 @@ namespace ProyectoCursoSoftware.Formularios
                 }
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Listar();
+        }
     }
 }

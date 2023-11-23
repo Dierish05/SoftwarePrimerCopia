@@ -38,5 +38,10 @@ namespace ProyectoCursoSoftware.Formularios
         {
             this.Dispose();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Listar();
+        }
     }
 }

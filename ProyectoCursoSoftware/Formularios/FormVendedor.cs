@@ -60,7 +60,8 @@ namespace ProyectoCursoSoftware.Formularios
             if (txtNombre.Text != string.Empty && txtApellido.Text == string.Empty)
             {
                 vm.BusquedaVendedorNombre(txtNombre.Text, dgvDatos);
-            } else if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
+            }
+            else if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
             {
                 listar();
             }
@@ -71,7 +72,8 @@ namespace ProyectoCursoSoftware.Formularios
             if (txtNombre.Text == string.Empty && txtApellido.Text != string.Empty)
             {
                 vm.BusquedaVendedorApellido(txtApellido.Text, dgvDatos);
-            } else if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
+            }
+            else if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
             {
                 listar();
             }
@@ -108,15 +110,15 @@ namespace ProyectoCursoSoftware.Formularios
                     {
                         formVendedor_02.rbtnMasculino.Checked = true;
                     }
-                        //formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString();
-                        formVendedor_02.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Cedula"].Value.ToString();
-                        formVendedor_02.txtTelefono.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Telefono"].Value.ToString();
-                        formVendedor_02.cmbMunicipio.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Municipio"].Value.ToString();
-                        formVendedor_02.ShowDialog();
+                    //formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString();
+                    formVendedor_02.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Cedula"].Value.ToString();
+                    formVendedor_02.txtTelefono.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Telefono"].Value.ToString();
+                    formVendedor_02.cmbMunicipio.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Municipio"].Value.ToString();
+                    formVendedor_02.ShowDialog();
                 }
                 else
                 {
-                        MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
+                    MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
                 }
             }
         }
@@ -142,5 +144,10 @@ namespace ProyectoCursoSoftware.Formularios
                 }
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            listar();
+        }
     }
-} 
+}

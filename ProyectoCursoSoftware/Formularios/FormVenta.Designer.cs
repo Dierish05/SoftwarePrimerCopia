@@ -42,6 +42,8 @@
             txtNombre = new TextBox();
             txtCodigo = new TextBox();
             dgvProducto = new DataGridView();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
             label4 = new Label();
             label3 = new Label();
             dateTimePicker1 = new DateTimePicker();
@@ -53,8 +55,6 @@
             Cantidad = new DataGridViewTextBoxColumn();
             Subtotal = new DataGridViewTextBoxColumn();
             groupBox2 = new GroupBox();
-            dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
             txtSaldo = new TextBox();
             txtMonto = new TextBox();
             btnImprimir = new Button();
@@ -67,10 +67,10 @@
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -146,6 +146,7 @@
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(114, 23);
             txtCantidad.TabIndex = 25;
+            txtCantidad.KeyDown += txtCantidad_KeyDown;
             // 
             // label10
             // 
@@ -246,6 +247,26 @@
             dgvProducto.Size = new Size(767, 106);
             dgvProducto.TabIndex = 10;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(791, 21);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(11, 19);
+            dataGridView1.TabIndex = 14;
+            dataGridView1.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(786, 48);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(16, 19);
+            dataGridView2.TabIndex = 26;
+            dataGridView2.Visible = false;
+            // 
             // label4
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -344,9 +365,9 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox2.Controls.Add(dataGridView2);
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Controls.Add(txtSaldo);
+            groupBox2.Controls.Add(dataGridView2);
             groupBox2.Controls.Add(txtMonto);
             groupBox2.Controls.Add(btnImprimir);
             groupBox2.Controls.Add(btnAnular);
@@ -364,26 +385,6 @@
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Detalle";
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(786, 21);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(33, 21);
-            dataGridView2.TabIndex = 26;
-            dataGridView2.Visible = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(786, 67);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(22, 31);
-            dataGridView1.TabIndex = 14;
-            dataGridView1.Visible = false;
             // 
             // txtSaldo
             // 
@@ -406,6 +407,7 @@
             txtMonto.Name = "txtMonto";
             txtMonto.Size = new Size(120, 23);
             txtMonto.TabIndex = 5;
+            txtMonto.KeyDown += txtMonto_KeyDown;
             // 
             // btnImprimir
             // 
@@ -518,11 +520,11 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
