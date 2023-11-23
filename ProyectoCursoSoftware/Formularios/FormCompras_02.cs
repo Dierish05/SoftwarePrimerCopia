@@ -87,12 +87,35 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            int IdProv = 0;
             int indiceSeleccionado = dgvDatos.SelectedCells[0].RowIndex;
-            CodProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["CodProd"].Value.ToString();
-            NombreProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del prodcuto"].Value.ToString();
+            DataGridViewCell cell = dgvDatos.Rows[indiceSeleccionado].Cells["CodProd"];
+
+            if (indiceSeleccionado >= 0)
+            {
+                if (cell.Value != null && cell.Value != DBNull.Value)
+                {
+                    IdProv = Convert.ToInt32(cell.Value);
+
+                    CodProductoSeleccionado = IdProv.ToString();
+                    NombreProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del prodcuto"].Value.ToString();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Este Producto no existe! Por favor, seleccione un Producto existente.");
+                }
+               
+            }
+              
 
 
             this.Close();
+        }
+
+        private void btnSeleccionar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
