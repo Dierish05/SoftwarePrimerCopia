@@ -38,8 +38,12 @@
             numericUpDown1 = new NumericUpDown();
             nUpdownCantidad = new NumericUpDown();
             btnSeleccionar = new Button();
+            nUpdownPorcentaje = new NumericUpDown();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nUpdownPorcentaje).BeginInit();
             SuspendLayout();
             // 
             // txtProducto
@@ -160,12 +164,46 @@
             btnSeleccionar.UseVisualStyleBackColor = true;
             btnSeleccionar.Click += btnSeleccionar_Click;
             // 
+            // nUpdownPorcentaje
+            // 
+            nUpdownPorcentaje.BackColor = Color.FromArgb(221, 233, 218);
+            nUpdownPorcentaje.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            nUpdownPorcentaje.Location = new Point(149, 134);
+            nUpdownPorcentaje.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
+            nUpdownPorcentaje.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
+            nUpdownPorcentaje.Name = "nUpdownPorcentaje";
+            nUpdownPorcentaje.Size = new Size(145, 23);
+            nUpdownPorcentaje.TabIndex = 39;
+            nUpdownPorcentaje.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(9, 140);
+            label2.Name = "label2";
+            label2.Size = new Size(134, 15);
+            label2.TabIndex = 40;
+            label2.Text = "Porcentaje de Ganancia:";
+            label2.Click += label2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(300, 140);
+            label3.Name = "label3";
+            label3.Size = new Size(17, 15);
+            label3.TabIndex = 41;
+            label3.Text = "%";
+            // 
             // FormCompras_01
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(341, 320);
+            Controls.Add(label3);
+            Controls.Add(nUpdownPorcentaje);
+            Controls.Add(label2);
             Controls.Add(btnSeleccionar);
             Controls.Add(nUpdownCantidad);
             Controls.Add(numericUpDown1);
@@ -184,6 +222,7 @@
             Load += FormCompras_01_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nUpdownPorcentaje).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,5 +238,8 @@
         public NumericUpDown numericUpDown1;
         public NumericUpDown nUpdownCantidad;
         private Button btnSeleccionar;
+        public NumericUpDown nUpdownPorcentaje;
+        private Label label2;
+        private Label label3;
     }
 }
