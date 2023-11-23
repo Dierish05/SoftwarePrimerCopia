@@ -99,7 +99,7 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 pm.BusquedaProveedorNombre(textBox1.Text, dgvDatos);
             }
-            else 
+            else
             {
                 Listar();
             }

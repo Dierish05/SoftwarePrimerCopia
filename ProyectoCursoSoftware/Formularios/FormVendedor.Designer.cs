@@ -37,7 +37,6 @@
             dgvDatos = new DataGridView();
             btnAgregar = new Button();
             btnEditar = new Button();
-            btnEliminar = new Button();
             btnSalir = new Button();
             btnUpdate = new Button();
             groupBox1.SuspendLayout();
@@ -155,20 +154,6 @@
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
             // 
-            // btnEliminar
-            // 
-            btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnEliminar.Location = new Point(872, 341);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(104, 31);
-            btnEliminar.TabIndex = 5;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
-            // 
             // btnSalir
             // 
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -205,7 +190,6 @@
             ClientSize = new Size(995, 446);
             Controls.Add(btnUpdate);
             Controls.Add(btnSalir);
-            Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(dgvDatos);
@@ -231,7 +215,6 @@
         private DataGridView dgvDatos;
         private Button btnAgregar;
         private Button btnEditar;
-        private Button btnEliminar;
         private Button btnSalir;
         private TextBox txtApellido;
         private Label lblApellido;

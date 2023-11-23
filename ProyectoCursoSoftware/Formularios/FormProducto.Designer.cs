@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducto));
             btnSalir = new Button();
-            btnEliminar = new Button();
             btnEditar = new Button();
             btnAgregar = new Button();
             dgvDatos = new DataGridView();
@@ -60,20 +59,6 @@
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnEliminar.Location = new Point(880, 341);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(104, 31);
-            btnEliminar.TabIndex = 6;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -222,7 +207,6 @@
             Controls.Add(btnUpdate);
             Controls.Add(groupBox2);
             Controls.Add(btnSalir);
-            Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(dgvDatos);
@@ -244,7 +228,6 @@
 
         private Button btnActualizar;
         private Button btnSalir;
-        private Button btnEliminar;
         private Button btnEditar;
         private Button btnAgregar;
         private DataGridView dgvDatos;

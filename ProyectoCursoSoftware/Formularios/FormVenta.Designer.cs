@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            label2 = new Label();
-            txtVendedor = new TextBox();
             groupBox1 = new GroupBox();
             groupBox3 = new GroupBox();
             txtCantidad = new TextBox();
@@ -85,26 +83,6 @@
             label1.TabIndex = 1;
             label1.Text = "VENTA";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(293, 50);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Vendedor";
-            // 
-            // txtVendedor
-            // 
-            txtVendedor.BackColor = Color.FromArgb(221, 233, 218);
-            txtVendedor.BorderStyle = BorderStyle.FixedSingle;
-            txtVendedor.Location = new Point(19, 66);
-            txtVendedor.Margin = new Padding(3, 2, 3, 2);
-            txtVendedor.Name = "txtVendedor";
-            txtVendedor.ReadOnly = true;
-            txtVendedor.Size = new Size(338, 23);
-            txtVendedor.TabIndex = 11;
             // 
             // groupBox1
             // 
@@ -506,9 +484,7 @@
             ClientSize = new Size(995, 591);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(txtVendedor);
             Controls.Add(label4);
-            Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(dateTimePicker1);
             Controls.Add(label1);
@@ -533,8 +509,6 @@
         #endregion
 
         private Label label1;
-        private Label label2;
-        private TextBox txtVendedor;
         private GroupBox groupBox1;
         private DataGridView dgvCarrito;
         private GroupBox groupBox2;
