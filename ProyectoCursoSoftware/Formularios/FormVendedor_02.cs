@@ -184,5 +184,13 @@ namespace ProyectoCursoSoftware.Formularios
                 this.Close();
             }
         }
+
+        private void txtCedula_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!(e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && txtCedula.Text.Length >= 16)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

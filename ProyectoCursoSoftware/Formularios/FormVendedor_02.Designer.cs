@@ -97,6 +97,7 @@
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(214, 27);
             txtCedula.TabIndex = 49;
+            txtCedula.KeyDown += txtCedula_KeyDown;
             // 
             // txtEmail
             // 

@@ -142,11 +142,10 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void txtCedula_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (txtCedula.TextLength == 14 && e.KeyCode != Keys.Back && e.KeyCode != Keys.Delete)
-            //{
-            //    e.SuppressKeyPress = true;
-            //    e.Handled = true;
-            //}
+            if (!(e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && txtCedula.Text.Length >= 16)
+            {
+                e.SuppressKeyPress = true;
+            }
         }
 
         private int DeterminarMunicipio(string a)
