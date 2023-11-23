@@ -1059,10 +1059,6 @@ namespace ProyectoCursoSoftware {
             
             private global::System.Data.DataColumn columnNombreProd;
             
-            private global::System.Data.DataColumn columnDescProd;
-            
-            private global::System.Data.DataColumn columnDescripcion;
-            
             private global::System.Data.DataColumn columnPrecioP;
             
             private global::System.Data.DataColumn columnExistP;
@@ -1113,22 +1109,6 @@ namespace ProyectoCursoSoftware {
             public global::System.Data.DataColumn NombreProdColumn {
                 get {
                     return this.columnNombreProd;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DescProdColumn {
-                get {
-                    return this.columnDescProd;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DescripcionColumn {
-                get {
-                    return this.columnDescripcion;
                 }
             }
             
@@ -1185,13 +1165,11 @@ namespace ProyectoCursoSoftware {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MostrarInventarioReporteRow AddMostrarInventarioReporteRow(string CodProd, string NombreProd, string DescProd, string Descripcion, double PrecioP, int ExistP) {
+            public MostrarInventarioReporteRow AddMostrarInventarioReporteRow(string CodProd, string NombreProd, double PrecioP, int ExistP) {
                 MostrarInventarioReporteRow rowMostrarInventarioReporteRow = ((MostrarInventarioReporteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CodProd,
                         NombreProd,
-                        DescProd,
-                        Descripcion,
                         PrecioP,
                         ExistP};
                 rowMostrarInventarioReporteRow.ItemArray = columnValuesArray;
@@ -1225,8 +1203,6 @@ namespace ProyectoCursoSoftware {
             internal void InitVars() {
                 this.columnCodProd = base.Columns["CodProd"];
                 this.columnNombreProd = base.Columns["NombreProd"];
-                this.columnDescProd = base.Columns["DescProd"];
-                this.columnDescripcion = base.Columns["Descripcion"];
                 this.columnPrecioP = base.Columns["PrecioP"];
                 this.columnExistP = base.Columns["ExistP"];
             }
@@ -1238,10 +1214,6 @@ namespace ProyectoCursoSoftware {
                 base.Columns.Add(this.columnCodProd);
                 this.columnNombreProd = new global::System.Data.DataColumn("NombreProd", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombreProd);
-                this.columnDescProd = new global::System.Data.DataColumn("DescProd", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescProd);
-                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescripcion);
                 this.columnPrecioP = new global::System.Data.DataColumn("PrecioP", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrecioP);
                 this.columnExistP = new global::System.Data.DataColumn("ExistP", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1253,10 +1225,6 @@ namespace ProyectoCursoSoftware {
                 this.columnCodProd.MaxLength = 5;
                 this.columnNombreProd.AllowDBNull = false;
                 this.columnNombreProd.MaxLength = 40;
-                this.columnDescProd.AllowDBNull = false;
-                this.columnDescProd.MaxLength = 50;
-                this.columnDescripcion.AllowDBNull = false;
-                this.columnDescripcion.MaxLength = 50;
                 this.columnPrecioP.AllowDBNull = false;
                 this.columnExistP.AllowDBNull = false;
             }
@@ -1630,28 +1598,6 @@ namespace ProyectoCursoSoftware {
                 }
                 set {
                     this[this.tableMostrarInventarioReporte.NombreProdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DescProd {
-                get {
-                    return ((string)(this[this.tableMostrarInventarioReporte.DescProdColumn]));
-                }
-                set {
-                    this[this.tableMostrarInventarioReporte.DescProdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Descripcion {
-                get {
-                    return ((string)(this[this.tableMostrarInventarioReporte.DescripcionColumn]));
-                }
-                set {
-                    this[this.tableMostrarInventarioReporte.DescripcionColumn] = value;
                 }
             }
             
@@ -2256,8 +2202,6 @@ namespace ProyectoCursoSoftware.DataSet1TableAdapters {
             tableMapping.DataSetTable = "MostrarInventarioReporte";
             tableMapping.ColumnMappings.Add("CodProd", "CodProd");
             tableMapping.ColumnMappings.Add("NombreProd", "NombreProd");
-            tableMapping.ColumnMappings.Add("DescProd", "DescProd");
-            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
             tableMapping.ColumnMappings.Add("PrecioP", "PrecioP");
             tableMapping.ColumnMappings.Add("ExistP", "ExistP");
             this._adapter.TableMappings.Add(tableMapping);

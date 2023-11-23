@@ -16,6 +16,7 @@ namespace ProyectoCursoSoftware.Formularios
         private Conexion con;
         private InventarioModel im;
         private VentaModel vm;
+        private double Total;
         public FormVenta(Conexion Con)
         {
             this.con = Con;
@@ -130,12 +131,21 @@ namespace ProyectoCursoSoftware.Formularios
                     object existenciasProducto = selectedRow.Cells["Existencias_del_producto"].Value;
 
                     if (idInventario != null && idInventario != DBNull.Value &&
-                precioProducto != null && precioProducto != DBNull.Value)
+                    precioProducto != null && precioProducto != DBNull.Value)
                     {
                         double precio = (double)precioProducto;
+                        if (int.Parse(nupCantidad.Value.ToString()) <= int.Parse(existenciasProducto.ToString()))
+                        {
+                            // Agregar nueva fila al dgvCarrito
+                            dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, nupCantidad.Value, (double)nupCantidad.Value * precio);
+                            Total = (double)nupCantidad.Value * precio;
+                            txtTotal.Text = Total.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No hay suficientes existencias");
+                        }
 
-                        // Agregar nueva fila al dgvCarrito
-                        dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, nupCantidad.Value, (double)nupCantidad.Value * precio);
                     }
                     else
                     {

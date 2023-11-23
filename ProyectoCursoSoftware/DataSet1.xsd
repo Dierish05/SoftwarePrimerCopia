@@ -72,8 +72,6 @@
             <Mappings>
               <Mapping SourceColumn="CodProd" DataSetColumn="CodProd" />
               <Mapping SourceColumn="NombreProd" DataSetColumn="NombreProd" />
-              <Mapping SourceColumn="DescProd" DataSetColumn="DescProd" />
-              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
               <Mapping SourceColumn="PrecioP" DataSetColumn="PrecioP" />
               <Mapping SourceColumn="ExistP" DataSetColumn="ExistP" />
             </Mappings>
@@ -112,35 +110,35 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MostrarCompra" msprop:Generator_RowClassName="MostrarCompraRow" msprop:Generator_RowEvHandlerName="MostrarCompraRowChangeEventHandler" msprop:Generator_RowDeletedName="MostrarCompraRowDeleted" msprop:Generator_RowDeletingName="MostrarCompraRowDeleting" msprop:Generator_RowEvArgName="MostrarCompraRowChangeEvent" msprop:Generator_TablePropName="MostrarCompra" msprop:Generator_RowChangedName="MostrarCompraRowChanged" msprop:Generator_UserTableName="MostrarCompra" msprop:Generator_RowChangingName="MostrarCompraRowChanging" msprop:Generator_TableClassName="MostrarCompraDataTable" msprop:Generator_TableVarName="tableMostrarCompra">
+        <xs:element name="MostrarCompra" msprop:Generator_RowEvHandlerName="MostrarCompraRowChangeEventHandler" msprop:Generator_RowDeletedName="MostrarCompraRowDeleted" msprop:Generator_RowDeletingName="MostrarCompraRowDeleting" msprop:Generator_RowEvArgName="MostrarCompraRowChangeEvent" msprop:Generator_TablePropName="MostrarCompra" msprop:Generator_RowChangedName="MostrarCompraRowChanged" msprop:Generator_UserTableName="MostrarCompra" msprop:Generator_RowChangingName="MostrarCompraRowChanging" msprop:Generator_RowClassName="MostrarCompraRow" msprop:Generator_TableClassName="MostrarCompraDataTable" msprop:Generator_TableVarName="tableMostrarCompra">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id_Compra" msprop:Generator_UserColumnName="Id_Compra" msprop:Generator_ColumnPropNameInTable="Id_CompraColumn" msprop:Generator_ColumnPropNameInRow="Id_Compra" msprop:Generator_ColumnVarNameInTable="columnId_Compra" type="xs:int" />
-              <xs:element name="FechaCompra" msprop:Generator_UserColumnName="FechaCompra" msprop:Generator_ColumnPropNameInTable="FechaCompraColumn" msprop:Generator_ColumnPropNameInRow="FechaCompra" msprop:Generator_ColumnVarNameInTable="columnFechaCompra" type="xs:dateTime" />
-              <xs:element name="CodProd" msprop:Generator_UserColumnName="CodProd" msprop:Generator_ColumnPropNameInTable="CodProdColumn" msprop:Generator_ColumnPropNameInRow="CodProd" msprop:Generator_ColumnVarNameInTable="columnCodProd">
+              <xs:element name="Id_Compra" msprop:Generator_ColumnPropNameInTable="Id_CompraColumn" msprop:Generator_ColumnPropNameInRow="Id_Compra" msprop:Generator_UserColumnName="Id_Compra" msprop:Generator_ColumnVarNameInTable="columnId_Compra" type="xs:int" />
+              <xs:element name="FechaCompra" msprop:Generator_ColumnPropNameInTable="FechaCompraColumn" msprop:Generator_ColumnPropNameInRow="FechaCompra" msprop:Generator_UserColumnName="FechaCompra" msprop:Generator_ColumnVarNameInTable="columnFechaCompra" type="xs:dateTime" />
+              <xs:element name="CodProd" msprop:Generator_ColumnPropNameInTable="CodProdColumn" msprop:Generator_ColumnPropNameInRow="CodProd" msprop:Generator_UserColumnName="CodProd" msprop:Generator_ColumnVarNameInTable="columnCodProd">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NombreProd" msprop:Generator_UserColumnName="NombreProd" msprop:Generator_ColumnPropNameInTable="NombreProdColumn" msprop:Generator_ColumnPropNameInRow="NombreProd" msprop:Generator_ColumnVarNameInTable="columnNombreProd">
+              <xs:element name="NombreProd" msprop:Generator_ColumnPropNameInTable="NombreProdColumn" msprop:Generator_ColumnPropNameInRow="NombreProd" msprop:Generator_UserColumnName="NombreProd" msprop:Generator_ColumnVarNameInTable="columnNombreProd">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DescProd" msprop:Generator_UserColumnName="DescProd" msprop:Generator_ColumnPropNameInTable="DescProdColumn" msprop:Generator_ColumnPropNameInRow="DescProd" msprop:Generator_ColumnVarNameInTable="columnDescProd">
+              <xs:element name="DescProd" msprop:Generator_ColumnPropNameInTable="DescProdColumn" msprop:Generator_ColumnPropNameInRow="DescProd" msprop:Generator_UserColumnName="DescProd" msprop:Generator_ColumnVarNameInTable="columnDescProd">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PrecioCompra" msprop:Generator_UserColumnName="PrecioCompra" msprop:Generator_ColumnPropNameInTable="PrecioCompraColumn" msprop:Generator_ColumnPropNameInRow="PrecioCompra" msprop:Generator_ColumnVarNameInTable="columnPrecioCompra" type="xs:double" />
-              <xs:element name="CantComprada" msprop:Generator_UserColumnName="CantComprada" msprop:Generator_ColumnPropNameInTable="CantCompradaColumn" msprop:Generator_ColumnPropNameInRow="CantComprada" msprop:Generator_ColumnVarNameInTable="columnCantComprada" type="xs:int" />
-              <xs:element name="PorcentajeGanancia" msprop:Generator_UserColumnName="PorcentajeGanancia" msprop:Generator_ColumnPropNameInTable="PorcentajeGananciaColumn" msprop:Generator_ColumnPropNameInRow="PorcentajeGanancia" msprop:Generator_ColumnVarNameInTable="columnPorcentajeGanancia" type="xs:int" />
+              <xs:element name="PrecioCompra" msprop:Generator_ColumnPropNameInTable="PrecioCompraColumn" msprop:Generator_ColumnPropNameInRow="PrecioCompra" msprop:Generator_UserColumnName="PrecioCompra" msprop:Generator_ColumnVarNameInTable="columnPrecioCompra" type="xs:double" />
+              <xs:element name="CantComprada" msprop:Generator_ColumnPropNameInTable="CantCompradaColumn" msprop:Generator_ColumnPropNameInRow="CantComprada" msprop:Generator_UserColumnName="CantComprada" msprop:Generator_ColumnVarNameInTable="columnCantComprada" type="xs:int" />
+              <xs:element name="PorcentajeGanancia" msprop:Generator_ColumnPropNameInTable="PorcentajeGananciaColumn" msprop:Generator_ColumnPropNameInRow="PorcentajeGanancia" msprop:Generator_UserColumnName="PorcentajeGanancia" msprop:Generator_ColumnVarNameInTable="columnPorcentajeGanancia" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -158,20 +156,6 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="DescProd" msprop:Generator_ColumnPropNameInRow="DescProd" msprop:Generator_ColumnPropNameInTable="DescProdColumn" msprop:Generator_ColumnVarNameInTable="columnDescProd" msprop:Generator_UserColumnName="DescProd">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Descripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_UserColumnName="Descripcion">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
