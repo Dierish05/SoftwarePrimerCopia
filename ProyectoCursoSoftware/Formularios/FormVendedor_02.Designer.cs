@@ -92,6 +92,7 @@
             // txtCedula
             // 
             txtCedula.BackColor = Color.FromArgb(221, 233, 218);
+            txtCedula.Enabled = false;
             txtCedula.Location = new Point(145, 258);
             txtCedula.Name = "txtCedula";
             txtCedula.Size = new Size(214, 27);
