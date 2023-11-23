@@ -46,7 +46,6 @@ namespace ProyectoCursoSoftware.Formularios
             ApplyShadows();
         }
 
-
         private void ApplyShadows()
         {
             // Obtener el estilo extendido actual

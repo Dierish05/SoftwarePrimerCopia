@@ -96,9 +96,9 @@
             label1.BackColor = Color.Teal;
             label1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1, 0);
+            label1.Location = new Point(-1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(661, 31);
+            label1.Size = new Size(663, 31);
             label1.TabIndex = 73;
             label1.Text = "SELECCION PRODUCTO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
