@@ -26,7 +26,7 @@ namespace ProyectoCursoSoftware.Reportes
 
         private void FrmReporte_Load(object sender, EventArgs e)
         {
-            if(n== 1) 
+            if (n == 1)
             {
                 DataSet1 ds = new DataSet1();
                 SqlDataAdapter das = new SqlDataAdapter("MostrarVentas", con.connect);
@@ -36,7 +36,8 @@ namespace ProyectoCursoSoftware.Reportes
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(dataSource);
                 reportViewer1.RefreshReport();
-            } else if(n == 2)
+            }
+            else if (n == 2)
             {
                 DataSet1 ds = new DataSet1();
                 SqlDataAdapter das = new SqlDataAdapter("MostrarCompra", con.connect);
@@ -46,8 +47,18 @@ namespace ProyectoCursoSoftware.Reportes
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(dataSource);
                 reportViewer1.RefreshReport();
+            } else if(n==3)
+            {
+                DataSet1 ds = new DataSet1();
+                SqlDataAdapter das = new SqlDataAdapter("MostrarInventarioReporte", con.connect);
+                das.Fill(ds, "MostrarInventarioReporte");
+                reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoCursoSoftware.Reportes.ReporteInventario.rdlc";
+                ReportDataSource dataSource = new ReportDataSource("DataSet1", ds.Tables[2]);
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(dataSource);
+                reportViewer1.RefreshReport();
             }
-            
+
         }
     }
 }
