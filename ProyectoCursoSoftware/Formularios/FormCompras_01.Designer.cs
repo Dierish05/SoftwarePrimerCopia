@@ -37,6 +37,7 @@
             label1 = new Label();
             numericUpDown1 = new NumericUpDown();
             nUpdownCantidad = new NumericUpDown();
+            btnSeleccionar = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).BeginInit();
             SuspendLayout();
@@ -47,7 +48,7 @@
             txtCodProducto.BorderStyle = BorderStyle.FixedSingle;
             txtCodProducto.Location = new Point(158, 48);
             txtCodProducto.Name = "txtCodProducto";
-            txtCodProducto.Size = new Size(137, 27);
+            txtCodProducto.Size = new Size(101, 27);
             txtCodProducto.TabIndex = 47;
             txtCodProducto.KeyDown += txtCodProducto_KeyDown;
             // 
@@ -55,7 +56,7 @@
             // 
             btnRegresar.FlatStyle = FlatStyle.Flat;
             btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnRegresar.Location = new Point(173, 359);
+            btnRegresar.Location = new Point(195, 359);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
             btnRegresar.TabIndex = 43;
@@ -68,7 +69,7 @@
             btnGuardar.BackColor = SystemColors.Control;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnGuardar.Location = new Point(41, 359);
+            btnGuardar.Location = new Point(63, 359);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
             btnGuardar.TabIndex = 42;
@@ -111,7 +112,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(1, -3);
             label1.Name = "label1";
-            label1.Size = new Size(321, 31);
+            label1.Size = new Size(389, 31);
             label1.TabIndex = 31;
             label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -126,7 +127,7 @@
             numericUpDown1.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(137, 27);
+            numericUpDown1.Size = new Size(220, 27);
             numericUpDown1.TabIndex = 50;
             numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.KeyDown += numericUpDown1_KeyDown;
@@ -140,16 +141,28 @@
             nUpdownCantidad.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nUpdownCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nUpdownCantidad.Name = "nUpdownCantidad";
-            nUpdownCantidad.Size = new Size(137, 27);
+            nUpdownCantidad.Size = new Size(220, 27);
             nUpdownCantidad.TabIndex = 51;
             nUpdownCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // btnSeleccionar
+            // 
+            btnSeleccionar.FlatStyle = FlatStyle.Flat;
+            btnSeleccionar.ForeColor = Color.FromArgb(26, 138, 94);
+            btnSeleccionar.Location = new Point(271, 48);
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.Size = new Size(107, 29);
+            btnSeleccionar.TabIndex = 52;
+            btnSeleccionar.Text = "Seleccionar";
+            btnSeleccionar.UseVisualStyleBackColor = true;
             // 
             // FormCompras_01
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(322, 427);
+            ClientSize = new Size(390, 427);
+            Controls.Add(btnSeleccionar);
             Controls.Add(nUpdownCantidad);
             Controls.Add(numericUpDown1);
             Controls.Add(txtCodProducto);
@@ -161,6 +174,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormCompras_01";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCompras_01";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).EndInit();
@@ -178,5 +192,6 @@
         public TextBox txtCodProducto;
         public NumericUpDown numericUpDown1;
         public NumericUpDown nUpdownCantidad;
+        private Button btnSeleccionar;
     }
 }

@@ -130,6 +130,7 @@
             Controls.Add(dgvDatos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormProducto_02";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProducto_02";
             ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             groupBox1.ResumeLayout(false);

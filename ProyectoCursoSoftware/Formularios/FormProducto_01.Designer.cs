@@ -207,6 +207,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormProducto_01";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProducto_01";
             ResumeLayout(false);
             PerformLayout();

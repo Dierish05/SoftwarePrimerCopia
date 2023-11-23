@@ -364,6 +364,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVendedor_01";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "x";
             ResumeLayout(false);
             PerformLayout();

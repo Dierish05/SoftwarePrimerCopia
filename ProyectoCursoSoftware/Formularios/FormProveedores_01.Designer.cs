@@ -171,6 +171,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormProveedores_01";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProveedores_01";
             Load += FormProveedores_01_Load;
             ResumeLayout(false);
