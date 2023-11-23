@@ -97,7 +97,7 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 if (cell.Value != null && cell.Value != DBNull.Value)
                 {
-                    IdProv = Convert.ToInt32(cell.Value);
+                    //IdProv = Convert.ToInt32(cell.Value);
 
                     CodProductoSeleccionado = IdProv.ToString();
                     NombreProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del prodcuto"].Value.ToString();
