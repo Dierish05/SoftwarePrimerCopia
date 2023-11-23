@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCursoSoftware.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,12 @@ namespace ProyectoCursoSoftware.Formularios
 {
     public partial class FormProveedores_01 : Form
     {
-        public FormProveedores_01()
+        private Conexion con;
+        private ProveedorModel pm;
+        public FormProveedores_01(Conexion Con)
         {
+            this.con = Con;
+            pm = new ProveedorModel(con);
             InitializeComponent();
         }
 
@@ -45,6 +50,10 @@ namespace ProyectoCursoSoftware.Formularios
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Cammpos vacios! porfavor complete todos los campos e intentelo nuevamente");
+            }
+            else
+            {
+                pm.CrearProveedor(txtNombre.Text,txtDireccion.Text,txtTelefono.Text,txtTelefono.Text);
             }
         }
 

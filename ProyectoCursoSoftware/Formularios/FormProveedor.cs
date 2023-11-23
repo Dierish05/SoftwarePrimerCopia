@@ -25,7 +25,7 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormProveedores_01 formProveedores_01 = new FormProveedores_01();
+            FormProveedores_01 formProveedores_01 = new FormProveedores_01(con);
             formProveedores_01.ShowDialog();
         }
 
