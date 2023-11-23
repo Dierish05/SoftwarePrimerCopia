@@ -33,10 +33,11 @@
             // 
             // reportViewer1
             // 
+            reportViewer1.Dock = DockStyle.Fill;
             reportViewer1.Location = new Point(0, 0);
             reportViewer1.Name = "ReportViewer";
             reportViewer1.ServerReport.BearerToken = null;
-            reportViewer1.Size = new Size(700, 300);
+            reportViewer1.Size = new Size(791, 450);
             reportViewer1.TabIndex = 0;
             // 
             // FrmReporte
@@ -45,6 +46,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(reportViewer1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmReporte";
             Text = "FrmReporte";
             Load += FrmReporte_Load;
