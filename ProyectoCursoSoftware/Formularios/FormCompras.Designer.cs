@@ -44,10 +44,9 @@
             btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.ForeColor = Color.FromArgb(26, 138, 94);
-            btnSalir.Location = new Point(880, 382);
-            btnSalir.Margin = new Padding(3, 2, 3, 2);
+            btnSalir.Location = new Point(1006, 509);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(104, 31);
+            btnSalir.Size = new Size(119, 41);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -58,10 +57,9 @@
             btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnAgregar.Location = new Point(880, 256);
-            btnAgregar.Margin = new Padding(3, 2, 3, 2);
+            btnAgregar.Location = new Point(1006, 450);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(104, 31);
+            btnAgregar.Size = new Size(119, 41);
             btnAgregar.TabIndex = 2;
             btnAgregar.Text = "Nuevo";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -73,24 +71,21 @@
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDatos.BackgroundColor = Color.FromArgb(235, 238, 245);
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDatos.Location = new Point(15, 160);
-            dgvDatos.Margin = new Padding(3, 2, 3, 2);
+            dgvDatos.Location = new Point(17, 213);
             dgvDatos.Name = "dgvDatos";
             dgvDatos.ReadOnly = true;
             dgvDatos.RowHeadersWidth = 51;
             dgvDatos.RowTemplate.Height = 29;
-            dgvDatos.Size = new Size(844, 253);
+            dgvDatos.Size = new Size(965, 337);
             dgvDatos.TabIndex = 5;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(15, 53);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(17, 71);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(306, 61);
+            groupBox1.Size = new Size(350, 81);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar";
@@ -99,18 +94,17 @@
             // 
             textBox1.BackColor = Color.FromArgb(221, 233, 218);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(78, 20);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Location = new Point(89, 27);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(169, 23);
+            textBox1.Size = new Size(193, 27);
             textBox1.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(17, 20);
+            label2.Location = new Point(19, 27);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(67, 20);
             label2.TabIndex = 0;
             label2.Text = "Nombre:";
             // 
@@ -122,24 +116,23 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(1, -1);
             label1.Name = "label1";
-            label1.Size = new Size(994, 38);
+            label1.Size = new Size(1136, 51);
             label1.TabIndex = 8;
             label1.Text = "BUSQUEDA Y MANTENIMIENTO DE COMPRA";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormCompras
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(995, 446);
+            ClientSize = new Size(1137, 595);
             Controls.Add(btnSalir);
             Controls.Add(btnAgregar);
             Controls.Add(dgvDatos);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormCompras";
             Text = "FormCompras";
             ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
