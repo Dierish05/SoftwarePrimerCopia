@@ -39,6 +39,8 @@ namespace ProyectoCursoSoftware
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            InicioSesion Inicio = new InicioSesion();
+            Inicio.ShowDialog();
         }
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
