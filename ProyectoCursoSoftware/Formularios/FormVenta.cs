@@ -17,6 +17,7 @@ namespace ProyectoCursoSoftware.Formularios
         private InventarioModel im;
         private VentaModel vm;
         private double Total;
+        public double subtotal;
         public FormVenta(Conexion Con)
         {
             this.con = Con;
@@ -111,7 +112,7 @@ namespace ProyectoCursoSoftware.Formularios
                 listar();
             }
         }
-
+        int numeroDeDecimales = 2;
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
             if (dgvProducto.SelectedCells.Count == 0)
@@ -136,9 +137,12 @@ namespace ProyectoCursoSoftware.Formularios
                         double precio = (double)precioProducto;
                         if (int.Parse(nupCantidad.Value.ToString()) <= int.Parse(existenciasProducto.ToString()))
                         {
+                            double subtotalfix = (double)nupCantidad.Value * precio;
+                            subtotalfix = Math.Round(subtotalfix, numeroDeDecimales);
                             // Agregar nueva fila al dgvCarrito
-                            dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, nupCantidad.Value, (double)nupCantidad.Value * precio);
+                            dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, nupCantidad.Value, subtotalfix);
                             Total = (double)nupCantidad.Value * precio;
+                            Total = Math.Round(Total, numeroDeDecimales);
                             txtTotal.Text = Total.ToString();
                         }
                         else
@@ -155,7 +159,7 @@ namespace ProyectoCursoSoftware.Formularios
 
             }
         }
-
+   
         private void btnEliminarProd_Click(object sender, EventArgs e)
         {
 
@@ -174,6 +178,8 @@ namespace ProyectoCursoSoftware.Formularios
                     // Verificar si la fila es nueva
                     if (!selectedRow.IsNewRow)
                     {
+                        subtotal = (double)dgvCarrito.Rows[indiceSeleccionado].Cells["Subtotal"].Value;
+                        subtotal = Math.Round(subtotal, numeroDeDecimales);
                         dgvCarrito.Rows.Remove(selectedRow);
                     }
                     else
