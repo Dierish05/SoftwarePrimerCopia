@@ -33,6 +33,7 @@
             txtVendedor = new TextBox();
             groupBox1 = new GroupBox();
             groupBox3 = new GroupBox();
+            nupCantidad = new NumericUpDown();
             label10 = new Label();
             btnEliminarProd = new Button();
             label9 = new Label();
@@ -46,6 +47,11 @@
             dateTimePicker1 = new DateTimePicker();
             textBox1 = new TextBox();
             dgvCarrito = new DataGridView();
+            Id_Inventario = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
             groupBox2 = new GroupBox();
             textBox7 = new TextBox();
             textBox6 = new TextBox();
@@ -56,13 +62,12 @@
             label6 = new Label();
             label5 = new Label();
             txtSubTotal = new TextBox();
-            nupCantidad = new NumericUpDown();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nupCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nupCantidad).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -73,7 +78,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(-3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1144, 51);
+            label1.Size = new Size(1001, 38);
             label1.TabIndex = 1;
             label1.Text = "VENTA";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -81,9 +86,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(335, 67);
+            label2.Location = new Point(293, 50);
             label2.Name = "label2";
-            label2.Size = new Size(73, 20);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 2;
             label2.Text = "Vendedor";
             // 
@@ -91,19 +96,22 @@
             // 
             txtVendedor.BackColor = Color.FromArgb(221, 233, 218);
             txtVendedor.BorderStyle = BorderStyle.FixedSingle;
-            txtVendedor.Location = new Point(22, 88);
+            txtVendedor.Location = new Point(19, 66);
+            txtVendedor.Margin = new Padding(3, 2, 3, 2);
             txtVendedor.Name = "txtVendedor";
             txtVendedor.ReadOnly = true;
-            txtVendedor.Size = new Size(386, 27);
+            txtVendedor.Size = new Size(338, 23);
             txtVendedor.TabIndex = 11;
             // 
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(groupBox3);
-            groupBox1.Location = new Point(22, 121);
+            groupBox1.Location = new Point(19, 91);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1103, 280);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(965, 210);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Principal";
@@ -120,20 +128,30 @@
             groupBox3.Controls.Add(txtNombre);
             groupBox3.Controls.Add(txtCodigo);
             groupBox3.Controls.Add(dgvProducto);
-            groupBox3.Location = new Point(6, 29);
+            groupBox3.Location = new Point(5, 22);
+            groupBox3.Margin = new Padding(3, 2, 3, 2);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(1091, 235);
+            groupBox3.Padding = new Padding(3, 2, 3, 2);
+            groupBox3.Size = new Size(955, 176);
             groupBox3.TabIndex = 17;
             groupBox3.TabStop = false;
             groupBox3.Text = "Buscar Producto";
+            // 
+            // nupCantidad
+            // 
+            nupCantidad.Location = new Point(796, 82);
+            nupCantidad.Margin = new Padding(3, 2, 3, 2);
+            nupCantidad.Name = "nupCantidad";
+            nupCantidad.Size = new Size(94, 23);
+            nupCantidad.TabIndex = 14;
             // 
             // label10
             // 
             label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label10.AutoSize = true;
-            label10.Location = new Point(949, 87);
+            label10.Location = new Point(830, 65);
             label10.Name = "label10";
-            label10.Size = new Size(69, 20);
+            label10.Size = new Size(55, 15);
             label10.TabIndex = 24;
             label10.Text = "Cantidad";
             // 
@@ -142,28 +160,30 @@
             btnEliminarProd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEliminarProd.FlatStyle = FlatStyle.Flat;
             btnEliminarProd.ForeColor = Color.FromArgb(26, 138, 94);
-            btnEliminarProd.Location = new Point(949, 199);
+            btnEliminarProd.Location = new Point(830, 149);
+            btnEliminarProd.Margin = new Padding(3, 2, 3, 2);
             btnEliminarProd.Name = "btnEliminarProd";
-            btnEliminarProd.Size = new Size(137, 29);
+            btnEliminarProd.Size = new Size(120, 22);
             btnEliminarProd.TabIndex = 4;
             btnEliminarProd.Text = "Eliminar Producto";
             btnEliminarProd.UseVisualStyleBackColor = true;
+            btnEliminarProd.Click += btnEliminarProd_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(224, 21);
+            label9.Location = new Point(196, 16);
             label9.Name = "label9";
-            label9.Size = new Size(64, 20);
+            label9.Size = new Size(51, 15);
             label9.TabIndex = 23;
             label9.Text = "Nombre";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(89, 21);
+            label8.Location = new Point(78, 16);
             label8.Name = "label8";
-            label8.Size = new Size(58, 20);
+            label8.Size = new Size(46, 15);
             label8.TabIndex = 22;
             label8.Text = "Codigo";
             // 
@@ -172,9 +192,10 @@
             btnAgregarProd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnAgregarProd.FlatStyle = FlatStyle.Flat;
             btnAgregarProd.ForeColor = Color.FromArgb(26, 138, 94);
-            btnAgregarProd.Location = new Point(949, 155);
+            btnAgregarProd.Location = new Point(830, 116);
+            btnAgregarProd.Margin = new Padding(3, 2, 3, 2);
             btnAgregarProd.Name = "btnAgregarProd";
-            btnAgregarProd.Size = new Size(137, 29);
+            btnAgregarProd.Size = new Size(120, 22);
             btnAgregarProd.TabIndex = 3;
             btnAgregarProd.Text = "Agregar Producto";
             btnAgregarProd.UseVisualStyleBackColor = true;
@@ -185,9 +206,10 @@
             txtNombre.BackColor = Color.FromArgb(221, 233, 218);
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.ForeColor = Color.FromArgb(149, 156, 146);
-            txtNombre.Location = new Point(163, 44);
+            txtNombre.Location = new Point(143, 33);
+            txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(125, 27);
+            txtNombre.Size = new Size(110, 23);
             txtNombre.TabIndex = 2;
             txtNombre.TextChanged += txtNombre_TextChanged;
             txtNombre.Enter += txtNombre_Enter;
@@ -198,9 +220,10 @@
             txtCodigo.BackColor = Color.FromArgb(221, 233, 218);
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
             txtCodigo.ForeColor = Color.FromArgb(149, 156, 146);
-            txtCodigo.Location = new Point(22, 44);
+            txtCodigo.Location = new Point(19, 33);
+            txtCodigo.Margin = new Padding(3, 2, 3, 2);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(125, 27);
+            txtCodigo.Size = new Size(110, 23);
             txtCodigo.TabIndex = 1;
             txtCodigo.TextChanged += txtCodigo_TextChanged;
             txtCodigo.Enter += txtCodigo_Enter;
@@ -212,21 +235,22 @@
             dgvProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProducto.BackgroundColor = Color.FromArgb(235, 238, 245);
             dgvProducto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducto.Location = new Point(9, 87);
+            dgvProducto.Location = new Point(8, 65);
+            dgvProducto.Margin = new Padding(3, 2, 3, 2);
             dgvProducto.Name = "dgvProducto";
             dgvProducto.ReadOnly = true;
             dgvProducto.RowHeadersWidth = 51;
             dgvProducto.RowTemplate.Height = 29;
-            dgvProducto.Size = new Size(877, 141);
+            dgvProducto.Size = new Size(767, 106);
             dgvProducto.TabIndex = 10;
             // 
             // label4
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(957, 100);
+            label4.Location = new Point(837, 75);
             label4.Name = "label4";
-            label4.Size = new Size(45, 20);
+            label4.Size = new Size(36, 15);
             label4.TabIndex = 7;
             label4.Text = "Hora:";
             // 
@@ -234,9 +258,9 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(952, 67);
+            label3.Location = new Point(833, 50);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(41, 15);
             label3.TabIndex = 2;
             label3.Text = "Fecha:";
             // 
@@ -245,9 +269,10 @@
             dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dateTimePicker1.CalendarMonthBackground = Color.YellowGreen;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(1015, 60);
+            dateTimePicker1.Location = new Point(888, 45);
+            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(105, 27);
+            dateTimePicker1.Size = new Size(92, 23);
             dateTimePicker1.TabIndex = 13;
             // 
             // textBox1
@@ -255,10 +280,11 @@
             textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox1.BackColor = Color.FromArgb(221, 233, 218);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(1015, 93);
+            textBox1.Location = new Point(888, 70);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(104, 27);
+            textBox1.Size = new Size(91, 23);
             textBox1.TabIndex = 12;
             // 
             // dgvCarrito
@@ -267,13 +293,45 @@
             dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCarrito.BackgroundColor = Color.FromArgb(235, 238, 245);
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarrito.Location = new Point(15, 36);
+            dgvCarrito.Columns.AddRange(new DataGridViewColumn[] { Id_Inventario, Nombre, Precio, Cantidad, Subtotal });
+            dgvCarrito.Location = new Point(13, 27);
+            dgvCarrito.Margin = new Padding(3, 2, 3, 2);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.ReadOnly = true;
             dgvCarrito.RowHeadersWidth = 51;
             dgvCarrito.RowTemplate.Height = 29;
-            dgvCarrito.Size = new Size(877, 324);
+            dgvCarrito.Size = new Size(767, 243);
             dgvCarrito.TabIndex = 9;
+            // 
+            // Id_Inventario
+            // 
+            Id_Inventario.HeaderText = "Id_Inventario";
+            Id_Inventario.Name = "Id_Inventario";
+            Id_Inventario.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            // 
+            // Subtotal
+            // 
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.Name = "Subtotal";
+            Subtotal.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -288,9 +346,11 @@
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(txtSubTotal);
             groupBox2.Controls.Add(dgvCarrito);
-            groupBox2.Location = new Point(22, 421);
+            groupBox2.Location = new Point(19, 316);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1103, 375);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(965, 281);
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Detalle";
@@ -300,9 +360,10 @@
             textBox7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             textBox7.BackColor = Color.FromArgb(221, 233, 218);
             textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(919, 161);
+            textBox7.Location = new Point(804, 121);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(106, 27);
+            textBox7.Size = new Size(93, 23);
             textBox7.TabIndex = 15;
             // 
             // textBox6
@@ -310,9 +371,10 @@
             textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             textBox6.BackColor = Color.FromArgb(221, 233, 218);
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(919, 112);
+            textBox6.Location = new Point(804, 84);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(106, 27);
+            textBox6.Size = new Size(93, 23);
             textBox6.TabIndex = 5;
             // 
             // btnImprimir
@@ -320,9 +382,10 @@
             btnImprimir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnImprimir.FlatStyle = FlatStyle.Flat;
             btnImprimir.ForeColor = Color.FromArgb(26, 138, 94);
-            btnImprimir.Location = new Point(898, 331);
+            btnImprimir.Location = new Point(786, 248);
+            btnImprimir.Margin = new Padding(3, 2, 3, 2);
             btnImprimir.Name = "btnImprimir";
-            btnImprimir.Size = new Size(199, 29);
+            btnImprimir.Size = new Size(174, 22);
             btnImprimir.TabIndex = 8;
             btnImprimir.Text = "Imprimir";
             btnImprimir.UseVisualStyleBackColor = true;
@@ -334,9 +397,10 @@
             btnAnular.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnAnular.FlatStyle = FlatStyle.Flat;
             btnAnular.ForeColor = Color.Red;
-            btnAnular.Location = new Point(1003, 295);
+            btnAnular.Location = new Point(878, 221);
+            btnAnular.Margin = new Padding(3, 2, 3, 2);
             btnAnular.Name = "btnAnular";
-            btnAnular.Size = new Size(94, 29);
+            btnAnular.Size = new Size(82, 22);
             btnAnular.TabIndex = 7;
             btnAnular.Text = "Anular";
             btnAnular.UseVisualStyleBackColor = true;
@@ -348,9 +412,10 @@
             btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnGuardar.Location = new Point(898, 295);
+            btnGuardar.Location = new Point(786, 221);
+            btnGuardar.Margin = new Padding(3, 2, 3, 2);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(94, 29);
+            btnGuardar.Size = new Size(82, 22);
             btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -361,9 +426,9 @@
             // 
             label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Location = new Point(970, 89);
+            label7.Location = new Point(849, 67);
             label7.Name = "label7";
-            label7.Size = new Size(53, 20);
+            label7.Size = new Size(43, 15);
             label7.TabIndex = 7;
             label7.Text = "Monto";
             // 
@@ -371,9 +436,9 @@
             // 
             label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(981, 139);
+            label6.Location = new Point(858, 104);
             label6.Name = "label6";
-            label6.Size = new Size(42, 20);
+            label6.Size = new Size(32, 15);
             label6.TabIndex = 10;
             label6.Text = "Total";
             // 
@@ -381,9 +446,9 @@
             // 
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(954, 36);
+            label5.Location = new Point(835, 27);
             label5.Name = "label5";
-            label5.Size = new Size(71, 20);
+            label5.Size = new Size(55, 15);
             label5.TabIndex = 8;
             label5.Text = "Sub Total";
             // 
@@ -392,24 +457,18 @@
             txtSubTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             txtSubTotal.BackColor = Color.FromArgb(221, 233, 218);
             txtSubTotal.BorderStyle = BorderStyle.FixedSingle;
-            txtSubTotal.Location = new Point(922, 59);
+            txtSubTotal.Location = new Point(807, 44);
+            txtSubTotal.Margin = new Padding(3, 2, 3, 2);
             txtSubTotal.Name = "txtSubTotal";
-            txtSubTotal.Size = new Size(104, 27);
+            txtSubTotal.Size = new Size(91, 23);
             txtSubTotal.TabIndex = 14;
-            // 
-            // nupCantidad
-            // 
-            nupCantidad.Location = new Point(910, 110);
-            nupCantidad.Name = "nupCantidad";
-            nupCantidad.Size = new Size(107, 27);
-            nupCantidad.TabIndex = 14;
             // 
             // FormVenta
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1137, 788);
+            ClientSize = new Size(995, 591);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(txtVendedor);
@@ -420,16 +479,17 @@
             Controls.Add(label1);
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormVenta";
             Text = "FormVenta";
             groupBox1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nupCantidad).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nupCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -467,5 +527,10 @@
         private DataGridView dgvProducto;
         private Label label10;
         private NumericUpDown nupCantidad;
+        private DataGridViewTextBoxColumn Id_Inventario;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Subtotal;
     }
 }

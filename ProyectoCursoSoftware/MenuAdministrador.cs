@@ -88,5 +88,11 @@ namespace ProyectoCursoSoftware
             InicioSesion Inicio = new InicioSesion();
             Inicio.ShowDialog();
         }
+
+        private void reporteInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            n = 3;
+            AbrirFormhijo(new FrmReporte(con, n));
+        }
     }
 }

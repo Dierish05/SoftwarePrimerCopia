@@ -40,6 +40,7 @@
             reporteComrpaToolStripMenuItem = new ToolStripMenuItem();
             cerrarToolStripMenuItem = new ToolStripMenuItem();
             PanelContenedor = new Panel();
+            reporteInventarioToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -101,7 +102,7 @@
             // 
             // reportesToolStripMenuItem
             // 
-            reportesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { reporteVentaToolStripMenuItem, reporteComrpaToolStripMenuItem });
+            reportesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { reporteVentaToolStripMenuItem, reporteComrpaToolStripMenuItem, reporteInventarioToolStripMenuItem });
             reportesToolStripMenuItem.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
             reportesToolStripMenuItem.ForeColor = Color.White;
             reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -111,14 +112,14 @@
             // reporteVentaToolStripMenuItem
             // 
             reporteVentaToolStripMenuItem.Name = "reporteVentaToolStripMenuItem";
-            reporteVentaToolStripMenuItem.Size = new Size(179, 24);
+            reporteVentaToolStripMenuItem.Size = new Size(192, 24);
             reporteVentaToolStripMenuItem.Text = "Reporte Venta";
             reporteVentaToolStripMenuItem.Click += reporteVentaToolStripMenuItem_Click;
             // 
             // reporteComrpaToolStripMenuItem
             // 
             reporteComrpaToolStripMenuItem.Name = "reporteComrpaToolStripMenuItem";
-            reporteComrpaToolStripMenuItem.Size = new Size(179, 24);
+            reporteComrpaToolStripMenuItem.Size = new Size(192, 24);
             reporteComrpaToolStripMenuItem.Text = "Reporte Compra";
             reporteComrpaToolStripMenuItem.Click += reporteComrpaToolStripMenuItem_Click;
             // 
@@ -139,6 +140,13 @@
             PanelContenedor.Name = "PanelContenedor";
             PanelContenedor.Size = new Size(1015, 482);
             PanelContenedor.TabIndex = 1;
+            // 
+            // reporteInventarioToolStripMenuItem
+            // 
+            reporteInventarioToolStripMenuItem.Name = "reporteInventarioToolStripMenuItem";
+            reporteInventarioToolStripMenuItem.Size = new Size(192, 24);
+            reporteInventarioToolStripMenuItem.Text = "Reporte Inventario";
+            reporteInventarioToolStripMenuItem.Click += reporteInventarioToolStripMenuItem_Click;
             // 
             // MenuAdministrador
             // 
@@ -173,5 +181,6 @@
         private ToolStripMenuItem reporteVentaToolStripMenuItem;
         private ToolStripMenuItem reporteComrpaToolStripMenuItem;
         private ToolStripMenuItem cerrarToolStripMenuItem;
+        private ToolStripMenuItem reporteInventarioToolStripMenuItem;
     }
 }

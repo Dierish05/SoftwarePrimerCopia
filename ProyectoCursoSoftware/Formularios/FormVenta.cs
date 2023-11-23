@@ -113,7 +113,69 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
+            if (dgvProducto.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
+            }
+            else
+            {
+                int indiceSeleccionado = dgvProducto.SelectedCells[0].RowIndex;
+                DataGridViewCell cell = dgvProducto.Rows[indiceSeleccionado].Cells["Id_Inv"];
+                if (cell.Value != null && cell.Value != DBNull.Value)
+                {
+                    DataGridViewRow selectedRow = dgvProducto.Rows[indiceSeleccionado];
+                    object idInventario = selectedRow.Cells["Id_Inv"].Value;
+                    object nombreProducto = selectedRow.Cells["Nombre_del_producto"].Value;
+                    object precioProducto = selectedRow.Cells["Precio_del_producto"].Value;
+                    object existenciasProducto = selectedRow.Cells["Existencias_del_producto"].Value;
 
+                    if (idInventario != null && idInventario != DBNull.Value &&
+                precioProducto != null && precioProducto != DBNull.Value)
+                    {
+                        double precio = (double)precioProducto;
+
+                        // Agregar nueva fila al dgvCarrito
+                        dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, nupCantidad.Value, (double)nupCantidad.Value * precio);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No tiene ningún producto seleccionado. Seleccione un producto e inténtelo nuevamente.");
+                    }
+                }
+
+            }
+        }
+
+        private void btnEliminarProd_Click(object sender, EventArgs e)
+        {
+
+            if (dgvCarrito.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("No tiene ninguna fila seleccionada en el carrito. Seleccione una fila e inténtelo nuevamente.");
+            }
+            else
+            {
+                int indiceSeleccionado = dgvCarrito.SelectedCells[0].RowIndex;
+
+                if (indiceSeleccionado >= 0 && indiceSeleccionado < dgvCarrito.Rows.Count)
+                {
+                    DataGridViewRow selectedRow = dgvCarrito.Rows[indiceSeleccionado];
+
+                    // Verificar si la fila es nueva
+                    if (!selectedRow.IsNewRow)
+                    {
+                        dgvCarrito.Rows.Remove(selectedRow);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede eliminar una fila nueva sin confirmar.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El índice seleccionado está fuera de rango. Seleccione una fila e inténtelo nuevamente.");
+                }
+            }
         }
     }
 }
