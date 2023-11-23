@@ -81,6 +81,7 @@ namespace ProyectoCursoSoftware.Model
             }
         }
 
+
         public void BusquedaVendedorNombre(string Nombre, DataGridView gridView)
         {
 
@@ -145,6 +146,38 @@ namespace ProyectoCursoSoftware.Model
                 return;
             }
 
+        }
+
+        public void CrearLoginVendedor(String usuario, string contrasena)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                SqlParameter[] param = new SqlParameter[2];
+                param[0] = new SqlParameter("@@Usuario", SqlDbType.NVarChar);
+                param[0].Value = usuario;
+                param[1] = new SqlParameter("@@Contraseña", SqlDbType.NVarChar);
+                param[1].Value = contrasena;
+
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "NuevosLogin";
+                cmd.Connection = con.connect;
+                cmd.Parameters.AddRange(param);
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al Crear el login");
+                return;
+            }
         }
     }
 }
