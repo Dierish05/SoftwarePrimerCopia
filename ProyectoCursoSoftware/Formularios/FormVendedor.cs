@@ -102,7 +102,7 @@ namespace ProyectoCursoSoftware.Formularios
                     formVendedor_01.txtPrimerApellido.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Categoria"].Value.ToString();
                     formVendedor_01.txtSegundoApellido.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
                     formVendedor_01.txtEmail.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
-                    formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
+                    //formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
                     formVendedor_01.txtUsuario.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
                     formVendedor_01.txtContraseña.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
                     formVendedor_01.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
