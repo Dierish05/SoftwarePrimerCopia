@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtCodProducto = new TextBox();
+            txtProducto = new TextBox();
             btnRegresar = new Button();
             btnGuardar = new Button();
             label7 = new Label();
@@ -42,15 +42,15 @@
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).BeginInit();
             SuspendLayout();
             // 
-            // txtCodProducto
+            // txtProducto
             // 
-            txtCodProducto.BackColor = Color.FromArgb(221, 233, 218);
-            txtCodProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtCodProducto.Location = new Point(158, 48);
-            txtCodProducto.Name = "txtCodProducto";
-            txtCodProducto.Size = new Size(101, 27);
-            txtCodProducto.TabIndex = 47;
-            txtCodProducto.KeyDown += txtCodProducto_KeyDown;
+            txtProducto.BackColor = Color.FromArgb(221, 233, 218);
+            txtProducto.BorderStyle = BorderStyle.FixedSingle;
+            txtProducto.Location = new Point(158, 48);
+            txtProducto.Name = "txtProducto";
+            txtProducto.Size = new Size(101, 27);
+            txtProducto.TabIndex = 47;
+            txtProducto.KeyDown += txtCodProducto_KeyDown;
             // 
             // btnRegresar
             // 
@@ -100,9 +100,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(12, 59);
             label4.Name = "label4";
-            label4.Size = new Size(103, 20);
+            label4.Size = new Size(72, 20);
             label4.TabIndex = 35;
-            label4.Text = "Cod Producto:";
+            label4.Text = "Producto:";
             // 
             // label1
             // 
@@ -155,6 +155,7 @@
             btnSeleccionar.TabIndex = 52;
             btnSeleccionar.Text = "Seleccionar";
             btnSeleccionar.UseVisualStyleBackColor = true;
+            btnSeleccionar.Click += btnSeleccionar_Click;
             // 
             // FormCompras_01
             // 
@@ -165,7 +166,7 @@
             Controls.Add(btnSeleccionar);
             Controls.Add(nUpdownCantidad);
             Controls.Add(numericUpDown1);
-            Controls.Add(txtCodProducto);
+            Controls.Add(txtProducto);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);
             Controls.Add(label7);
@@ -189,7 +190,7 @@
         private Label label5;
         private Label label4;
         private Label label1;
-        public TextBox txtCodProducto;
+        public TextBox txtProducto;
         public NumericUpDown numericUpDown1;
         public NumericUpDown nUpdownCantidad;
         private Button btnSeleccionar;

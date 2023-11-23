@@ -74,7 +74,6 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void ActualizarTextBoxProveedor()
         {
-           
             txtProveedor.Text = NombreProveedor;
         }
 
