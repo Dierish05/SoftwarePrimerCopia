@@ -13,12 +13,10 @@ namespace ProyectoCursoSoftware.Formularios
 {
     public partial class FormProveedores_01 : Form
     {
-        private Conexion con;
         private ProveedorModel pm;
-        public FormProveedores_01(Conexion Con)
+        public FormProveedores_01(ProveedorModel Pm)
         {
-            this.con = Con;
-            pm = new ProveedorModel(con);
+            this.pm = Pm;
             InitializeComponent();
         }
 
