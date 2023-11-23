@@ -194,7 +194,7 @@ namespace ProyectoCursoSoftware.Formularios
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtPrimerNombre.Text == "" || txtSegundoNombre.Text == "" || txtDireccion.Text == ""
+            if (txtPrimerNombre.Text == "" || txtPrimerApellido.Text == "" || txtDireccion.Text == ""
                 || txtTelefono.Text == "" || txtEmail.Text == "" || txtCedula.Text == "")
             {
 
