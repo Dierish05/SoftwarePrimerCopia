@@ -25,7 +25,7 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormCompras_01 formCompras_01 = new FormCompras_01();
+            FormCompras_01 formCompras_01 = new FormCompras_01(con);
             formCompras_01.ShowDialog();
         }
 

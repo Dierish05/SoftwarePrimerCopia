@@ -12,15 +12,19 @@ namespace ProyectoCursoSoftware.Formularios
 {
     public partial class FormCompras_01 : Form
     {
-        public FormCompras_01()
+        Conexion con;
+        public string NombreProducto;
+        public string codProducto;
+        public FormCompras_01(Conexion con)
         {
             InitializeComponent();
+            this.con = con;
         }
 
         private void txtCodProducto_KeyDown(object sender, KeyEventArgs e)
         {
             // Limitar a 5 caracteres
-            if (!(e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && txtCodProducto.Text.Length >= 5)
+            if (!(e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && txtProducto.Text.Length >= 5)
             {
                 e.SuppressKeyPress = true;
             }
@@ -39,7 +43,7 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtCodProducto.Text == "" || numericUpDown1.Value == 0 || nUpdownCantidad.Value == 0)
+            if (txtProducto.Text == "" || numericUpDown1.Value == 0 || nUpdownCantidad.Value == 0)
             {
                 MessageBox.Show("Campos vacios, porfavor introduzca un dato valido!");
             }
@@ -52,6 +56,29 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            FormCompras_02 formCompras_02 = new FormCompras_02(con);
+            formCompras_02.ShowDialog();
+
+            if (!string.IsNullOrEmpty(formCompras_02.CodProductoSeleccionado) &&
+         !string.IsNullOrEmpty(formCompras_02.NombreProductoSeleccionado))
+            {
+
+                codProducto = formCompras_02.CodProductoSeleccionado;
+                NombreProducto = formCompras_02.NombreProductoSeleccionado;
+
+
+                ActualizarTextBoxProveedor();
+            }
+        }
+
+        private void ActualizarTextBoxProveedor()
+        {
+
+            txtProducto.Text = NombreProducto;
         }
     }
 }
