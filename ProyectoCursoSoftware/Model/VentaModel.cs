@@ -37,6 +37,27 @@ namespace ProyectoCursoSoftware.Model
 
         }
 
+        public void listarVentasId(DataGridView GridView1)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader leer;
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "listarVentas";
+            cmd.Connection = con.connect;
+
+
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            GridView1.DataSource = dt;
+
+        }
+
         public void CrearVenta(int Vendedor)
         {
 
@@ -45,8 +66,8 @@ namespace ProyectoCursoSoftware.Model
                 SqlCommand cmd = new SqlCommand();
 
                 SqlParameter[] param = new SqlParameter[1];
-                param[1] = new SqlParameter("@IdEmp", SqlDbType.Int);
-                param[1].Value = Vendedor;
+                param[0] = new SqlParameter("@IdEmp", SqlDbType.Int);
+                param[0].Value = Vendedor;
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "CrearVentaP";
@@ -163,6 +184,66 @@ namespace ProyectoCursoSoftware.Model
                 return;
             }
 
+        }
+
+        public void SumarVenta(int IdInv, int Cantidad)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                SqlParameter[] param = new SqlParameter[2];
+                param[0] = new SqlParameter("@Id_Inv", SqlDbType.Int);
+                param[0].Value = IdInv;
+                param[1] = new SqlParameter("@Cant", SqlDbType.Int);
+                param[1].Value = Cantidad;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SumarVenta";
+                cmd.Connection = con.connect;
+                cmd.Parameters.AddRange(param);
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al actualizar");
+                return;
+            }
+        }
+
+        public void RestarVenta(int IdInv, int Cantidad)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                SqlParameter[] param = new SqlParameter[2];
+                param[0] = new SqlParameter("@Id_Inv", SqlDbType.Int);
+                param[0].Value = IdInv;
+                param[1] = new SqlParameter("@Cant", SqlDbType.Int);
+                param[1].Value = Cantidad;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "RestarVenta";
+                cmd.Connection = con.connect;
+                cmd.Parameters.AddRange(param);
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al actualizar");
+                return;
+            }
         }
     }
 }

@@ -33,7 +33,7 @@
             txtVendedor = new TextBox();
             groupBox1 = new GroupBox();
             groupBox3 = new GroupBox();
-            nupCantidad = new NumericUpDown();
+            txtCantidad = new TextBox();
             label10 = new Label();
             btnEliminarProd = new Button();
             label9 = new Label();
@@ -62,12 +62,15 @@
             label6 = new Label();
             label5 = new Label();
             txtTotal = new TextBox();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nupCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -119,7 +122,7 @@
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox3.Controls.Add(nupCantidad);
+            groupBox3.Controls.Add(txtCantidad);
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(btnEliminarProd);
             groupBox3.Controls.Add(label9);
@@ -137,16 +140,12 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Buscar Producto";
             // 
-            // nupCantidad
+            // txtCantidad
             // 
-            nupCantidad.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            nupCantidad.Location = new Point(830, 82);
-            nupCantidad.Margin = new Padding(3, 2, 3, 2);
-            nupCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            nupCantidad.Name = "nupCantidad";
-            nupCantidad.Size = new Size(118, 23);
-            nupCantidad.TabIndex = 14;
-            nupCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            txtCantidad.Location = new Point(831, 88);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(114, 23);
+            txtCantidad.TabIndex = 25;
             // 
             // label10
             // 
@@ -345,6 +344,8 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox2.Controls.Add(dataGridView2);
+            groupBox2.Controls.Add(dataGridView1);
             groupBox2.Controls.Add(textBox7);
             groupBox2.Controls.Add(textBox6);
             groupBox2.Controls.Add(btnImprimir);
@@ -428,6 +429,7 @@
             btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             btnGuardar.MouseEnter += btnGuardar_MouseEnter;
             btnGuardar.MouseLeave += btnGuardar_MouseLeave;
             // 
@@ -473,6 +475,25 @@
             txtTotal.Size = new Size(118, 23);
             txtTotal.TabIndex = 14;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(786, 67);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(22, 31);
+            dataGridView1.TabIndex = 14;
+            dataGridView1.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(786, 21);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(33, 21);
+            dataGridView2.TabIndex = 26;
+            // 
             // FormVenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -495,11 +516,12 @@
             groupBox1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nupCantidad).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -536,11 +558,13 @@
         private TextBox txtCodigo;
         private DataGridView dgvProducto;
         private Label label10;
-        private NumericUpDown nupCantidad;
         private DataGridViewTextBoxColumn Id_Inventario;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Subtotal;
+        private TextBox txtCantidad;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
     }
 }

@@ -14,10 +14,12 @@ namespace ProyectoCursoSoftware
     public partial class MenuVendedor : Form
     {
         Conexion con;
-        public MenuVendedor(Conexion con)
+        private string usuario;
+        public MenuVendedor(Conexion con, string Usuario)
         {
             InitializeComponent();
             this.con = con;
+            this.usuario = Usuario;
         }
 
         private void AbrirFormhijo(object formhijo)
@@ -45,12 +47,12 @@ namespace ProyectoCursoSoftware
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FormVenta(con));
+            AbrirFormhijo(new FormVenta(con, usuario));
         }
 
         private void MenuVendedor_Load(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FormVenta(con));
+            AbrirFormhijo(new FormVenta(con,usuario));
         }
     }
 }

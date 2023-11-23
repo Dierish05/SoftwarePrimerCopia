@@ -60,7 +60,7 @@ namespace ProyectoCursoSoftware
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FormVenta(con));
+            //AbrirFormhijo(new FormVenta(con));
         }
 
         private void reporteVentaToolStripMenuItem_Click(object sender, EventArgs e)

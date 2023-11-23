@@ -16,13 +16,17 @@ namespace ProyectoCursoSoftware.Formularios
         private Conexion con;
         private InventarioModel im;
         private VentaModel vm;
+        private VendedorModel vd;
         private double Total;
         public double subtotal;
-        public FormVenta(Conexion Con)
+        private string usuario;
+        public FormVenta(Conexion Con, string Usuario)
         {
             this.con = Con;
+            this.usuario = Usuario;
             im = new InventarioModel(con);
             vm = new VentaModel(con);
+            vd = new VendedorModel(con);
             InitializeComponent();
             listar();
         }
@@ -135,15 +139,18 @@ namespace ProyectoCursoSoftware.Formularios
                     precioProducto != null && precioProducto != DBNull.Value)
                     {
                         double precio = (double)precioProducto;
-                        if (int.Parse(nupCantidad.Value.ToString()) <= int.Parse(existenciasProducto.ToString()))
+                        if (int.Parse(txtCantidad.Text) <= int.Parse(existenciasProducto.ToString()))
                         {
-                            double subtotalfix = (double)nupCantidad.Value * precio;
+                            double subtotalfix = int.Parse(txtCantidad.Text) * precio;
                             subtotalfix = Math.Round(subtotalfix, numeroDeDecimales);
+                            int cantidad = int.Parse(txtCantidad.Text);
                             // Agregar nueva fila al dgvCarrito
-                            dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, nupCantidad.Value, subtotalfix);
-                            Total = (double)nupCantidad.Value * precio;
+                            dgvCarrito.Rows.Add(idInventario, nombreProducto, precio, int.Parse(txtCantidad.Text), subtotalfix);
+                            vm.RestarVenta(int.Parse(idInventario.ToString()), cantidad);
+                            Total = cantidad * precio;
                             Total = Math.Round(Total, numeroDeDecimales);
                             txtTotal.Text = Total.ToString();
+                            listar();
                         }
                         else
                         {
@@ -159,7 +166,7 @@ namespace ProyectoCursoSoftware.Formularios
 
             }
         }
-   
+
         private void btnEliminarProd_Click(object sender, EventArgs e)
         {
 
@@ -179,8 +186,14 @@ namespace ProyectoCursoSoftware.Formularios
                     if (!selectedRow.IsNewRow)
                     {
                         subtotal = (double)dgvCarrito.Rows[indiceSeleccionado].Cells["Subtotal"].Value;
+                        int Idd = int.Parse(dgvCarrito.Rows[indiceSeleccionado].Cells["Id_Inventario"].Value.ToString());
+                        int cantidad = int.Parse(dgvCarrito.Rows[indiceSeleccionado].Cells["Cantidad"].Value.ToString());
+                        vm.SumarVenta(Idd, cantidad);
+                        listar();
                         subtotal = Math.Round(subtotal, numeroDeDecimales);
                         dgvCarrito.Rows.Remove(selectedRow);
+                        Total = Total - subtotal;
+                        txtTotal.Text = Total.ToString();
                     }
                     else
                     {
@@ -192,6 +205,77 @@ namespace ProyectoCursoSoftware.Formularios
                     MessageBox.Show("El índice seleccionado está fuera de rango. Seleccione una fila e inténtelo nuevamente.");
                 }
             }
+        }
+
+        public List<int> obtenerIdS()
+        {
+            List<int> lIdServicios = new List<int>();
+            foreach (DataGridViewRow dr in dgvCarrito.Rows)
+            {
+                int id = Convert.ToInt32(dr.Cells["Id_Inventario"].Value);
+                lIdServicios.Add(id);
+            }
+            return lIdServicios;
+        }
+
+        public List<int> obtenerCantidades()
+        {
+            List<int> lIdServicios = new List<int>();
+            foreach (DataGridViewRow dr in dgvCarrito.Rows)
+            {
+                int id = Convert.ToInt32(dr.Cells["Cantidad"].Value);
+                lIdServicios.Add(id);
+            }
+            return lIdServicios;
+        }
+
+        
+
+        public int ObtenerIdVentaS()
+        {
+            dataGridView1.DataSource = null;
+            vm.listarVentas(dataGridView1);
+            List<int> lVentaSId = new List<int>();
+
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            {
+                int vSId;
+                vSId = Convert.ToInt32(dr.Cells["Id_Venta"].Value);
+                lVentaSId.Add(vSId);
+            }
+            int IdVentaS = (lVentaSId[lVentaSId.Count - 2]);
+            return IdVentaS;
+        }
+
+        //public int ObtenerIdVendedor()
+        //{
+        //    dataGridView2.DataSource = null;
+        //    vd.BusquedaVendedorUsuario(usuario,dataGridView1);
+        //    List<int> lVentaSId = new List<int>();
+
+        //    foreach (DataGridViewRow dr in dataGridView1.Rows)
+        //    {
+        //        int vSId;
+        //        vSId = Convert.ToInt32(dr.Cells["Id_Vendedor"].Value);
+        //        lVentaSId.Add(vSId);
+        //    }
+        //    int IdVentaS = (lVentaSId[lVentaSId.Count - 2]);
+        //    return IdVentaS;
+        //}
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            //int vendedor = ObtenerIdVendedor();
+            vm.CrearVenta(1);        
+            int venta = ObtenerIdVentaS();
+            List<int> datos = obtenerIdS();
+            List<int> cant = obtenerCantidades();
+            for (int i = 0; i < datos.Count; i++)
+            {
+                vm.SumarVenta(datos[i], cant[i]);
+                vm.CrearDetVenta(venta, datos[i], cant[i]);
+            }
+            MessageBox.Show("La venta se realizo con exito");
         }
     }
 }
