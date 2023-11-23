@@ -41,7 +41,7 @@ namespace ProyectoCursoSoftware
                                 // Abrir el formulario para dbcreator
                                 rol = "Vendedor";
                             }
-                            else if (userRole == "sysadmin" && user != "sa")
+                            else if (userRole == "Gerente" && user != "sa")
                             {
                                 rol = "Gerente";
                             }
