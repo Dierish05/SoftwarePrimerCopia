@@ -41,7 +41,11 @@ namespace ProyectoCursoSoftware
                                 // Abrir el formulario para dbcreator
                                 rol = "Vendedor";
                             }
-                           else
+                            else if (userRole == "sysadmin" && user != "sa")
+                            {
+                                rol = "Gerente";
+                            }
+                            else
                             {
                                 MessageBox.Show("No tienes roles específicos asignados.");
                             }
