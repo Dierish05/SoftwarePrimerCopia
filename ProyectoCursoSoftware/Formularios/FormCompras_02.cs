@@ -85,7 +85,9 @@ namespace ProyectoCursoSoftware.Formularios
             this.Dispose();
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
+      
+
+        private void btnSeleccionar_Click_1(object sender, EventArgs e)
         {
             int IdProv = 0;
             int indiceSeleccionado = dgvDatos.SelectedCells[0].RowIndex;
@@ -105,17 +107,8 @@ namespace ProyectoCursoSoftware.Formularios
                 {
                     MessageBox.Show("Este Producto no existe! Por favor, seleccione un Producto existente.");
                 }
-               
+
             }
-              
-
-
-            this.Close();
-        }
-
-        private void btnSeleccionar_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
