@@ -33,5 +33,10 @@ namespace ProyectoCursoSoftware.Formularios
         {
             cm.listarCompras(dgvDatos);
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

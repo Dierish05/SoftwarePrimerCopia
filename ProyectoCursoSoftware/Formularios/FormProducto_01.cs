@@ -56,5 +56,10 @@ namespace ProyectoCursoSoftware.Formularios
             FormProducto_02 formProducto_02 = new FormProducto_02(con);
             formProducto_02.ShowDialog();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

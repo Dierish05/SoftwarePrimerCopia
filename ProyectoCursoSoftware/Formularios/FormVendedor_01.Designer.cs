@@ -32,26 +32,30 @@
             txtPrimerNombre = new TextBox();
             label2 = new Label();
             label3 = new Label();
+            btnGuardar = new Button();
+            btnRegresar = new Button();
+            txtSegundoNombre = new TextBox();
+            txtPrimerApellido = new TextBox();
+            txtSegundoApellido = new TextBox();
+            label9 = new Label();
+            label11 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
             label10 = new Label();
-            btnGuardar = new Button();
-            btnRegresar = new Button();
             rbtnMasculino = new RadioButton();
             rbtnFemenino = new RadioButton();
-            txtSegundoNombre = new TextBox();
             txtDireccion = new TextBox();
             txtTelefono = new TextBox();
             txtEmail = new TextBox();
             txtCedula = new TextBox();
             cmbMunicipio = new ComboBox();
-            txtPrimerApellido = new TextBox();
-            txtSegundoApellido = new TextBox();
-            label9 = new Label();
-            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -95,65 +99,11 @@
             label3.TabIndex = 12;
             label3.Text = "Segundo Nombre:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(14, 190);
-            label4.Name = "label4";
-            label4.Size = new Size(75, 20);
-            label4.TabIndex = 13;
-            label4.Text = "Direccion:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(14, 226);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 20);
-            label5.TabIndex = 14;
-            label5.Text = "Telefono:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(14, 259);
-            label6.Name = "label6";
-            label6.Size = new Size(78, 20);
-            label6.TabIndex = 15;
-            label6.Text = "Municipio:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(14, 289);
-            label7.Name = "label7";
-            label7.Size = new Size(49, 20);
-            label7.TabIndex = 16;
-            label7.Text = "Email:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(14, 323);
-            label8.Name = "label8";
-            label8.Size = new Size(58, 20);
-            label8.TabIndex = 17;
-            label8.Text = "Cedula:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(14, 350);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 20);
-            label10.TabIndex = 19;
-            label10.Text = "Sexo:";
-            // 
             // btnGuardar
             // 
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnGuardar.Location = new Point(53, 398);
+            btnGuardar.Location = new Point(55, 456);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(119, 41);
             btnGuardar.TabIndex = 20;
@@ -165,34 +115,13 @@
             // 
             btnRegresar.FlatStyle = FlatStyle.Flat;
             btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnRegresar.Location = new Point(192, 398);
+            btnRegresar.Location = new Point(194, 456);
             btnRegresar.Name = "btnRegresar";
             btnRegresar.Size = new Size(119, 41);
             btnRegresar.TabIndex = 21;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMasculino
-            // 
-            rbtnMasculino.AutoSize = true;
-            rbtnMasculino.Location = new Point(145, 350);
-            rbtnMasculino.Name = "rbtnMasculino";
-            rbtnMasculino.Size = new Size(97, 24);
-            rbtnMasculino.TabIndex = 22;
-            rbtnMasculino.TabStop = true;
-            rbtnMasculino.Text = "Masculino";
-            rbtnMasculino.UseVisualStyleBackColor = true;
-            // 
-            // rbtnFemenino
-            // 
-            rbtnFemenino.AutoSize = true;
-            rbtnFemenino.Location = new Point(265, 350);
-            rbtnFemenino.Name = "rbtnFemenino";
-            rbtnFemenino.Size = new Size(95, 24);
-            rbtnFemenino.TabIndex = 23;
-            rbtnFemenino.TabStop = true;
-            rbtnFemenino.Text = "Femenino";
-            rbtnFemenino.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // txtSegundoNombre
             // 
@@ -203,53 +132,6 @@
             txtSegundoNombre.Size = new Size(214, 27);
             txtSegundoNombre.TabIndex = 24;
             txtSegundoNombre.KeyDown += txtApellidos_KeyDown;
-            // 
-            // txtDireccion
-            // 
-            txtDireccion.BackColor = Color.FromArgb(221, 233, 218);
-            txtDireccion.BorderStyle = BorderStyle.FixedSingle;
-            txtDireccion.Location = new Point(145, 182);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(214, 27);
-            txtDireccion.TabIndex = 25;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.BackColor = Color.FromArgb(221, 233, 218);
-            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
-            txtTelefono.Location = new Point(145, 218);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(214, 27);
-            txtTelefono.TabIndex = 26;
-            txtTelefono.KeyDown += txtTelefono_KeyDown;
-            // 
-            // txtEmail
-            // 
-            txtEmail.BackColor = Color.FromArgb(221, 233, 218);
-            txtEmail.Location = new Point(145, 281);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(214, 27);
-            txtEmail.TabIndex = 27;
-            // 
-            // txtCedula
-            // 
-            txtCedula.BackColor = Color.FromArgb(221, 233, 218);
-            txtCedula.Location = new Point(145, 316);
-            txtCedula.Name = "txtCedula";
-            txtCedula.Size = new Size(214, 27);
-            txtCedula.TabIndex = 28;
-            txtCedula.KeyDown += txtCedula_KeyDown;
-            // 
-            // cmbMunicipio
-            // 
-            cmbMunicipio.BackColor = Color.FromArgb(221, 233, 218);
-            cmbMunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbMunicipio.FormattingEnabled = true;
-            cmbMunicipio.Items.AddRange(new object[] { "Managua", "Esteli", "Leon", "Granada", "Masaya" });
-            cmbMunicipio.Location = new Point(145, 250);
-            cmbMunicipio.Name = "cmbMunicipio";
-            cmbMunicipio.Size = new Size(214, 28);
-            cmbMunicipio.TabIndex = 30;
             // 
             // txtPrimerApellido
             // 
@@ -287,12 +169,175 @@
             label11.TabIndex = 33;
             label11.Text = "Primer Apellido:";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(11, 250);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Direccion:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(9, 286);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 20);
+            label5.TabIndex = 14;
+            label5.Text = "Telefono:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(9, 319);
+            label6.Name = "label6";
+            label6.Size = new Size(78, 20);
+            label6.TabIndex = 15;
+            label6.Text = "Municipio:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(11, 349);
+            label7.Name = "label7";
+            label7.Size = new Size(49, 20);
+            label7.TabIndex = 16;
+            label7.Text = "Email:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(9, 384);
+            label8.Name = "label8";
+            label8.Size = new Size(58, 20);
+            label8.TabIndex = 17;
+            label8.Text = "Cedula:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(12, 415);
+            label10.Name = "label10";
+            label10.Size = new Size(44, 20);
+            label10.TabIndex = 19;
+            label10.Text = "Sexo:";
+            // 
+            // rbtnMasculino
+            // 
+            rbtnMasculino.AutoSize = true;
+            rbtnMasculino.Location = new Point(143, 411);
+            rbtnMasculino.Name = "rbtnMasculino";
+            rbtnMasculino.Size = new Size(97, 24);
+            rbtnMasculino.TabIndex = 22;
+            rbtnMasculino.TabStop = true;
+            rbtnMasculino.Text = "Masculino";
+            rbtnMasculino.UseVisualStyleBackColor = true;
+            // 
+            // rbtnFemenino
+            // 
+            rbtnFemenino.AutoSize = true;
+            rbtnFemenino.Location = new Point(263, 411);
+            rbtnFemenino.Name = "rbtnFemenino";
+            rbtnFemenino.Size = new Size(95, 24);
+            rbtnFemenino.TabIndex = 23;
+            rbtnFemenino.TabStop = true;
+            rbtnFemenino.Text = "Femenino";
+            rbtnFemenino.UseVisualStyleBackColor = true;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.BackColor = Color.FromArgb(221, 233, 218);
+            txtDireccion.BorderStyle = BorderStyle.FixedSingle;
+            txtDireccion.Location = new Point(146, 243);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(214, 27);
+            txtDireccion.TabIndex = 25;
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.BackColor = Color.FromArgb(221, 233, 218);
+            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
+            txtTelefono.Location = new Point(146, 279);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(214, 27);
+            txtTelefono.TabIndex = 26;
+            txtTelefono.KeyDown += txtTelefono_KeyDown;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BackColor = Color.FromArgb(221, 233, 218);
+            txtEmail.Location = new Point(146, 342);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(214, 27);
+            txtEmail.TabIndex = 27;
+            // 
+            // txtCedula
+            // 
+            txtCedula.BackColor = Color.FromArgb(221, 233, 218);
+            txtCedula.Location = new Point(146, 377);
+            txtCedula.Name = "txtCedula";
+            txtCedula.Size = new Size(214, 27);
+            txtCedula.TabIndex = 28;
+            txtCedula.KeyDown += txtCedula_KeyDown;
+            // 
+            // cmbMunicipio
+            // 
+            cmbMunicipio.BackColor = Color.FromArgb(221, 233, 218);
+            cmbMunicipio.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMunicipio.FormattingEnabled = true;
+            cmbMunicipio.Items.AddRange(new object[] { "Managua", "Esteli", "Leon", "Granada", "Masaya" });
+            cmbMunicipio.Location = new Point(146, 311);
+            cmbMunicipio.Name = "cmbMunicipio";
+            cmbMunicipio.Size = new Size(214, 28);
+            cmbMunicipio.TabIndex = 30;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(11, 184);
+            label12.Name = "label12";
+            label12.Size = new Size(62, 20);
+            label12.TabIndex = 35;
+            label12.Text = "Usuario:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(9, 217);
+            label13.Name = "label13";
+            label13.Size = new Size(86, 20);
+            label13.TabIndex = 36;
+            label13.Text = "Contraseña:";
+            // 
+            // txtUsuario
+            // 
+            txtUsuario.BackColor = Color.FromArgb(221, 233, 218);
+            txtUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtUsuario.Location = new Point(146, 177);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(214, 27);
+            txtUsuario.TabIndex = 37;
+            // 
+            // txtContraseña
+            // 
+            txtContraseña.BackColor = Color.FromArgb(221, 233, 218);
+            txtContraseña.BorderStyle = BorderStyle.FixedSingle;
+            txtContraseña.Location = new Point(146, 210);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(214, 27);
+            txtContraseña.TabIndex = 38;
+            // 
             // FormVendedor_01
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(371, 451);
+            ClientSize = new Size(371, 509);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
+            Controls.Add(label13);
+            Controls.Add(label12);
             Controls.Add(label9);
             Controls.Add(label11);
             Controls.Add(txtSegundoApellido);
@@ -329,12 +374,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label10;
         private Button btnGuardar;
         private Button btnRegresar;
         private Label label9;
@@ -342,13 +381,23 @@
         public TextBox txtPrimerApellido;
         public TextBox txtSegundoApellido;
         public TextBox txtPrimerNombre;
+        public TextBox txtSegundoNombre;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label10;
         public RadioButton rbtnMasculino;
         public RadioButton rbtnFemenino;
-        public TextBox txtSegundoNombre;
         public TextBox txtDireccion;
         public TextBox txtTelefono;
         public TextBox txtEmail;
         public TextBox txtCedula;
         public ComboBox cmbMunicipio;
+        private Label label12;
+        private Label label13;
+        public TextBox txtUsuario;
+        public TextBox txtContraseña;
     }
 }

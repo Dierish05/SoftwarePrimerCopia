@@ -83,6 +83,7 @@
             btnRegresar.TabIndex = 75;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
+            btnRegresar.Click += btnRegresar_Click;
             // 
             // btnGuardar
             // 

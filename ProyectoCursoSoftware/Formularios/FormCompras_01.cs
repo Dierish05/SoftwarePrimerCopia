@@ -48,5 +48,10 @@ namespace ProyectoCursoSoftware.Formularios
                 //Metodo de guardar compra
             }
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

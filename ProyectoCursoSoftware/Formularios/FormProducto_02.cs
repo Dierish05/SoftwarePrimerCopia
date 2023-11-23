@@ -34,5 +34,10 @@ namespace ProyectoCursoSoftware.Formularios
         {
             pm.listarProveedores(dgvDatos);
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
