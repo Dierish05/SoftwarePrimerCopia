@@ -20,5 +20,17 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
         }
+
+        private void txtCodProduct_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodProduct.Text != "")
+            {
+                //Metodo para buscar por codigo de producto
+            }
+            else 
+            {
+               //Metodo de listar productos
+            }
+        }
     }
 }
