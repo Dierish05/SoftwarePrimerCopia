@@ -44,7 +44,7 @@
             label3 = new Label();
             dateTimePicker1 = new DateTimePicker();
             textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
+            dgvCarrito = new DataGridView();
             groupBox2 = new GroupBox();
             textBox7 = new TextBox();
             textBox6 = new TextBox();
@@ -58,7 +58,7 @@
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -195,6 +195,7 @@
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(110, 23);
             txtCodigo.TabIndex = 1;
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
             txtCodigo.Enter += txtCodigo_Enter;
             txtCodigo.Leave += txtCodigo_Leave;
             // 
@@ -256,20 +257,20 @@
             textBox1.Size = new Size(91, 23);
             textBox1.TabIndex = 12;
             // 
-            // dataGridView1
+            // dgvCarrito
             // 
-            dataGridView1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.FromArgb(235, 238, 245);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(13, 27);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(767, 243);
-            dataGridView1.TabIndex = 9;
+            dgvCarrito.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCarrito.BackgroundColor = Color.FromArgb(235, 238, 245);
+            dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCarrito.Location = new Point(13, 27);
+            dgvCarrito.Margin = new Padding(3, 2, 3, 2);
+            dgvCarrito.Name = "dgvCarrito";
+            dgvCarrito.ReadOnly = true;
+            dgvCarrito.RowHeadersWidth = 51;
+            dgvCarrito.RowTemplate.Height = 29;
+            dgvCarrito.Size = new Size(767, 243);
+            dgvCarrito.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -283,7 +284,7 @@
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
             groupBox2.Controls.Add(txtSubTotal);
-            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Controls.Add(dgvCarrito);
             groupBox2.Location = new Point(19, 316);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
@@ -424,7 +425,7 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProducto).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
@@ -437,7 +438,7 @@
         private Label label2;
         private TextBox txtVendedor;
         private GroupBox groupBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvCarrito;
         private GroupBox groupBox2;
         private TextBox textBox5;
         private TextBox textBox4;

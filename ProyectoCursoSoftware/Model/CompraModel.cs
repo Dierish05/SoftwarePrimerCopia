@@ -37,7 +37,7 @@ namespace ProyectoCursoSoftware.Model
 
         }
 
-        public void CrearDetVenta(string CodProd, float precio, int exist,int porcentaje)
+        public void CrearCompra(string CodProd, float precio, int exist,int porcentaje)
         {
 
             try
@@ -55,7 +55,7 @@ namespace ProyectoCursoSoftware.Model
                 param[3].Value = porcentaje;
 
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "NDetProducto";
+                cmd.CommandText = "CrearCompra";
                 cmd.Connection = con.connect;
                 cmd.Parameters.AddRange(param);
 
@@ -67,7 +67,7 @@ namespace ProyectoCursoSoftware.Model
             catch (Exception)
             {
 
-                MessageBox.Show("Error al Crear el detalle de venta");
+                MessageBox.Show("Error al Crear la compra");
                 return;
             }
         }

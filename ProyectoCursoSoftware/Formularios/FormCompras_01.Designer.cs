@@ -35,13 +35,13 @@
             label5 = new Label();
             label4 = new Label();
             label1 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            nudPrecio = new NumericUpDown();
             nUpdownCantidad = new NumericUpDown();
             btnSeleccionar = new Button();
             nUpdownPorcentaje = new NumericUpDown();
             label2 = new Label();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPrecio).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownPorcentaje).BeginInit();
             SuspendLayout();
@@ -125,19 +125,19 @@
             label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown1
+            // nudPrecio
             // 
-            numericUpDown1.BackColor = Color.FromArgb(221, 233, 218);
-            numericUpDown1.DecimalPlaces = 2;
-            numericUpDown1.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            numericUpDown1.Location = new Point(138, 65);
-            numericUpDown1.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(192, 23);
-            numericUpDown1.TabIndex = 3;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.KeyDown += numericUpDown1_KeyDown;
+            nudPrecio.BackColor = Color.FromArgb(221, 233, 218);
+            nudPrecio.DecimalPlaces = 2;
+            nudPrecio.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            nudPrecio.Location = new Point(138, 65);
+            nudPrecio.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
+            nudPrecio.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudPrecio.Name = "nudPrecio";
+            nudPrecio.Size = new Size(192, 23);
+            nudPrecio.TabIndex = 3;
+            nudPrecio.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudPrecio.KeyDown += numericUpDown1_KeyDown;
             // 
             // nUpdownCantidad
             // 
@@ -206,7 +206,7 @@
             Controls.Add(label2);
             Controls.Add(btnSeleccionar);
             Controls.Add(nUpdownCantidad);
-            Controls.Add(numericUpDown1);
+            Controls.Add(nudPrecio);
             Controls.Add(txtProducto);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);
@@ -220,7 +220,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCompras_01";
             Load += FormCompras_01_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPrecio).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownPorcentaje).EndInit();
             ResumeLayout(false);
@@ -235,7 +235,7 @@
         private Label label4;
         private Label label1;
         public TextBox txtProducto;
-        public NumericUpDown numericUpDown1;
+        public NumericUpDown nudPrecio;
         public NumericUpDown nUpdownCantidad;
         private Button btnSeleccionar;
         public NumericUpDown nUpdownPorcentaje;
