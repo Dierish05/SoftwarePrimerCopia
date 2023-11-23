@@ -45,11 +45,33 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             int indiceSeleccionado = dgvDatos.SelectedCells[0].RowIndex;
-            IdProveedorSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"].Value.ToString();
-            NombreProveedorSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre"].Value.ToString();
 
+            int IdProv = 0;
+            DataGridViewCell cell = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"];
+            if (indiceSeleccionado >= 0)
+            {
+                
+
+                if (cell.Value != null && cell.Value != DBNull.Value)
+                {
+                    IdProv = Convert.ToInt32(cell.Value);
+
+                        IdProveedorSeleccionado = IdProv.ToString();
+                        NombreProveedorSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre"].Value.ToString();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Este Proveedor no existe! Por favor, seleccione un Proveedor existente.");
+                }
+
+                if(IdProv == 0) 
+                {
+                   
+                }
+            }
            
-            this.Close();
+            
         }
     }
 }
