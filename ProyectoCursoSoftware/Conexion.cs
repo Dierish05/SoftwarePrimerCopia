@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace ProyectoCursoSoftware
@@ -22,29 +23,25 @@ namespace ProyectoCursoSoftware
 
                 //connect = new SqlConnection("Server=DESKTOP-B2TA6M2;Database=odonto;UID=" + user + ";PWD=" + pass);
                 connect.Open();
-                string query = @"SELECT 
-                                    CASE
-                                        WHEN 'dbcreator' IN (SELECT r.name FROM sys.server_role_members m JOIN sys.server_principals r ON m.role_principal_id = r.principal_id WHERE m.member_principal_id = SUSER_ID()) THEN 'dbcreator'
-                                        WHEN 'sysadmin' IN (SELECT r.name FROM sys.server_role_members m JOIN sys.server_principals r ON m.role_principal_id = r.principal_id WHERE m.member_principal_id = SUSER_ID()) THEN 'sysadmin'
-                                        ELSE 'OtroRol'
-                                    END AS UserRole";
+                string query = $"SELECT r.name FROM Proyecto.sys.database_principals p JOIN Proyecto.sys.database_role_members m ON p.principal_id = m.member_principal_id JOIN Proyecto.sys.database_principals r ON m.role_principal_id = r.principal_id WHERE p.name = '{user}'";
+
                 using (SqlCommand command = new SqlCommand(query, connect))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            string userRole = reader["UserRole"].ToString();
+                            string userRole = reader["name"].ToString();
 
-                            if (userRole == "dbcreator")
+                            if (userRole == "Vendedor")
                             {
                                 // Abrir el formulario para dbcreator
-                                rol = "dbcreator";
+                                rol = "Vendedor";
                             }
-                            else if (userRole == "sysadmin")
+                            else if (userRole == "Gerente")
                             {
                                 // Abrir el formulario para sysadmin
-                                rol = "sysadmin";
+                                rol = "Gerente";
                             }
                             else
                             {
@@ -53,7 +50,9 @@ namespace ProyectoCursoSoftware
                         }
                         else
                         {
-                            MessageBox.Show("Error al verificar roles.");
+                            //MessageBox.Show("Error al verificar roles.");
+                            rol = "sysadmin";
+                            connect.Close();
                         }
 
                     }

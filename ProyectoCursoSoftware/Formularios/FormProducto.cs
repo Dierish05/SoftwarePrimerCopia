@@ -25,7 +25,7 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormProducto_01 formProducto_01 = new FormProducto_01();
+            FormProducto_01 formProducto_01 = new FormProducto_01(con);
             formProducto_01.ShowDialog();
         }
 
