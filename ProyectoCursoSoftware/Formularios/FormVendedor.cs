@@ -57,7 +57,10 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
+            if (txtNombre.Text != string.Empty && txtApellido.Text == string.Empty)
+            {
+                vm.BusquedaVendedorNombre(txtNombre.Text,dgvDatos);
+            } else if(txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
             {
                 listar();
             }
@@ -65,7 +68,10 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void txtApellido_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
+            if (txtNombre.Text == string.Empty && txtApellido.Text != string.Empty)
+            {
+                vm.BusquedaVendedorApellido(txtApellido.Text, dgvDatos);     
+            }else if (txtNombre.Text == string.Empty && txtApellido.Text == string.Empty)
             {
                 listar();
             }
