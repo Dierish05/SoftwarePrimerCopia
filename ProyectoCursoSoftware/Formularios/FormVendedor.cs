@@ -95,24 +95,24 @@ namespace ProyectoCursoSoftware.Formularios
                 if (cell.Value != null && cell.Value != DBNull.Value)
                 {
 
-                    FormVendedor_01 formVendedor_01 = new FormVendedor_01(vm);
-                    formVendedor_01.txtId.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Vendedores"].Value.ToString();
-                    formVendedor_01.txtPrimerNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre"].Value.ToString();
-                    formVendedor_01.txtPrimerApellido.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Apellido"].Value.ToString();
-                    formVendedor_01.txtEmail.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Email"].Value.ToString();
+                    FormVendedor_02 formVendedor_02 = new FormVendedor_02(vm);
+                    formVendedor_02.txtId.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Vendedores"].Value.ToString();
+                    formVendedor_02.txtPrimerNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre"].Value.ToString();
+                    formVendedor_02.txtPrimerApellido.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Apellido"].Value.ToString();
+                    formVendedor_02.txtEmail.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Email"].Value.ToString();
                     if (dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString() == "F")
                     {
-                        formVendedor_01.rbtnFemenino.Checked = true;
+                        formVendedor_02.rbtnFemenino.Checked = true;
                     }
                     else if (dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString() == "M")
                     {
-                        formVendedor_01.rbtnMasculino.Checked = true;
+                        formVendedor_02.rbtnMasculino.Checked = true;
                     }
                         //formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString();
-                        formVendedor_01.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Cedula"].Value.ToString();
-                        formVendedor_01.txtTelefono.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Telefono"].Value.ToString();
-                        formVendedor_01.cmbMunicipio.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Municipio"].Value.ToString();
-                        formVendedor_01.ShowDialog();
+                        formVendedor_02.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Cedula"].Value.ToString();
+                        formVendedor_02.txtTelefono.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Telefono"].Value.ToString();
+                        formVendedor_02.cmbMunicipio.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Municipio"].Value.ToString();
+                        formVendedor_02.ShowDialog();
                 }
                 else
                 {

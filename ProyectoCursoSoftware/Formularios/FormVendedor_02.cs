@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ProyectoCursoSoftware.Formularios
 {
-    public partial class FormVendedor_01 : Form
+    public partial class FormVendedor_02 : Form
     {
         // Importar funciones de la API de Windows para la sombra
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -38,7 +38,7 @@ namespace ProyectoCursoSoftware.Formularios
         private const int LWA_ALPHA = 0x2;
 
         private VendedorModel vm;
-        public FormVendedor_01(VendedorModel vm)
+        public FormVendedor_02(VendedorModel vm)
         {
             this.vm = vm;
             InitializeComponent();
@@ -62,52 +62,6 @@ namespace ProyectoCursoSoftware.Formularios
 
             // Establecer la opacidad a 255 (completamente opaco)
             SetLayeredWindowAttributes(Handle, 0, 255, LWA_ALPHA);
-        }
-
-        private void txtNombres_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (!(e.KeyCode >= Keys.A && e.KeyCode <= Keys.Z) &&
-                !(e.KeyCode == Keys.OemPeriod) &&
-                !(e.KeyCode == Keys.Oemcomma) &&
-                !(e.KeyCode == Keys.Space) &&
-                !(e.KeyCode == Keys.Back) &&
-                !(e.KeyCode == Keys.Delete) &&
-                !(e.KeyCode == Keys.ControlKey) &&
-                !(e.KeyCode == Keys.Control) &&
-                !(e.KeyCode == Keys.Control || e.KeyCode == Keys.C) &&
-                !(e.KeyCode == Keys.Control || e.KeyCode == Keys.V) &&
-                !(e.KeyCode == Keys.Control || e.KeyCode == Keys.A) &&
-                !(e.KeyCode == Keys.Home) &&
-                !(e.KeyCode == Keys.End) &&
-                !(e.KeyCode == Keys.Left) &&
-                !(e.KeyCode == Keys.Right))
-            {
-                e.SuppressKeyPress = true;
-                e.Handled = true;
-            }
-        }
-
-        private void txtApellidos_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (!(e.KeyCode >= Keys.A && e.KeyCode <= Keys.Z) &&
-                !(e.KeyCode == Keys.OemPeriod) &&
-                !(e.KeyCode == Keys.Oemcomma) &&
-                !(e.KeyCode == Keys.Space) &&
-                !(e.KeyCode == Keys.Back) &&
-                !(e.KeyCode == Keys.Delete) &&
-                !(e.KeyCode == Keys.ControlKey) &&
-                !(e.KeyCode == Keys.Control) &&
-                !(e.KeyCode == Keys.Control || e.KeyCode == Keys.C) &&
-                !(e.KeyCode == Keys.Control || e.KeyCode == Keys.V) &&
-                !(e.KeyCode == Keys.Control || e.KeyCode == Keys.A) &&
-                !(e.KeyCode == Keys.Home) &&
-                !(e.KeyCode == Keys.End) &&
-                !(e.KeyCode == Keys.Left) &&
-                !(e.KeyCode == Keys.Right))
-            {
-                e.SuppressKeyPress = true;
-                e.Handled = true;
-            }
         }
 
         private void txtTelefono_KeyDown(object sender, KeyEventArgs e)
@@ -140,15 +94,6 @@ namespace ProyectoCursoSoftware.Formularios
             }
         }
 
-        private void txtCedula_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (txtCedula.TextLength == 14 && e.KeyCode != Keys.Back && e.KeyCode != Keys.Delete)
-            //{
-            //    e.SuppressKeyPress = true;
-            //    e.Handled = true;
-            //}
-        }
-
         private int DeterminarMunicipio(string a)
         {
             if (string.Equals(a, "Managua") == true)
@@ -178,50 +123,8 @@ namespace ProyectoCursoSoftware.Formularios
             }
         }
 
-        private char DeterminarSexo()
-        {
-            if (rbtnFemenino.Checked == true)
-            {
-                return 'F';
-            }
-            else if (rbtnMasculino.Checked == true)
-            {
-                return 'M';
-            }
-            else
-            {
-                return 'O';
-            }
-        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtPrimerNombre.Text == "" || txtPrimerApellido.Text == "" || txtUsuario.Text == "" || txtContraseña.Text == ""
-                || txtDireccion.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtCedula.Text == "" || cmbMunicipio.Text == "")
-            {
-
-                MessageBox.Show("Datos incompletos! porfavor complete los datos e intentelo nuevamente");
-
-            }
-            else if (rbtnFemenino.Checked == false && rbtnMasculino.Checked == false)
-            {
-                MessageBox.Show("Debe seleccionar un genero");
-            }
-            else if (!IsValidEmail(txtEmail.Text))
-            {
-                MessageBox.Show("El correo electrónico no es válido.");
-            }
-            else if (!IsValidNicaraguanCedula(txtCedula.Text))
-            {
-                MessageBox.Show("El correo electrónico no es válido.");
-            }
-            else
-            {
-                int muni = DeterminarMunicipio(cmbMunicipio.SelectedItem.ToString());
-                char sexo = DeterminarSexo();
-                vm.CrearVendedor(txtPrimerNombre.Text, txtSegundoNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text, txtUsuario.Text);
-                vm.CrearLoginVendedor(txtUsuario.Text, txtContraseña.Text);
-                this.Close();
-            }
 
         }
 
@@ -252,9 +155,34 @@ namespace ProyectoCursoSoftware.Formularios
             this.Dispose();
         }
 
-        private void FormVendedor_01_Load(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (txtPrimerNombre.Text == "" || txtPrimerApellido.Text == ""
+                || txtDireccion.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtCedula.Text == "" || cmbMunicipio.Text == "")
+            {
 
+                MessageBox.Show("Datos incompletos! porfavor complete los datos e intentelo nuevamente");
+
+            }
+            else if (rbtnFemenino.Checked == false && rbtnMasculino.Checked == false)
+            {
+                MessageBox.Show("Debe seleccionar un genero");
+            }
+            else if (!IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("El correo electrónico no es válido.");
+            }
+            else if (!IsValidNicaraguanCedula(txtCedula.Text))
+            {
+                MessageBox.Show("El correo electrónico no es válido.");
+            }
+            else
+            {
+                int muni = DeterminarMunicipio(cmbMunicipio.SelectedItem.ToString());
+                //vm.CrearVendedor(txtPrimerNombre.Text, txtSegundoNombre.Text, txtPrimerApellido.Text, txtSegundoApellido.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text, txtUsuario.Text);
+                //vm.CrearLoginVendedor(txtUsuario.Text, txtContraseña.Text);
+                this.Close();
+            }
         }
     }
 }

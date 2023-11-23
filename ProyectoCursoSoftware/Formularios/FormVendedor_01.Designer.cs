@@ -56,7 +56,6 @@
             label13 = new Label();
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
-            txtId = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -69,7 +68,7 @@
             label1.Name = "label1";
             label1.Size = new Size(372, 31);
             label1.TabIndex = 9;
-            label1.Text = "REGISTRO / ACTUALIZACION";
+            label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtPrimerNombre
@@ -329,22 +328,12 @@
             txtContraseña.Size = new Size(214, 27);
             txtContraseña.TabIndex = 6;
             // 
-            // txtId
-            // 
-            txtId.Location = new Point(11, 456);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(34, 27);
-            txtId.TabIndex = 37;
-            txtId.Visible = false;
-            txtId.TextChanged += txtId_TextChanged;
-            // 
             // FormVendedor_01
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(371, 509);
-            Controls.Add(txtId);
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
             Controls.Add(label13);
@@ -411,6 +400,5 @@
         private Label label13;
         public TextBox txtUsuario;
         public TextBox txtContraseña;
-        public TextBox txtId;
     }
 }
