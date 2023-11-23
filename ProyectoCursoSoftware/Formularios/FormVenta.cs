@@ -84,5 +84,10 @@ namespace ProyectoCursoSoftware.Formularios
         {
             im.listarInventario(dgvProducto);
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
