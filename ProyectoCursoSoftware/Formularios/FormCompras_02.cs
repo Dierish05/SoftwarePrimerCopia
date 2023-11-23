@@ -99,7 +99,7 @@ namespace ProyectoCursoSoftware.Formularios
                 {
                     //IdProv = Convert.ToInt32(cell.Value);
 
-                    CodProductoSeleccionado = IdProv.ToString();
+                    CodProductoSeleccionado = cell.Value.ToString();
                     NombreProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del prodcuto"].Value.ToString();
                     this.Close();
                 }
