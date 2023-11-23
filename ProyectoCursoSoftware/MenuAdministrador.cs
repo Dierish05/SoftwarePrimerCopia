@@ -66,13 +66,18 @@ namespace ProyectoCursoSoftware
         private void reporteVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             n = 1;
-            AbrirFormhijo(new FrmReporte(con,n));
+            AbrirFormhijo(new FrmReporte(con, n));
         }
 
         private void reporteComrpaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             n = 2;
-            AbrirFormhijo(new FrmReporte(con,n));
+            AbrirFormhijo(new FrmReporte(con, n));
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
