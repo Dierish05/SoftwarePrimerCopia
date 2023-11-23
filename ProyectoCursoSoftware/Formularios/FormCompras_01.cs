@@ -94,7 +94,7 @@ namespace ProyectoCursoSoftware.Formularios
         {
             if (txtProducto.Text == "" || nudPrecio.Value == 0 || nUpdownCantidad.Value == 0)
             {
-                MessageBox.Show("Campos vacios, porfavor introduzca un dato valido!");
+                MessageBox.Show("Campos de producto vacio, porfavor seleccione un producto!");
             }
             else
             {

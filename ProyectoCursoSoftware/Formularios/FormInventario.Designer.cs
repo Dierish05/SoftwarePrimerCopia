@@ -42,12 +42,13 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.FromArgb(235, 238, 245);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(11, 166);
+            dataGridView1.Location = new Point(10, 124);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1103, 407);
+            dataGridView1.Size = new Size(965, 305);
             dataGridView1.TabIndex = 27;
             // 
             // label1
@@ -56,9 +57,9 @@
             label1.BackColor = Color.Teal;
             label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(-5, -1);
+            label1.Location = new Point(-4, -1);
             label1.Name = "label1";
-            label1.Size = new Size(1144, 51);
+            label1.Size = new Size(1001, 38);
             label1.TabIndex = 25;
             label1.Text = "INVENTARIO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -67,9 +68,11 @@
             // 
             groupBox1.Controls.Add(txtCodProduct);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(11, 67);
+            groupBox1.Location = new Point(10, 50);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(350, 78);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(306, 58);
             groupBox1.TabIndex = 28;
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscar";
@@ -78,30 +81,33 @@
             // 
             txtCodProduct.BackColor = Color.FromArgb(221, 233, 218);
             txtCodProduct.BorderStyle = BorderStyle.FixedSingle;
-            txtCodProduct.Location = new Point(150, 24);
+            txtCodProduct.Location = new Point(131, 18);
+            txtCodProduct.Margin = new Padding(3, 2, 3, 2);
             txtCodProduct.Name = "txtCodProduct";
-            txtCodProduct.Size = new Size(193, 27);
+            txtCodProduct.Size = new Size(169, 23);
             txtCodProduct.TabIndex = 1;
+            txtCodProduct.TextChanged += txtCodProduct_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(19, 27);
+            label2.Location = new Point(17, 20);
             label2.Name = "label2";
-            label2.Size = new Size(125, 20);
+            label2.Size = new Size(101, 15);
             label2.TabIndex = 0;
             label2.Text = "Codigo Producto:";
             // 
             // FormInventario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1137, 595);
+            ClientSize = new Size(995, 446);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormInventario";
             Text = "FormInventario";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
