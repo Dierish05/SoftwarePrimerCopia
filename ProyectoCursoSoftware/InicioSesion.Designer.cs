@@ -43,14 +43,14 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(284, 2);
+            label1.Location = new Point(3, 2);
             label1.Name = "label1";
-            label1.Size = new Size(73, 25);
+            label1.Size = new Size(660, 25);
             label1.TabIndex = 8;
             label1.Text = "LOGIN";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
