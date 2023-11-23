@@ -142,6 +142,7 @@
             // 
             // txtCantidad
             // 
+            txtCantidad.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             txtCantidad.Location = new Point(831, 88);
             txtCantidad.Name = "txtCantidad";
             txtCantidad.Size = new Size(114, 23);

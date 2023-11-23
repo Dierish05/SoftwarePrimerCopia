@@ -37,6 +37,39 @@ namespace ProyectoCursoSoftware.Model
 
         }
 
+        public void BusquedaProveedorNombre(string Nombre, DataGridView gridView)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@Nombre", SqlDbType.NVarChar);
+                param[0].Value = Nombre;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "BusquedaProveedorNombre";
+                cmd.Connection = con.connect;
+                cmd.Parameters.AddRange(param);
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                gridView.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error en la busqueda");
+                return;
+            }
+
+        }
+
         public void CrearProveedor(string Nombre, string Dir, string Tel, string Email)
         {
 

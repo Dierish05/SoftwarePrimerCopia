@@ -159,5 +159,17 @@ namespace ProyectoCursoSoftware.Formularios
         {
             Listar();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != string.Empty)
+            {
+                pm.BusquedaProductosNombre(textBox1.Text, dgvDatos);
+            }
+            else
+            {
+                Listar();
+            }
+        }
     }
 }
