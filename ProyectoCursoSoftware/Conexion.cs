@@ -41,7 +41,7 @@ namespace ProyectoCursoSoftware
                                 // Abrir el formulario para dbcreator
                                 rol = "Vendedor";
                             }
-                            else if (userRole == "Gerente" && user != "sa")
+                            else if (userRole == "Gerente")
                             {
                                 rol = "Gerente";
                             }
@@ -52,12 +52,12 @@ namespace ProyectoCursoSoftware
                         }
                         else
                         {
-                            if (rol == null && user != "sa")
-                            {
-                                // Abrir el formulario para sysadmin
-                                rol = "Gerente";
-                            }
-                            else
+                            //if (rol == null && user != "sa")
+                            //{
+                            //    // Abrir el formulario para sysadmin
+                            //    rol = "Gerente";
+                            //}
+                            //else
                                 //MessageBox.Show("Error al verificar roles.");
                                 //rol = "sysadmin";
                                 connect.Close();
