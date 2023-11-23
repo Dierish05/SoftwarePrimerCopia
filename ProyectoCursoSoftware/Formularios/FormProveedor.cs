@@ -51,8 +51,13 @@ namespace ProyectoCursoSoftware.Formularios
                 DataGridViewCell cell = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"];
                 if (cell.Value != null && cell.Value != DBNull.Value)
                 {
-
-                    //Mostrar formulario de editar producto
+                    FormProveedores_01 formProveedores_01 = new FormProveedores_01(pm);
+                    formProveedores_01.txtId.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"].Value.ToString();
+                    formProveedores_01.txtNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre"].Value.ToString();
+                    formProveedores_01.txtDireccion.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Direccion"].Value.ToString();
+                    formProveedores_01.txtTelefono.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Tel"].Value.ToString();
+                    formProveedores_01.txtEmail.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Email"].Value.ToString();
+                    formProveedores_01.ShowDialog();
                 }
                 else
                 {

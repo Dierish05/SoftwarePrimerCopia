@@ -39,6 +39,7 @@
             txtTelefono = new TextBox();
             txtEmail = new TextBox();
             txtDireccion = new TextBox();
+            txtId = new TextBox();
             SuspendLayout();
             // 
             // btnRegresar
@@ -153,12 +154,21 @@
             txtDireccion.Size = new Size(214, 27);
             txtDireccion.TabIndex = 4;
             // 
+            // txtId
+            // 
+            txtId.Location = new Point(11, 217);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(30, 27);
+            txtId.TabIndex = 50;
+            txtId.Visible = false;
+            // 
             // FormProveedores_01
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(322, 427);
+            Controls.Add(txtId);
             Controls.Add(txtDireccion);
             Controls.Add(txtEmail);
             Controls.Add(txtTelefono);
@@ -202,5 +212,6 @@
         public TextBox txtTelefono;
         public TextBox txtEmail;
         public TextBox txtDireccion;
+        public TextBox txtId;
     }
 }

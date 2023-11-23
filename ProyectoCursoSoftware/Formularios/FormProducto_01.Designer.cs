@@ -168,9 +168,9 @@
             // 
             // txtProveedor
             // 
+            txtProveedor.Enabled = false;
             txtProveedor.Location = new Point(93, 161);
             txtProveedor.Name = "txtProveedor";
-            txtProveedor.ReadOnly = true;
             txtProveedor.Size = new Size(101, 27);
             txtProveedor.TabIndex = 4;
             // 
@@ -223,11 +223,11 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox txtProveedor;
         private Button btnSeleccionar;
         public ComboBox cmbCategoria;
         public TextBox txtDescripcion;
         public TextBox txtNombre;
         public TextBox txtCodigo;
+        public TextBox txtProveedor;
     }
 }

@@ -89,11 +89,12 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(txtNombre.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtDireccion.Text == "")
+            if (txtNombre.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtDireccion.Text == "")
             {
                 MessageBox.Show("Campos vacios! porfavor complete todos los campos e intentelo nuevamente");
             }
-            else if(!IsValidEmail(txtEmail.Text)){
+            else if (!IsValidEmail(txtEmail.Text))
+            {
                 MessageBox.Show("El correo electrónico no es válido.");
             }
             else
