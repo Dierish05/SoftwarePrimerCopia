@@ -102,11 +102,11 @@ namespace ProyectoCursoSoftware.Formularios
                     formVendedor_01.txtEmail.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Email"].Value.ToString();
                     if (dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString() == "F")
                     {
-                        //formVendedor_01.rbtnFemenino.Checked == true;
+                        formVendedor_01.rbtnFemenino.Checked = true;
                     }
                     else if (dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString() == "M")
                     {
-                        //formVendedor_01.rbtnMasculino.checked == true;
+                        formVendedor_01.rbtnMasculino.Checked = true;
                     }
                         //formVendedor_01.genero.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Sexo"].Value.ToString();
                         formVendedor_01.txtCedula.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Cedula"].Value.ToString();

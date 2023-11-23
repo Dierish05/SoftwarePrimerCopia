@@ -251,5 +251,29 @@ namespace ProyectoCursoSoftware.Formularios
         {
             this.Dispose();
         }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            if(txtId.Text != "")
+            {
+                txtPrimerNombre.Enabled = false;
+                txtPrimerApellido.Enabled = false;
+                txtUsuario.Enabled = false;
+                txtContraseña.Enabled = false;
+                txtCedula.Enabled = false;
+                rbtnFemenino.Enabled = false;
+                rbtnMasculino.Enabled = false;
+            }
+            else
+            {
+                txtPrimerNombre.Enabled = true;
+                txtPrimerApellido.Enabled = true;
+                txtUsuario.Enabled = true;
+                txtContraseña.Enabled = true;
+                txtCedula.Enabled = true;
+                rbtnFemenino.Enabled = true;
+                rbtnMasculino.Enabled = true;
+            }
+        }
     }
 }

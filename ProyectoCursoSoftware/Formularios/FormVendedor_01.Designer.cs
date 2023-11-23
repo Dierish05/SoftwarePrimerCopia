@@ -336,6 +336,7 @@
             txtId.Size = new Size(34, 27);
             txtId.TabIndex = 37;
             txtId.Visible = false;
+            txtId.TextChanged += txtId_TextChanged;
             // 
             // FormVendedor_01
             // 
