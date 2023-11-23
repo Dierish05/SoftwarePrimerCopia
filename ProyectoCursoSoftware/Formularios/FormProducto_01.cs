@@ -22,7 +22,7 @@ namespace ProyectoCursoSoftware.Formularios
             this.con = con;
             pm = new ProductoModel(con);
             InitializeComponent();
-            
+
 
             txtProveedor.Enabled = false;
             //Hola uwu
@@ -56,7 +56,8 @@ namespace ProyectoCursoSoftware.Formularios
             else
             {
                 //Metodo guardar producto
-                pm.CrearProducto(txtCodigo.Text, txtNombre.Text, txtDescripcion.Text, int.Parse(idProveedor), 1);
+                int cat = DeterminarCategoria(cmbCategoria.SelectedItem.ToString());
+                pm.CrearProducto(txtCodigo.Text, txtNombre.Text, txtDescripcion.Text, int.Parse(idProveedor), cat);
                 this.Close();
             }
         }
@@ -69,11 +70,11 @@ namespace ProyectoCursoSoftware.Formularios
             if (!string.IsNullOrEmpty(formProducto_02.IdProveedorSeleccionado) &&
          !string.IsNullOrEmpty(formProducto_02.NombreProveedorSeleccionado))
             {
-               
+
                 idProveedor = formProducto_02.IdProveedorSeleccionado;
                 NombreProveedor = formProducto_02.NombreProveedorSeleccionado;
 
-               
+
                 ActualizarTextBoxProveedor();
             }
         }
@@ -86,6 +87,39 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private int DeterminarCategoria(string a)
+        {
+            if (string.Equals(a, "Cargadores") == true)
+            {
+                return 1;
+            }
+            else if (string.Equals(a, "Audifonos") == true)
+            {
+                return 2;
+            }
+            else if (string.Equals(a, "Covers") == true)
+            {
+                return 3;
+            }
+            else if (string.Equals(a, "Memorias") == true)
+            {
+                return 4;
+
+            }
+            else if (string.Equals(a, "Protectores de pantalla") == true)
+            {
+                return 5;
+            }
+            else if (string.Equals(a, "Celulares") == true)
+            {
+                return 6;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
