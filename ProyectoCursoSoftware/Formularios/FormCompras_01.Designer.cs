@@ -80,7 +80,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(12, 131);
+            label7.Location = new Point(11, 131);
             label7.Name = "label7";
             label7.Size = new Size(146, 20);
             label7.TabIndex = 38;
@@ -89,7 +89,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 95);
+            label5.Location = new Point(11, 95);
             label5.Name = "label5";
             label5.Size = new Size(110, 20);
             label5.TabIndex = 36;
@@ -98,7 +98,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 59);
+            label4.Location = new Point(11, 59);
             label4.Name = "label4";
             label4.Size = new Size(72, 20);
             label4.TabIndex = 35;
@@ -110,9 +110,9 @@
             label1.BackColor = Color.Teal;
             label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1, -3);
+            label1.Location = new Point(0, -3);
             label1.Name = "label1";
-            label1.Size = new Size(389, 31);
+            label1.Size = new Size(390, 31);
             label1.TabIndex = 31;
             label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -127,7 +127,7 @@
             numericUpDown1.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(220, 27);
+            numericUpDown1.Size = new Size(219, 27);
             numericUpDown1.TabIndex = 50;
             numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.KeyDown += numericUpDown1_KeyDown;
@@ -141,7 +141,7 @@
             nUpdownCantidad.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nUpdownCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nUpdownCantidad.Name = "nUpdownCantidad";
-            nUpdownCantidad.Size = new Size(220, 27);
+            nUpdownCantidad.Size = new Size(219, 27);
             nUpdownCantidad.TabIndex = 51;
             nUpdownCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -177,6 +177,7 @@
             Name = "FormCompras_01";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCompras_01";
+            Load += FormCompras_01_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)nUpdownCantidad).EndInit();
             ResumeLayout(false);
