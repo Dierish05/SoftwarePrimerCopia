@@ -81,5 +81,12 @@ namespace ProyectoCursoSoftware
             InicioSesion Inicio = new InicioSesion();
             Inicio.ShowDialog();
         }
+
+        private void MenuAdministrador_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+            InicioSesion Inicio = new InicioSesion();
+            Inicio.ShowDialog();
+        }
     }
 }

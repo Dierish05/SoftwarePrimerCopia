@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -12,10 +13,12 @@ namespace ProyectoCursoSoftware
     public class Conexion
     {
         public string rol;
+
         public SqlConnection connect = new SqlConnection();
 
         public Conexion(String user, String pass)
         {
+            
             try
             {
                 connect = new SqlConnection("Data Source=localhost;Initial Catalog=Proyecto;User Id=" + user + ";Password=" + pass + ";");
@@ -38,21 +41,22 @@ namespace ProyectoCursoSoftware
                                 // Abrir el formulario para dbcreator
                                 rol = "Vendedor";
                             }
-                            else if (userRole == "Gerente")
-                            {
-                                // Abrir el formulario para sysadmin
-                                rol = "Gerente";
-                            }
-                            else
+                           else
                             {
                                 MessageBox.Show("No tienes roles específicos asignados.");
                             }
                         }
                         else
                         {
-                            //MessageBox.Show("Error al verificar roles.");
-                            rol = "sysadmin";
-                            connect.Close();
+                            if (rol == null && user != "sa")
+                            {
+                                // Abrir el formulario para sysadmin
+                                rol = "Gerente";
+                            }
+                            else
+                                //MessageBox.Show("Error al verificar roles.");
+                                //rol = "sysadmin";
+                                connect.Close();
                         }
 
                     }
