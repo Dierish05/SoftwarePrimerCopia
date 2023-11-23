@@ -15,6 +15,7 @@ namespace ProyectoCursoSoftware
     public partial class MenuAdministrador : Form
     {
         Conexion con;
+        int n;
         public MenuAdministrador(Conexion con)
         {
             this.con = con;
@@ -64,7 +65,14 @@ namespace ProyectoCursoSoftware
 
         private void reporteVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new FrmReporte(con));
+            n = 1;
+            AbrirFormhijo(new FrmReporte(con,n));
+        }
+
+        private void reporteComrpaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            n = 2;
+            AbrirFormhijo(new FrmReporte(con,n));
         }
     }
 }
