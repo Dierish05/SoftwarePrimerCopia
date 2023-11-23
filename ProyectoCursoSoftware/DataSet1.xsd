@@ -36,7 +36,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="MostrarVentas" msprop:Generator_RowEvHandlerName="MostrarVentasRowChangeEventHandler" msprop:Generator_RowDeletedName="MostrarVentasRowDeleted" msprop:Generator_RowDeletingName="MostrarVentasRowDeleting" msprop:Generator_RowEvArgName="MostrarVentasRowChangeEvent" msprop:Generator_TablePropName="MostrarVentas" msprop:Generator_RowChangedName="MostrarVentasRowChanged" msprop:Generator_RowChangingName="MostrarVentasRowChanging" msprop:Generator_TableClassName="MostrarVentasDataTable" msprop:Generator_RowClassName="MostrarVentasRow" msprop:Generator_TableVarName="tableMostrarVentas" msprop:Generator_UserTableName="MostrarVentas">
