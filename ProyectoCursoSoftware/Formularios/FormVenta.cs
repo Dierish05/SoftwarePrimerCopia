@@ -91,7 +91,7 @@ namespace ProyectoCursoSoftware.Formularios
         {
             if (txtNombre.Text != string.Empty && txtCodigo.Text == string.Empty)
             {
-                vm.BusquedaInventarioNombre(txtNombre.Text,dgvProducto);
+                vm.BusquedaInventarioNombre(txtNombre.Text, dgvProducto);
             }
             else if (txtCodigo.Text == string.Empty && txtNombre.Text == string.Empty)
             {
@@ -104,10 +104,16 @@ namespace ProyectoCursoSoftware.Formularios
             if (txtCodigo.Text != string.Empty && txtNombre.Text == string.Empty)
             {
                 vm.BusquedaInventarioCodigo(txtCodigo.Text, dgvProducto);
-            } else if(txtCodigo.Text == string.Empty && txtNombre.Text == string.Empty)
+            }
+            else if (txtCodigo.Text == string.Empty && txtNombre.Text == string.Empty)
             {
                 listar();
             }
+        }
+
+        private void btnAgregarProd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

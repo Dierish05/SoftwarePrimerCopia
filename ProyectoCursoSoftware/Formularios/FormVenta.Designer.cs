@@ -170,6 +170,7 @@
             btnAgregarProd.TabIndex = 3;
             btnAgregarProd.Text = "Agregar Producto";
             btnAgregarProd.UseVisualStyleBackColor = true;
+            btnAgregarProd.Click += btnAgregarProd_Click;
             // 
             // txtNombre
             // 
