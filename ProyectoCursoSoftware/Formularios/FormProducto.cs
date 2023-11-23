@@ -53,7 +53,7 @@ namespace ProyectoCursoSoftware.Formularios
                 {
                     FormProducto_01 formProducto_01 = new FormProducto_01(con);
                     formProducto_01.txtCodigo.Text = dgvDatos.Rows[indiceSeleccionado].Cells["CodProd"].Value.ToString();
-                    formProducto_01.txtNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del prodcuto"].Value.ToString();
+                    formProducto_01.txtNombre.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del producto"].Value.ToString();
                     formProducto_01.txtDescripcion.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Descripcion del producto"].Value.ToString();
                     formProducto_01.cmbCategoria.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Categoria"].Value.ToString();
                     formProducto_01.txtProveedor.Text = dgvDatos.Rows[indiceSeleccionado].Cells["Proveedor"].Value.ToString();
