@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -88,14 +89,28 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "")
+            if(txtNombre.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtDireccion.Text == "")
             {
-                MessageBox.Show("Cammpos vacios! porfavor complete todos los campos e intentelo nuevamente");
+                MessageBox.Show("Campos vacios! porfavor complete todos los campos e intentelo nuevamente");
+            }
+            else if(!IsValidEmail(txtEmail.Text)){
+                MessageBox.Show("El correo electrónico no es válido.");
             }
             else
             {
                 pm.CrearProveedor(txtNombre.Text, txtDireccion.Text, txtTelefono.Text, txtTelefono.Text);
             }
+        }
+
+        static bool IsValidEmail(string email)
+        {
+            // Patrón para validar el formato de un correo electrónico
+            string patron = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+
+            // Utilizar la clase Regex para realizar la validación
+            Regex regex = new Regex(patron);
+
+            return regex.IsMatch(email);
         }
 
         private void FormProveedores_01_Load(object sender, EventArgs e)
@@ -111,6 +126,36 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void txtTelefono_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!(e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) &&
+                !(e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9) &&
+                !(e.KeyCode == Keys.Back) &&
+                !(e.KeyCode == Keys.Delete) &&
+                !(e.KeyCode == Keys.ControlKey) &&
+                !(e.KeyCode == Keys.Control) &&
+                //!(e.KeyCode == Keys.Control || e.KeyCode == Keys.C) &&
+                //!(e.KeyCode == Keys.Control || e.KeyCode == Keys.V) &&
+                //!(e.KeyCode == Keys.Control || e.KeyCode == Keys.A) &&
+                !(e.KeyCode == Keys.Home) &&
+                !(e.KeyCode == Keys.End) &&
+                !(e.KeyCode == Keys.Left) &&
+                !(e.KeyCode == Keys.Right))
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
+            else
+            {
+
+                if (txtTelefono.TextLength == 8 && e.KeyCode != Keys.Back && e.KeyCode != Keys.Delete)
+                {
+                    e.SuppressKeyPress = true;
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

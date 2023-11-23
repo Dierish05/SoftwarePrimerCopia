@@ -133,6 +133,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(214, 27);
             txtTelefono.TabIndex = 2;
+            txtTelefono.KeyDown += txtTelefono_KeyDown;
             // 
             // txtEmail
             // 

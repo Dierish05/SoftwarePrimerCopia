@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -194,8 +195,8 @@ namespace ProyectoCursoSoftware.Formularios
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtPrimerNombre.Text == "" || txtPrimerApellido.Text == "" || txtDireccion.Text == ""
-                || txtTelefono.Text == "" || txtEmail.Text == "" || txtCedula.Text == "")
+            if (txtPrimerNombre.Text == "" || txtPrimerApellido.Text == "" || txtUsuario.Text == "" || txtContraseña.Text == "" 
+                || txtDireccion.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtCedula.Text == "" || cmbMunicipio.Text == "")
             {
 
                 MessageBox.Show("Datos incompletos! porfavor complete los datos e intentelo nuevamente");
@@ -204,6 +205,14 @@ namespace ProyectoCursoSoftware.Formularios
             else if (rbtnFemenino.Checked == false && rbtnMasculino.Checked == false)
             {
                 MessageBox.Show("Debe seleccionar un genero");
+            }
+            else if (!IsValidEmail(txtEmail.Text))
+            {
+                MessageBox.Show("El correo electrónico no es válido.");
+            }
+            else if (!IsValidNicaraguanCedula(txtCedula.Text))
+            {
+                MessageBox.Show("El correo electrónico no es válido.");
             }
             else
             {
@@ -214,7 +223,28 @@ namespace ProyectoCursoSoftware.Formularios
                 this.Close();
             }
 
+        }
 
+        static bool IsValidNicaraguanCedula(string cedula)
+        {
+            // Patrón para validar el formato de una cédula nicaragüense
+            string patron = @"^\d{3}-\d{6}-\d{4}[A-Za-z]$";
+
+            // Utilizar la clase Regex para realizar la validación
+            Regex regex = new Regex(patron);
+
+            return regex.IsMatch(cedula);
+        }
+
+        static bool IsValidEmail(string email)
+        {
+            // Patrón para validar el formato de un correo electrónico
+            string patron = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+
+            // Utilizar la clase Regex para realizar la validación
+            Regex regex = new Regex(patron);
+
+            return regex.IsMatch(email);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
