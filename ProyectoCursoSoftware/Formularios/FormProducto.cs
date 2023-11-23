@@ -59,7 +59,7 @@ namespace ProyectoCursoSoftware.Formularios
                     MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
                 }
             }
-           
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -83,5 +83,73 @@ namespace ProyectoCursoSoftware.Formularios
                 }
             }
         }
+
+        private int DeterminarCategoria(string a)
+        {
+            if (string.Equals(a, "Cargadores") == true)
+            {
+                return 1;
+            }
+            else if (string.Equals(a, "Audifonos") == true)
+            {
+                return 2;
+            }
+            else if (string.Equals(a, "Covers") == true)
+            {
+                return 3;
+            }
+            else if (string.Equals(a, "Memorias") == true)
+            {
+                return 4;
+            }
+            else if (string.Equals(a, "Protectores de pantalla") == true)
+            {
+                return 5;
+            }
+            else if (string.Equals(a, "Celulares") == true)
+            {
+                return 6;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = DeterminarCategoria(cmbCategoria.SelectedItem.ToString());
+            if (i == 1)
+            {
+                pm.BusquedaProductoCategoria(i, dgvDatos);
+            }
+            else if (i == 2)
+            {
+                pm.BusquedaProductoCategoria(i, dgvDatos);
+            }
+            else if (i == 3)
+            {
+                pm.BusquedaProductoCategoria(i, dgvDatos);
+            }
+            else if (i == 4)
+            {
+                pm.BusquedaProductoCategoria(i, dgvDatos);
+            }
+            else if (i == 5)
+            {
+                pm.BusquedaProductoCategoria(i, dgvDatos);
+            }
+            else if (i == 6)
+            {
+                pm.BusquedaProductoCategoria(i, dgvDatos);
+            }
+            else
+            {
+                Listar();
+            }
+
+        }
+
+
     }
 }
