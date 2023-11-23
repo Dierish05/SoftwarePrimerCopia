@@ -135,16 +135,16 @@
             // nupCantidad
             // 
             nupCantidad.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            nupCantidad.Location = new Point(910, 109);
+            nupCantidad.Location = new Point(949, 110);
             nupCantidad.Name = "nupCantidad";
-            nupCantidad.Size = new Size(107, 27);
+            nupCantidad.Size = new Size(135, 27);
             nupCantidad.TabIndex = 14;
             // 
             // label10
             // 
             label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label10.AutoSize = true;
-            label10.Location = new Point(949, 87);
+            label10.Location = new Point(1017, 87);
             label10.Name = "label10";
             label10.Size = new Size(69, 20);
             label10.TabIndex = 24;
@@ -350,9 +350,9 @@
             textBox7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             textBox7.BackColor = Color.FromArgb(221, 233, 218);
             textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(919, 161);
+            textBox7.Location = new Point(955, 161);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(106, 27);
+            textBox7.Size = new Size(137, 27);
             textBox7.TabIndex = 15;
             // 
             // textBox6
@@ -360,9 +360,9 @@
             textBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             textBox6.BackColor = Color.FromArgb(221, 233, 218);
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(919, 112);
+            textBox6.Location = new Point(955, 112);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(106, 27);
+            textBox6.Size = new Size(137, 27);
             textBox6.TabIndex = 5;
             // 
             // btnImprimir
@@ -411,7 +411,7 @@
             // 
             label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Location = new Point(970, 89);
+            label7.Location = new Point(1037, 89);
             label7.Name = "label7";
             label7.Size = new Size(53, 20);
             label7.TabIndex = 7;
@@ -421,7 +421,7 @@
             // 
             label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(981, 139);
+            label6.Location = new Point(1048, 139);
             label6.Name = "label6";
             label6.Size = new Size(42, 20);
             label6.TabIndex = 10;
@@ -431,7 +431,7 @@
             // 
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(954, 36);
+            label5.Location = new Point(1021, 36);
             label5.Name = "label5";
             label5.Size = new Size(71, 20);
             label5.TabIndex = 8;
@@ -442,9 +442,9 @@
             txtSubTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             txtSubTotal.BackColor = Color.FromArgb(221, 233, 218);
             txtSubTotal.BorderStyle = BorderStyle.FixedSingle;
-            txtSubTotal.Location = new Point(922, 59);
+            txtSubTotal.Location = new Point(958, 59);
             txtSubTotal.Name = "txtSubTotal";
-            txtSubTotal.Size = new Size(104, 27);
+            txtSubTotal.Size = new Size(135, 27);
             txtSubTotal.TabIndex = 14;
             // 
             // FormVenta
