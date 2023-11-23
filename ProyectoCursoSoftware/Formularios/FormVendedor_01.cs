@@ -151,7 +151,7 @@ namespace ProyectoCursoSoftware.Formularios
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombres.Text == "" || txtApellidos.Text == "" || txtDireccion.Text == ""
+            if (txtPrimerNombre.Text == "" || txtSegundoNombre.Text == "" || txtDireccion.Text == ""
                 || txtTelefono.Text == "" || txtEmail.Text == "" || txtCedula.Text == "")
             {
 
@@ -166,7 +166,7 @@ namespace ProyectoCursoSoftware.Formularios
             {
                 int muni = DeterminarMunicipio(cmbMunicipio.SelectedItem.ToString());
                 char sexo = DeterminarSexo();
-                vm.CrearVendedor(txtNombres.Text, txtApellidos.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text);
+                vm.CrearVendedor(txtPrimerNombre.Text, txtSegundoNombre.Text, txtDireccion.Text, txtTelefono.Text, sexo, muni, txtEmail.Text, txtCedula.Text);
                 this.Close();
             }
 

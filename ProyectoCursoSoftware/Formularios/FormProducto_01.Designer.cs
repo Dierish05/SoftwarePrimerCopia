@@ -49,7 +49,7 @@
             cmbCategoria.BackColor = Color.FromArgb(221, 233, 218);
             cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(93, 195);
+            cmbCategoria.Location = new Point(93, 194);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(214, 28);
             cmbCategoria.TabIndex = 78;
@@ -58,7 +58,7 @@
             // 
             txtDescripcion.BackColor = Color.FromArgb(221, 233, 218);
             txtDescripcion.BorderStyle = BorderStyle.FixedSingle;
-            txtDescripcion.Location = new Point(93, 117);
+            txtDescripcion.Location = new Point(93, 116);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(214, 27);
             txtDescripcion.TabIndex = 77;
@@ -67,7 +67,7 @@
             // 
             txtNombre.BackColor = Color.FromArgb(221, 233, 218);
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
-            txtNombre.Location = new Point(96, 77);
+            txtNombre.Location = new Point(96, 76);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(214, 27);
             txtNombre.TabIndex = 76;
@@ -145,7 +145,7 @@
             // 
             txtCodigo.BackColor = Color.FromArgb(221, 233, 218);
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
-            txtCodigo.Location = new Point(96, 39);
+            txtCodigo.Location = new Point(96, 38);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(214, 27);
             txtCodigo.TabIndex = 68;
@@ -166,7 +166,7 @@
             // 
             // txtProveedor
             // 
-            txtProveedor.Location = new Point(93, 162);
+            txtProveedor.Location = new Point(93, 161);
             txtProveedor.Name = "txtProveedor";
             txtProveedor.ReadOnly = true;
             txtProveedor.Size = new Size(101, 27);
@@ -176,7 +176,7 @@
             // 
             btnSeleccionar.FlatStyle = FlatStyle.Flat;
             btnSeleccionar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnSeleccionar.Location = new Point(200, 160);
+            btnSeleccionar.Location = new Point(200, 159);
             btnSeleccionar.Name = "btnSeleccionar";
             btnSeleccionar.Size = new Size(107, 29);
             btnSeleccionar.TabIndex = 80;
@@ -212,9 +212,6 @@
         }
 
         #endregion
-        private ComboBox cmbCategoria;
-        private TextBox txtDescripcion;
-        private TextBox txtNombre;
         private Button btnRegresar;
         private Button btnGuardar;
         private Label label6;
@@ -222,9 +219,12 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox txtCodigo;
         private Label label1;
         private TextBox txtProveedor;
         private Button btnSeleccionar;
+        public ComboBox cmbCategoria;
+        public TextBox txtDescripcion;
+        public TextBox txtNombre;
+        public TextBox txtCodigo;
     }
 }

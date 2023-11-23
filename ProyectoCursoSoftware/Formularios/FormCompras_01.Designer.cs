@@ -45,7 +45,7 @@
             // 
             txtCodProducto.BackColor = Color.FromArgb(221, 233, 218);
             txtCodProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtCodProducto.Location = new Point(160, 64);
+            txtCodProducto.Location = new Point(158, 48);
             txtCodProducto.Name = "txtCodProducto";
             txtCodProducto.Size = new Size(137, 27);
             txtCodProducto.TabIndex = 47;
@@ -78,7 +78,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(14, 147);
+            label7.Location = new Point(12, 131);
             label7.Name = "label7";
             label7.Size = new Size(146, 20);
             label7.TabIndex = 38;
@@ -87,7 +87,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(14, 111);
+            label5.Location = new Point(12, 95);
             label5.Name = "label5";
             label5.Size = new Size(110, 20);
             label5.TabIndex = 36;
@@ -96,7 +96,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(14, 75);
+            label4.Location = new Point(12, 59);
             label4.Name = "label4";
             label4.Size = new Size(103, 20);
             label4.TabIndex = 35;
@@ -120,7 +120,7 @@
             numericUpDown1.BackColor = Color.FromArgb(221, 233, 218);
             numericUpDown1.DecimalPlaces = 2;
             numericUpDown1.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            numericUpDown1.Location = new Point(160, 103);
+            numericUpDown1.Location = new Point(158, 87);
             numericUpDown1.Margin = new Padding(3, 4, 3, 4);
             numericUpDown1.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -134,7 +134,7 @@
             // 
             nUpdownCantidad.BackColor = Color.FromArgb(221, 233, 218);
             nUpdownCantidad.BorderStyle = BorderStyle.FixedSingle;
-            nUpdownCantidad.Location = new Point(160, 141);
+            nUpdownCantidad.Location = new Point(158, 125);
             nUpdownCantidad.Margin = new Padding(3, 4, 3, 4);
             nUpdownCantidad.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nUpdownCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -168,14 +168,14 @@
         }
 
         #endregion
-        private TextBox txtCodProducto;
         private Button btnRegresar;
         private Button btnGuardar;
         private Label label7;
         private Label label5;
         private Label label4;
         private Label label1;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown nUpdownCantidad;
+        public TextBox txtCodProducto;
+        public NumericUpDown numericUpDown1;
+        public NumericUpDown nUpdownCantidad;
     }
 }

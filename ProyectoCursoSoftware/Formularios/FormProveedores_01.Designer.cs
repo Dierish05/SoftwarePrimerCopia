@@ -33,6 +33,12 @@
             label2 = new Label();
             txtNombre = new TextBox();
             label1 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            txtTelefono = new TextBox();
+            txtEmail = new TextBox();
+            txtDireccion = new TextBox();
             SuspendLayout();
             // 
             // btnRegresar
@@ -70,6 +76,7 @@
             // txtNombre
             // 
             txtNombre.BackColor = Color.FromArgb(221, 233, 218);
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Location = new Point(94, 45);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(214, 27);
@@ -90,12 +97,72 @@
             label1.Text = "REGISTRO / ACTUALIZACION";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(11, 84);
+            label11.Name = "label11";
+            label11.Size = new Size(70, 20);
+            label11.TabIndex = 45;
+            label11.Text = "Telefono:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(12, 128);
+            label12.Name = "label12";
+            label12.Size = new Size(49, 20);
+            label12.TabIndex = 47;
+            label12.Text = "Email:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(12, 170);
+            label13.Name = "label13";
+            label13.Size = new Size(75, 20);
+            label13.TabIndex = 49;
+            label13.Text = "Dirección:";
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.BackColor = Color.FromArgb(221, 233, 218);
+            txtTelefono.BorderStyle = BorderStyle.FixedSingle;
+            txtTelefono.Location = new Point(94, 84);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(214, 27);
+            txtTelefono.TabIndex = 50;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BackColor = Color.FromArgb(221, 233, 218);
+            txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            txtEmail.Location = new Point(94, 128);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(214, 27);
+            txtEmail.TabIndex = 51;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.BackColor = Color.FromArgb(221, 233, 218);
+            txtDireccion.BorderStyle = BorderStyle.FixedSingle;
+            txtDireccion.Location = new Point(94, 170);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(214, 27);
+            txtDireccion.TabIndex = 52;
+            // 
             // FormProveedores_01
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(322, 427);
+            Controls.Add(txtDireccion);
+            Controls.Add(txtEmail);
+            Controls.Add(txtTelefono);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(label11);
             Controls.Add(btnRegresar);
             Controls.Add(btnGuardar);
             Controls.Add(label2);
@@ -111,13 +178,6 @@
 
         #endregion
 
-        private ComboBox cmbMunicipio;
-        private TextBox txtEstado;
-        private TextBox txtCedula;
-        private TextBox txtEmail;
-        private TextBox txtTelefono;
-        private TextBox txtDireccion;
-        private TextBox txtApellidos;
         private RadioButton rbtnFemenino;
         private RadioButton rbtnMasculino;
         private Button btnRegresar;
@@ -131,7 +191,13 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox txtNombre;
         private Label label1;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        public TextBox txtNombre;
+        public TextBox txtTelefono;
+        public TextBox txtEmail;
+        public TextBox txtDireccion;
     }
 }
