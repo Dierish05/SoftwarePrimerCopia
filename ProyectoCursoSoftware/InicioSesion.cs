@@ -29,7 +29,7 @@ namespace ProyectoCursoSoftware
             {
                 if (con.rol == "Vendedor")
                 {
-                    MenuVendedor menuVendedor = new MenuVendedor();
+                    MenuVendedor menuVendedor = new MenuVendedor(con);
                     menuVendedor.Show();
                     this.Visible = false;
                 }
