@@ -36,8 +36,9 @@
             proveedorToolStripMenuItem = new ToolStripMenuItem();
             ventaToolStripMenuItem = new ToolStripMenuItem();
             reportesToolStripMenuItem = new ToolStripMenuItem();
-            PanelContenedor = new Panel();
             reporteVentaToolStripMenuItem = new ToolStripMenuItem();
+            PanelContenedor = new Panel();
+            reporteComrpaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -99,12 +100,19 @@
             // 
             // reportesToolStripMenuItem
             // 
-            reportesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { reporteVentaToolStripMenuItem });
+            reportesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { reporteVentaToolStripMenuItem, reporteComrpaToolStripMenuItem });
             reportesToolStripMenuItem.Font = new Font("Arial Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point);
             reportesToolStripMenuItem.ForeColor = Color.White;
             reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             reportesToolStripMenuItem.Size = new Size(76, 24);
             reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reporteVentaToolStripMenuItem
+            // 
+            reporteVentaToolStripMenuItem.Name = "reporteVentaToolStripMenuItem";
+            reporteVentaToolStripMenuItem.Size = new Size(180, 24);
+            reporteVentaToolStripMenuItem.Text = "Reporte Venta";
+            reporteVentaToolStripMenuItem.Click += reporteVentaToolStripMenuItem_Click;
             // 
             // PanelContenedor
             // 
@@ -115,12 +123,12 @@
             PanelContenedor.Size = new Size(1015, 482);
             PanelContenedor.TabIndex = 1;
             // 
-            // reporteVentaToolStripMenuItem
+            // reporteComrpaToolStripMenuItem
             // 
-            reporteVentaToolStripMenuItem.Name = "reporteVentaToolStripMenuItem";
-            reporteVentaToolStripMenuItem.Size = new Size(180, 24);
-            reporteVentaToolStripMenuItem.Text = "Reporte Venta";
-            reporteVentaToolStripMenuItem.Click += reporteVentaToolStripMenuItem_Click;
+            reporteComrpaToolStripMenuItem.Name = "reporteComrpaToolStripMenuItem";
+            reporteComrpaToolStripMenuItem.Size = new Size(180, 24);
+            reporteComrpaToolStripMenuItem.Text = "Reporte Compra";
+            reporteComrpaToolStripMenuItem.Click += reporteComrpaToolStripMenuItem_Click;
             // 
             // MenuAdministrador
             // 
@@ -153,5 +161,6 @@
         private Panel PanelContenedor;
         private ToolStripMenuItem ventaToolStripMenuItem;
         private ToolStripMenuItem reporteVentaToolStripMenuItem;
+        private ToolStripMenuItem reporteComrpaToolStripMenuItem;
     }
 }
