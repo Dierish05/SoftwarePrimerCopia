@@ -46,10 +46,9 @@
             // 
             txtProducto.BackColor = Color.FromArgb(221, 233, 218);
             txtProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtProducto.Location = new Point(138, 36);
-            txtProducto.Margin = new Padding(3, 2, 3, 2);
+            txtProducto.Location = new Point(158, 48);
             txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(89, 23);
+            txtProducto.Size = new Size(101, 27);
             txtProducto.TabIndex = 47;
             txtProducto.KeyDown += txtCodProducto_KeyDown;
             // 
@@ -57,10 +56,9 @@
             // 
             btnRegresar.FlatStyle = FlatStyle.Flat;
             btnRegresar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnRegresar.Location = new Point(171, 269);
-            btnRegresar.Margin = new Padding(3, 2, 3, 2);
+            btnRegresar.Location = new Point(195, 359);
             btnRegresar.Name = "btnRegresar";
-            btnRegresar.Size = new Size(104, 31);
+            btnRegresar.Size = new Size(119, 41);
             btnRegresar.TabIndex = 43;
             btnRegresar.Text = "Regresar";
             btnRegresar.UseVisualStyleBackColor = true;
@@ -71,10 +69,9 @@
             btnGuardar.BackColor = SystemColors.Control;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnGuardar.Location = new Point(55, 269);
-            btnGuardar.Margin = new Padding(3, 2, 3, 2);
+            btnGuardar.Location = new Point(63, 359);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(104, 31);
+            btnGuardar.Size = new Size(119, 41);
             btnGuardar.TabIndex = 42;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -83,27 +80,27 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(10, 98);
+            label7.Location = new Point(11, 131);
             label7.Name = "label7";
-            label7.Size = new Size(117, 15);
+            label7.Size = new Size(146, 20);
             label7.TabIndex = 38;
             label7.Text = "Cantidad Comprada:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(10, 71);
+            label5.Location = new Point(11, 95);
             label5.Name = "label5";
-            label5.Size = new Size(89, 15);
+            label5.Size = new Size(110, 20);
             label5.TabIndex = 36;
             label5.Text = "Precio Compra:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(10, 44);
+            label4.Location = new Point(11, 59);
             label4.Name = "label4";
-            label4.Size = new Size(59, 15);
+            label4.Size = new Size(72, 20);
             label4.TabIndex = 35;
             label4.Text = "Producto:";
             // 
@@ -113,9 +110,9 @@
             label1.BackColor = Color.Teal;
             label1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(1, -2);
+            label1.Location = new Point(0, -3);
             label1.Name = "label1";
-            label1.Size = new Size(340, 23);
+            label1.Size = new Size(390, 31);
             label1.TabIndex = 31;
             label1.Text = "REGISTRO";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -125,11 +122,12 @@
             numericUpDown1.BackColor = Color.FromArgb(221, 233, 218);
             numericUpDown1.DecimalPlaces = 2;
             numericUpDown1.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            numericUpDown1.Location = new Point(138, 65);
+            numericUpDown1.Location = new Point(158, 87);
+            numericUpDown1.Margin = new Padding(3, 4, 3, 4);
             numericUpDown1.Maximum = new decimal(new int[] { 30000, 0, 0, 0 });
             numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(192, 23);
+            numericUpDown1.Size = new Size(219, 27);
             numericUpDown1.TabIndex = 50;
             numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.KeyDown += numericUpDown1_KeyDown;
@@ -138,11 +136,12 @@
             // 
             nUpdownCantidad.BackColor = Color.FromArgb(221, 233, 218);
             nUpdownCantidad.BorderStyle = BorderStyle.FixedSingle;
-            nUpdownCantidad.Location = new Point(138, 94);
+            nUpdownCantidad.Location = new Point(158, 125);
+            nUpdownCantidad.Margin = new Padding(3, 4, 3, 4);
             nUpdownCantidad.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nUpdownCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nUpdownCantidad.Name = "nUpdownCantidad";
-            nUpdownCantidad.Size = new Size(192, 23);
+            nUpdownCantidad.Size = new Size(219, 27);
             nUpdownCantidad.TabIndex = 51;
             nUpdownCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -150,10 +149,9 @@
             // 
             btnSeleccionar.FlatStyle = FlatStyle.Flat;
             btnSeleccionar.ForeColor = Color.FromArgb(26, 138, 94);
-            btnSeleccionar.Location = new Point(237, 36);
-            btnSeleccionar.Margin = new Padding(3, 2, 3, 2);
+            btnSeleccionar.Location = new Point(271, 48);
             btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.Size = new Size(94, 22);
+            btnSeleccionar.Size = new Size(107, 29);
             btnSeleccionar.TabIndex = 52;
             btnSeleccionar.Text = "Seleccionar";
             btnSeleccionar.UseVisualStyleBackColor = true;
@@ -161,10 +159,10 @@
             // 
             // FormCompras_01
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(341, 320);
+            ClientSize = new Size(390, 427);
             Controls.Add(btnSeleccionar);
             Controls.Add(nUpdownCantidad);
             Controls.Add(numericUpDown1);
@@ -176,7 +174,6 @@
             Controls.Add(label4);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormCompras_01";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCompras_01";

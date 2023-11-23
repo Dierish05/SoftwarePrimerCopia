@@ -66,7 +66,7 @@ namespace ProyectoCursoSoftware.Formularios
             SetLayeredWindowAttributes(Handle, 0, 255, LWA_ALPHA);
         }
 
-     
+
         private void txtCodProducto_KeyDown(object sender, KeyEventArgs e)
         {
             // Limitar a 5 caracteres
