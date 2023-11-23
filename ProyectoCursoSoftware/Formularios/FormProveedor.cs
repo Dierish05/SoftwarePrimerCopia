@@ -38,5 +38,49 @@ namespace ProyectoCursoSoftware.Formularios
         {
             this.Dispose();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
+            }
+            else
+            {
+                int indiceSeleccionado = dgvDatos.SelectedCells[0].RowIndex;
+                DataGridViewCell cell = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"];
+                if (cell.Value != null && cell.Value != DBNull.Value)
+                {
+
+                    //Mostrar formulario de editar producto
+                }
+                else
+                {
+                    MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
+                }
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
+            }
+            else
+            {
+                int indiceSeleccionado = dgvDatos.SelectedCells[0].RowIndex;
+                DataGridViewCell cell = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"];
+                if (cell.Value != null && cell.Value != DBNull.Value)
+                {
+
+                    //Funcion eliminar xde
+                }
+                else
+                {
+                    MessageBox.Show("No tiene ningun producto seleccionado! seleccione un producto e intentelo nuevamente");
+                }
+            }
+        }
     }
 }
