@@ -96,6 +96,7 @@
             // 
             dgvDatos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDatos.BackgroundColor = Color.FromArgb(235, 238, 245);
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDatos.Location = new Point(16, 213);
             dgvDatos.Name = "dgvDatos";
