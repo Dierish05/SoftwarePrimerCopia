@@ -187,10 +187,9 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void txtCedula_KeyDown(object sender, KeyEventArgs e)
         {
-            if (txtTelefono.TextLength == 16 && e.KeyCode != Keys.Back && e.KeyCode != Keys.Delete)
+            if (!(e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) && txtCedula.Text.Length >= 16)
             {
                 e.SuppressKeyPress = true;
-                e.Handled = true;
             }
         }
     }
