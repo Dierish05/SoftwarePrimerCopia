@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCursoSoftware.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,10 +40,13 @@ namespace ProyectoCursoSoftware.Formularios
         Conexion con;
         public string NombreProducto;
         public string codProducto;
+        private CompraModel cm;
         public FormCompras_01(Conexion con)
         {
-            InitializeComponent();
             this.con = con;
+            cm = new CompraModel(con);
+            InitializeComponent();
+
             ApplyShadows();
         }
 
@@ -88,13 +92,15 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtProducto.Text == "" || numericUpDown1.Value == 0 || nUpdownCantidad.Value == 0)
+            if (txtProducto.Text == "" || nudPrecio.Value == 0 || nUpdownCantidad.Value == 0)
             {
                 MessageBox.Show("Campos vacios, porfavor introduzca un dato valido!");
             }
             else
             {
                 //Metodo de guardar compra
+                cm.CrearCompra(codProducto, float.Parse(nudPrecio.Value.ToString()), int.Parse(nUpdownCantidad.Value.ToString()), int.Parse(nUpdownPorcentaje.Value.ToString()));
+                this.Close();
             }
         }
 

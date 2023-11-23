@@ -42,9 +42,10 @@ namespace ProyectoCursoSoftware.Formularios
         public string NombreProductoSeleccionado { get; set; }
         public FormCompras_02(Conexion con)
         {
+            
             InitializeComponent();
-            cm = new ProductoModel(con);
             this.con = con;
+            cm = new ProductoModel(con);
             Listar();
             ApplyShadows();
         }
@@ -70,9 +71,13 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == string.Empty)
+            if (txtNombre.Text != string.Empty)
             {
-
+                cm.BusquedaProductosNombre(txtNombre.Text, dgvDatos);
+            }
+            else
+            {
+                Listar();
             }
         }
         private void Listar()
@@ -85,7 +90,7 @@ namespace ProyectoCursoSoftware.Formularios
             this.Dispose();
         }
 
-      
+
 
         private void btnSeleccionar_Click_1(object sender, EventArgs e)
         {
@@ -100,7 +105,7 @@ namespace ProyectoCursoSoftware.Formularios
                     //IdProv = Convert.ToInt32(cell.Value);
 
                     CodProductoSeleccionado = cell.Value.ToString();
-                    NombreProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre del prodcuto"].Value.ToString();
+                    NombreProductoSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre_del_producto"].Value.ToString();
                     this.Close();
                 }
                 else

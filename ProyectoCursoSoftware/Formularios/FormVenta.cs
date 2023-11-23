@@ -15,10 +15,12 @@ namespace ProyectoCursoSoftware.Formularios
     {
         private Conexion con;
         private InventarioModel im;
+        private VentaModel vm;
         public FormVenta(Conexion Con)
         {
             this.con = Con;
             im = new InventarioModel(con);
+            vm = new VentaModel(con);
             InitializeComponent();
             listar();
         }
@@ -87,7 +89,25 @@ namespace ProyectoCursoSoftware.Formularios
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            
+            if (txtNombre.Text != string.Empty && txtCodigo.Text == string.Empty)
+            {
+                vm.BusquedaInventarioNombre(txtNombre.Text,dgvProducto);
+            }
+            else if (txtCodigo.Text == string.Empty && txtNombre.Text == string.Empty)
+            {
+                listar();
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != string.Empty && txtNombre.Text == string.Empty)
+            {
+                vm.BusquedaInventarioCodigo(txtCodigo.Text, dgvProducto);
+            } else if(txtCodigo.Text == string.Empty && txtNombre.Text == string.Empty)
+            {
+                listar();
+            }
         }
     }
 }
