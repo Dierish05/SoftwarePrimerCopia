@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoCursoSoftware.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +15,14 @@ namespace ProyectoCursoSoftware.Formularios
     {
         Conexion con;
         public string NombreProveedor;
+        private ProductoModel pm;
         public string idProveedor;
         public FormProducto_01(Conexion con)
         {
-            InitializeComponent();
             this.con = con;
+            pm = new ProductoModel(con);
+            InitializeComponent();
+            
 
             txtProveedor.Enabled = false;
             //Hola uwu
@@ -52,6 +56,8 @@ namespace ProyectoCursoSoftware.Formularios
             else
             {
                 //Metodo guardar producto
+                pm.CrearProducto(txtCodigo.Text, txtNombre.Text, txtDescripcion.Text, int.Parse(idProveedor), 1);
+                this.Close();
             }
         }
 
