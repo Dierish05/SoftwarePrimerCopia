@@ -13,10 +13,14 @@ namespace ProyectoCursoSoftware.Formularios
     public partial class FormProducto_01 : Form
     {
         Conexion con;
+        public string NombreProveedor;
+        public string idProveedor;
         public FormProducto_01(Conexion con)
         {
             InitializeComponent();
             this.con = con;
+
+            txtProveedor.Enabled = false;
             //Hola uwu
         }
 
@@ -55,6 +59,23 @@ namespace ProyectoCursoSoftware.Formularios
         {
             FormProducto_02 formProducto_02 = new FormProducto_02(con);
             formProducto_02.ShowDialog();
+
+            if (!string.IsNullOrEmpty(formProducto_02.IdProveedorSeleccionado) &&
+         !string.IsNullOrEmpty(formProducto_02.NombreProveedorSeleccionado))
+            {
+               
+                idProveedor = formProducto_02.IdProveedorSeleccionado;
+                NombreProveedor = formProducto_02.NombreProveedorSeleccionado;
+
+               
+                ActualizarTextBoxProveedor();
+            }
+        }
+
+        private void ActualizarTextBoxProveedor()
+        {
+           
+            txtProveedor.Text = NombreProveedor;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

@@ -15,6 +15,8 @@ namespace ProyectoCursoSoftware.Formularios
     {
         Conexion con;
         private ProveedorModel pm;
+        public string IdProveedorSeleccionado { get; set; }
+        public string NombreProveedorSeleccionado { get; set; }
         public FormProducto_02(Conexion con)
         {
             InitializeComponent();
@@ -38,6 +40,16 @@ namespace ProyectoCursoSoftware.Formularios
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            int indiceSeleccionado = dgvDatos.SelectedCells[0].RowIndex;
+            IdProveedorSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Id_Prov"].Value.ToString();
+            NombreProveedorSeleccionado = dgvDatos.Rows[indiceSeleccionado].Cells["Nombre"].Value.ToString();
+
+           
+            this.Close();
         }
     }
 }
